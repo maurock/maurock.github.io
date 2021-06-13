@@ -77,8 +77,8 @@
                 Here you can see the two games: on the left, the AI does not know anything about the game. On the right, the AI is trained and learnt how to play.<br>
 
                 <div style="text-align: center">
-                    <img class ="snakegif-norl", src="img/notraining.gif" >
-                    <img class ="snakegif-rl" src="img/training.gif" >
+                    <img class="snakegif-norl" , src="img/notraining.gif">
+                    <img class="snakegif-rl" src="img/training.gif">
                 </div>
                 <br><br>
                 <h3><b>Learning goals</b></h3>
@@ -163,8 +163,11 @@
                 <h4><b>Loss</b></h4>
                 The Deep neural network optimizes the answer (action) to a specific input (state) trying to maximize the reward. The value to express how good is the prediction is called Loss. The job of a neural network is to minimize the loss, reducing then the difference between the real target and the predicted one.
                 In our case, the loss is expressed as:
-                <img class="snake-loss-eq" src="img/loss.png" style="margin: auto; display: block"><br>
 
+                $$ loss = \left( r + \gamma max_a  \textcolor{red}{\hat{Q}}(s, a') - \textcolor{red}{Q}(s, a) \right)^2 $$
+
+                
+                
                 <h4><b>Reward</b></h4>
                 As said, the AI tries to maximize the reward.
                 The only reward given to the system is when it eats the food target (+10). If the snake hits a wall or hits itself, the reward is negative (-10). Additionally, there could be given a positive reward for each step the snake takes without dying. In that case, the risk is that it prefers to run in a circle, since it gets positive rewards for each step, instead of reaching for the food. <br><br>
@@ -180,34 +183,39 @@
                 <blockquote>
                     <p><b>In only 150 games - less than 5 minutes - the system went from 0 points and no clue whatsoever on the rules to 45 points and a solid strategy!</b></p>
                 </blockquote>
-                <img class = "snake-score" src="img/result.PNG" style="display: block; margin: auto">
-
-                <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-                <div class="scroll-to-top d-lg-none position-fixed ">
-                    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
-                        <i class="fa fa-chevron-up"></i>
-                    </a>
-                </div>
-                <br>
+                <img class="snake-score" src="img/result.PNG" style="display: block; margin: auto">
+            </div>
+        </div>
+    </section>
 
 
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-to-top d-lg-none position-fixed ">
+        <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+    <br>
 
 
+    <!-- Math Jax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-                <!-- Bootstrap core JavaScript -->
-                <script src="vendor/jquery/jquery.min.js"></script>
-                <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-                <!-- Plugin JavaScript -->
-                <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-                <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
-                <!-- Contact Form JavaScript -->
-                <script src="js/jqBootstrapValidation.js"></script>
-                <script src="js/contact_me.js"></script>
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
 
-                <!-- Custom scripts for this template -->
-                <script src="js/freelancer.min.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="js/freelancer.min.js"></script>
 
 </body>
 
