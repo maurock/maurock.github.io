@@ -132,7 +132,7 @@ section h2 {
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link.active {
-    color: #fff;	
+    color: #fff;
     background: #18BC9C;
 }
 
@@ -162,7 +162,7 @@ section h2 {
     }
 
     #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
-        color: #fff;	
+        color: #fff;
         background: #18BC9C;
     }
 
@@ -185,7 +185,7 @@ section h2 {
 
 /* For mobile */
 header.masthead {
-    padding-top: calc(6rem + 72px);    
+    padding-top: calc(6rem + 72px);
 
 }
 
@@ -754,8 +754,9 @@ blockquote p {
     .transfer-result-boston {
         width: 100%;
     }
-    .logo{
-        width: 45%;        
+
+    .logo {
+        width: 45%;
     }
 
 }
@@ -798,12 +799,13 @@ blockquote p {
     .transfer-result-boston {
         width: 75;
     }
-    .logo{
-        width: 25%;        
+
+    .logo {
+        width: 25%;
     }
 }
 
-.text-intro{
+.text-intro {
     font-family: Nunito;
     font-weight: 300;
     line-height: 1.3;
@@ -811,7 +813,7 @@ blockquote p {
 
 /* Text for mobile */
 @media only screen and (max-width: 800px) {
-    .text-intro{
+    .text-intro {
         font-size: 19px;
         line-height: 1.3;
     }
@@ -819,13 +821,13 @@ blockquote p {
 
 /* Text for desktop */
 @media only screen and (min-width: 800px) {
-    .text-intro{
+    .text-intro {
         font-size: 22px;
     }
 }
 
 
-.text-page{
+.text-page {
     font-family: Nunito;
     font-weight: 300;
     line-height: 1.3;
@@ -833,7 +835,7 @@ blockquote p {
 
 /* Text for mobile */
 @media only screen and (max-width: 800px) {
-    .text-page{
+    .text-page {
         font-size: 19px;
         line-height: 1.3;
     }
@@ -841,16 +843,16 @@ blockquote p {
 
 /* Text for desktop */
 @media only screen and (min-width: 800px) {
-    .text-page{
+    .text-page {
         font-size: 20px;
     }
 }
 
-.text-research a{
+.text-research a {
     font-weight: 600;
 }
 
-.text-research > ul > li{
+.text-research > ul > li {
     padding-bottom: 10px;
 }
 
@@ -858,8 +860,8 @@ blockquote p {
     margin-bottom: 20px;
 }
 
-#card1 > .card{
-    height:100%;
+#card1 > .card {
+    height: 100%;
 }
 
 /* CODE.CSS ------------------------------------------------------------------------ */
@@ -993,18 +995,29 @@ h4 {
     background-color: #ec0;
 }
 
-.MathJax { 
-    font-size: 1.5em !important; 
+/* MathJAX */
+/* for mobile */
+@media only screen and (max-width: 800px) {
+    .MathJax {
+        font-size: 1 !important;
+    }
+}
+
+/* for desktop */
+@media only screen and (min-width: 800px) {
+    .MathJax {
+        font-size: 1.5em !important;
+    }
 }
 
 .snippet-code-div {
     background: #ffffff;
-    overflow:auto;
-    width:auto;
+    overflow: auto;
+    width: auto;
     border: solid #c1c1c1;
     border-width: .05em .05em .05em .05em;
     border-radius: 0.5em;
-    padding: 1em ;
+    padding: 1em;
     font-family: 'Fira Code';
-    margin-top : 2vh;        
+    margin-top: 2vh;
 }
