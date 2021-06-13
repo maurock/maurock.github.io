@@ -1,0 +1,3 @@
+[0422/183839.920:ERROR:crash_report_database_win.cc(427)] unexpected header
+[0116/190320.889:ERROR:directory_reader_win.cc(43)] FindFirstFile: Impossibile trovare il percorso specificato. (0x3)
+[0125/210013.980:ERROR:directory_reader_win.cc(43)] FindFirstFile: Impossibile trovare il percorso specificato. (0x3)

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>CODE</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+        <!-- Custom fonts for this template -->
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:700,200,400,300, 500" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:700,200,400,300, 500" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
+
+        <!-- Plugin CSS -->
+        <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+
+        <!-- Custom styles for this template -->
+        <link href="css/code.css" rel="stylesheet">
+        <link href="css/freelancer.css" rel="stylesheet">
+        <link href="css/code.css" rel="stylesheet">
+        
+</head>
+
+    <body id="page-top">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" style="font-family: Raleway; font-size: 20px;" href="https://vegaoscar.000webhostapp.com/index.html">Mauro Comi</a>
+                <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    
+                    <div class="cr cr-top cr-right cr-sticky cr-red">Work in progress</div>
+
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html#portfolio" style="color: #fff !important">My Projects</a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html#about" style="color: #fff !important">About me</a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html#contact" style="color: #fff !important">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- Code -->
+        <section class="code" id="prediction">
+            <div class="container">
+                <h2 class="text-center text-uppercase text-secondary mb-0" style="margin-top: 50px; line-height: 1.2">Monte Carlo Path Tracer</h2>
+                <br><br>
+                <img src="img/rendering/cover-article.png" class="container" style="max-width: 100%; height: 100%;object-fit: cover">
+                <blockquote>
+                <p style="font-family: Hind"><b>IMPORTANT <br>This project is the starting point of my Master thesis, a Research project conducted at TU Delft and TU Eindhoven. The thesis explores the application of Sparse Neural Networks in Reinforcement Learning for Physically Based Rendering. More specifically, the main contribution is to optimize Monte Carlo integration, learning the radiance in a scene and thus guiding the light path towards the light source.<br>
+                This brief article shows two standard approaches for noise reduction, and it's addressed to people who are already familiar with the basic concepts of Physically Based Rendering. The article does not address the detailed math required to understand the implementation, which will be likely added after the publication of my thesis. </b></p>
+                </blockquote>
+                <div class="snippet"><h3 style="font-family: Raleway"><b>Introduction</b></h3>The goal of this project is to develop a <b>Path tracer</b> and implement different techniques to reduce noise in rendered images. For a great introduction, I suggest the awesome book  <a href="http://www.pbr-book.org/" style="color: #2885e2ed" >Physically Based Rendering: From Theory to Implementation </a>written by Matt Pharr, Wenzel Jakob, and Greg Humphreys, and now free in its online version. An additional great resource is <a href="https://www.scratchapixel.com/index.php?redirect" style="color: #2885e2ed" >Scratchapixel</a>. <br>
+                To understand this project, familiarity with ray tracing, path tracing, Monte Carlo statistics and Calculus is necessary.<br>
+                I explored few techniques for noise reduction during rendering, as explained later. For more advanced <b>Machine Learning</b> techniques, you can refer to <a href="http://www.pbr-book.org/" style="color: #2885e2ed" >my other project </a>. <br>
+                The code includes multiple approaches and <b>needs to be cleaned</b>. I am experimenting for my thesis, I hope you will forgive me.  You can check the <span><b>GitHub Repository</b><img src="img/github-icon.png" style="height: 20px; margin-left: 5px;"></span> for it: <br>
+                <a href="https://github.com/maurock/Q-tracer" class="text-center btn_custom-inverse first_btn-inverse" style="font-size: 16px; font-family: Roboto; font-weight: 500; width: fit-content; margin: auto; margin-bottom: 10px; margin-top: 10px">Check full code<span class="fa fa-long-arrow-right" aria-hidden="true" style="margin-left: 8px"></span></a>
+                    
+               
+                <br>
+               <h3><b>Learning goals</b></h3>
+                 <ul>
+                    <li>Understand and Implement a <i>naive path tracer</i> in C++</li>
+                    <li>Improve Monte Carlo integration through <i>cosine-weighted importance sampling</i>  </li>
+                    <li>Implement <i>Direct light sampling</i></li>
+                    <li>Compare the different approaches</li>
+                </ul>
+                <br>
+                    
+                    
+                    
+                 <h3><b>Physically based rendering</b></h3>    
+                 Physically based rendering (PBR) is an approach in computer graphics that tries to simulate the flow of light to render graphics as accurate as possible. PBR is used in the movie industry, in gaming, and in engineering. <br>
+                In practice, the aim is to approximate the Rendering equation to its correct value:  <br>
+                    
+                `L_o(x, w_o) = L_e(x,w_o) + \int L_i(x, -w_i) \cdot f_r(x, w_i, w_o) \cdot cos\theta_i\ dw_i `<br>
+                
+                Since the integral cannot be computed aritmetically, it needs to be approximated through multiple iterations. <br>
+                The theory of Monte Carlo integration guarantees that the integrand can be approximated generating random samples `X_i` according to a probability density function `p(X_i)`. <br>
+                    
+                `F = \int_D f(x) dx \approx  \frac{1}{n} \sum_{i=0}^{n-1} \frac{f(X_i)}{p(X_i)}` <br>
+                    
+                Since we are dealing with a statistical model, many different approaches to reduce the standard deviation were advanced along the years. These methods are usually based on Monte Carlo statistics, and lately Machine Learning.<br> 
+                 <br>         
+                    
+                
+                    
+                    
+                 <h3><b>Path tracer</b></h3>
+                Path tracing is a ray tracing algorithm, unbiased and consistent. This means that, as the number of samples scattered inside the scene increases, the approximation of the radiance gets closer to its real value. The Whitted ray tracer was a previous version that could only compute one bounce. Path tracing extends this through recursively computing the radiance inside the scene. <br><br>
+                I wrote the path tracer in C++, without using any third parties graphics library. This means that basic classes like Vector, Ray, Plane, Sphere, etc.. are implemented in pure C++. <br>
+                As I am writing, this single-threaded path tracer is in a relatively basic version. It can compute correctly global illumination, it supports anti-aliasing and Russian Roulette stopping criterion, and can process rectangles and spheres. Rays are scattered based on Uniform scattering, Cosine-weighted importance sampling, and Direct light sampling (or Next event estimation). The main current limitation is that it only supports Lambertian materials, since they are faster to handle when Machine Learning driven importance sampling comes into play.                     
+                <br><br>
+                    
+                    
+                    
+                    
+                <!--      Uniform sampling      -->
+                <h3><b>Uniform scattering</b></h3>
+                This type of scattering represents the easiest version of the path tracing algorithm. Rays are scattered based on a uniform distribution over the hemisphere on top of the hitting point, following a probability defined as: <br>
+                      
+                `p(w) = \frac{1}{2 \pi r^2} ` <br>
+                    
+                where `r` is 1. <br>
+                
+                In order to draw randomly generated samples with the chosen probability density functions in the C++ implementation, we need to retrieve Cartesian coordinates from spherical coordinates. Then, we need to express them as functions of randomly generated values `\xi_1` and `\xi_2`. <br>
+                    
+                `x=cos \varphi  sin \theta =cos \left( 2  \pi   \xi _{1} \right) \sqrt[\xi _{2} \left( 2-  \xi _{2} \right)]` <br>
+                `y=sin \varphi sin \theta = sin  \left( 2  \pi   \xi _{1} \right) \sqrt[ \xi _{2} \left( 2-  \xi _{2} \right)]` <br>
+                `z=cos \theta =1- \xi _{2} `<br>
+                
+                The BRDF `f_r(x, w_i, w_o)` for ideal Lambertian surfaces is simply `BRDF = \frac{\rho}{\pi}`, since by definition radiance is equally reflected into all directions.  <br>
+                
+                To show some results, I rendered two images using this strategy: <br> <br>
+                    
+                <img src="img/rendering/uniform.png" class="container" style="max-width: 85%; height: 85 %;object-fit: cover; display:block;"> <br>
+                    
+                The noise is due to the fact that not all the scattered rays hit the light source during their path. The highest the amount of scattered rays, the highest the noise reduction. This is why a highest amount of sample per pixel leads to a less noisy image. <br>The scene in the middle, with the light source blocked by a door, is an example of poor visibility. Same applies to the scene on the right, which is partially blocked by a cube. Light cannot be sampled directly, but only rays bouncing with specific directions can reach it. For this reason, these scenes are noisier and darker. <br>
+                Is there a way to improve this solution? <br> <br>       
+                                
+                    
+                    
+                    
+                <!--      cosine weighted importance sampling      -->
+                <h3><b>Cosine-weighted importance sampling</b></h3>
+                In order to estimate the value of the rendering equation's integral as close as possible to the arithmetic solution, it is essential to get samples from those regions that lead to the highest contribution. <br> Previously, we sampled uniformly over the hemisphere. Let's try to find a better way to do this. <br>
+                The approximation of the intractable rendering equation requires, as first step, to find a proper Probability Density Function, which will be used to generate samples. <br>
+                A common PDF for importance sampling in ray tracing is is: `f = \frac{cos\{theta} }{\pi}`. <br>Indeed, that is proportional to `cos\theta` like the rendering equation and so, following the equation closely, it helps reducing the variance. Let's remind that `\theta` is the angle between the scattered ray and the normal to the surface. Moreover, the term `\pi` allows micro-optimization in the calculation of the resulting radiance. <br> What does this probability density function mean in practice? Since the hemisphere is sampled proportionally to the cosine of `\theta`, rays are more likely to be scattered close to the normal, where `\theta` is smaller and the cosine is bigger. From physics, we know that these rays contribute more to the computation of the total incoming radiance. <br>
+                As before, we need to express Cartesian coordinates from spherical coordinates as functions of randomly generated values. Calculating the cumulative density function for `\theta` and `\phi`, and considering the new <i>pdf</i>, we obtain: <br>
+                
+                `x=cos \varphi  sin \theta =cos \left( 2  \pi   \xi _{1} \right) \sqrt[ \xi _{2}] ` <br> ` y=sin \varphi sin \theta = sin  \left( 2  \pi   \xi _{1} \right) \sqrt[\xi _{2}]` <br>
+                `z=cos \theta =\sqrt[1- \xi _{2}] ` <br>
+                    
+                Now, the path tracer scatters according to this <i>pdf</i>. Improvements respect to uniform sampling are shown below: <br>
+                    
+                <img src="img/rendering/comparison-random-is.png" class="container" style="max-width: 65%; height: 65 %;object-fit: cover; display:block;"> <br>
+                
+                <br>
+                    
+                Now, this new model yields better results than the previous one, as expected. As one might argue, cosine weighted importance sampling does not take into account the position of the light source. The algorithm prefers to scatter rays closer to the normal to the surface, but what if the light source is located far from this direction? <br>
+                Next event estimation attempts to solve this problem. <br> <br>
+                
+                    
+                    
+            
+                    
+                <!--     Next event estimation      -->
+                <h3><b>Next event estimation</b></h3>    
+                    
+                Even though cosine weighted importance sampling ensures the probability density function to follow the integrand in the rendering equation, this method does not take into account the position of light sources. On that account, convergence still remains problematic for small light sources. Moreover, since only paths that hit a light source contribute to the final radiance, a long path where no material with positive emittance was hit returns a radiance equal to zero. Clearly, this entails inefficiency due to a significant waste of computational power. Explicit light sampling, also known as next event estimation, is a technique developed to overcome this issue. 
+                
+                <img src="img/rendering/explicitlight.png" class="container" style="max-width: 45%; height: 45 %;object-fit: cover; display:block;"> <br>
+
+                The Figure shows a schematic overview of the path tracing algorithm with the implementation of explicit light sampling. The main different with the naive path tracer is that for every ray casted, one shadow ray is directly scattered towards the light source. The final radiance takes into account both the contribution of direct and reflected light. This approach is widely used in industry not only for of its simplicity and faster convergence, but also because it allows to manage direct and reflected contributions separately. This adds value for artistic purposes, and can help debugging the path tracer. <br> Ir's important to mention that indirect light is still sampled according to cosine weighted importance sampling<br>
+                
+                To compute the <i>pdf</i>for the direct light sampling, it's more convenient to express the integral over the hemisphere as an integral over the visible area seen from the point for which the incoming radiance is computed. Let's consider the point P, for which we are computing the radiance, and a point Q in the light source area. This relationship allows to calculate the inverse probability density function as: <br>
+                    
+                    <i>inverse pdf</i> = `\frac{A \cdot cos(\theta_{iL})}{r^2}` <br>
+                
+                where `cos(\theta_{iL})` is the cosine of the angle between the normal to the light surface and the vector linking the point P to Q. <br>
+                Moreover, it's very important to check whether the rays scattered for indirect lightining hit the light source or not at every iteration. Otherwhise, we would overestimate the radiance coming from the light source, since we would sample it twice.
+                Results can be seen below:
+                
+                <img src="img/rendering/comparison_explicitlight.PNG" class="container" style="max-width: 90%; height: 90 %;object-fit: cover; display:block;"> <br>
+        
+                Both importance sampling and importance sampling with next event estimation do not consider blockers between the point for which the integration is computed and the light source. This inevitably leads to a high number of scattered rays with zero contribution, unless visibility is considered. <br>
+                Solving this issue is very complicated, but new methods, such as Metropolis or Reinforcement Learning, can help in learning the light path. <br><br>
+                
+                 <!--     Final comparison      -->
+                <h3><b>Final comparison</b></h3>   
+                    
+                Finally, we can compare these three methods using 32 spp. As expected, Next event estimation with importance sampling generates the best result, followed by cosine weighted importance sampling and lastly uniform sampling. <br>
+                
+                <img src="img/rendering/comparison_uni_imp.png" class="container" style="max-width: 90%; height: 90 %;object-fit: cover; display:block;"> <br>
+
+                In my next article, I will explore the concept of path guiding accoridng to a policy learned using Q-Learning. This approach was studied by <a href = "https://arxiv.org/abs/1701.07403">Dahm and Keller</a> and gives a beautiful example of how the structural similarity between the Bellman equation and the rendering equation can be used for path tracing.
+   
+        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+        <div class="scroll-to-top d-lg-none position-fixed ">
+            <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+        <br>
+        
+
+                    
+
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Plugin JavaScript -->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+        <!-- Contact Form JavaScript -->
+        <script src="js/jqBootstrapValidation.js"></script>
+        <script src="js/contact_me.js"></script>
+
+        <!-- Custom scripts for this template -->
+        <script src="js/freelancer.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+
+    </body>
+
+</html>

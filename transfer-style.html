@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CODE</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:700,200,400,300, 500" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700,200,400,300, 500" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/code.css" rel="stylesheet">
+    <link href="css/freelancer.css" rel="stylesheet">
+    <link href="css/code.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/lucario.css">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" style="font-family: Raleway; font-size: 20px;" href="https://vegaoscar.000webhostapp.com/index.html">Mauro Comi</a>
+            <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html#portfolio" style="color: #fff !important">My Projects</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html#about" style="color: #fff !important">About me</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html#contact" style="color: #fff !important">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Code -->
+    <section class="code" id="prediction">
+        <div class="container">
+            <h2 class="text-center text-uppercase text-secondary mb-0" style="margin-top: 50px; line-height: 1.2">Neural Transfer Style: Artificial intelligence meets Art</h2>
+            <br><br>
+            <img src="img/transferStyle/combined2.jpg" class="container" style="max-width: 100%; object-fit: cover">
+
+            <div class="snippet">
+                <h3><b>Introduction</b></h3>Neural Transfer Style is one of the most amazing applications of Artificial Intelligence in a creative context. In this Project, we'll see how to transfer an art painting style to a chosen image, creating stunning results. Leon A. Gatys et al. conceived the concept of <b>Neural Transfer Style</b> in their paper <a href='https://arxiv.org/abs/1508.06576'><i style='color: #2885e2ed'>A Neural Algorithm of Artistic Style</i></a>, in 2015. After that, many researchers applied and improved the methodology, adding elements to the loss, trying different optimizers and experimenting different neural networks used for the purpose.<br>
+                Still, the original paper remains the best source to understand this concept, and the VGG16 and VGG19 networks are the
+                most used models in this context. This choice, which is unusual considering that both have been outperformed by most recent networks, is proved by the highest performance achieved in style transfer.
+                <br>
+                You can check the <span><b>GitHub Repository</b><img src="img/github-icon.png" style="height: 20px; margin-left: 5px;"></span> for the full code: <br>
+                <a href="https://github.com/maurock/neural_transfer_style" class="text-center btn_custom-inverse first_btn-inverse" style="font-size: 16px; font-family: Roboto; font-weight: 500; width: fit-content; margin: auto; margin-bottom: 10px; margin-top: 10px">Check full code<span class="fa fa-long-arrow-right" aria-hidden="true" style="margin-left: 8px"></span></a><br>
+
+                <h3><b>Learning goals</b></h3>
+                <ul>
+                    <li>Implement a different methodology in Deep Learning</li>
+                    <li>Understand how to use intermediate results in Neural networks</li>
+                </ul>
+                <br>
+                <h3><b>How does it work?</b></h3>
+                The goal of this technique is to apply the style of an image, which we will call "style image", to a target image, conserving the content of the latter. Let's define these two terms: <br>
+                <ul>
+                    <li><b>Style</b> is textures and visual patterns in an image. An example is the brush strokes of an artist. </li>
+                    <li><b>Content</b> is the macrostructure of an image. People, buildings, objects are examples of the content of an image.</li>
+                </ul>
+                The resulting effect is shown here:<br><br>
+
+                <img class="transfer-statue-gif" src="img/transferStyle/output_LoPwet.gif" style='display: block; margin: auto'>
+
+                <br>
+                Let's see the high-level steps:
+                <ul>
+                    <li>Choose the image to style</li>
+                    <li>Choose the style reference image. Usually, this is a painting with a peculiar and well recognizable style.</li>
+                    <li>Initialize a pre-trained Deep neural network, and obtain the feature representations of intermediate layers. This step is done to achieve the representations of both the content image and the style image. In the content image, the best option is to obtain the feature representations of the highest layers, since they contain information on the image macrostructure. For the style reference image, feature representations are obtained from multiple layers at different scales.</li>
+                    <li>Define the loss function to minimize as the sum of the <i>content loss</i>, the <i>style loss</i> and the <i>variation loss</i>. Each iteration, the optimizer generated an image. The content loss is the difference (l2 normalization) between the generated image and the content image, while the style loss between the generated image and the style. We'll see later how these variables are defined mathematically.</li>
+                    <li>Re-iterate the minimization of the loss</li>
+                </ul>
+
+                <h4><b>Processing and deprocessing images</b></h4>
+                First of all, we need to format our images to be used by our network. The CNN that we are going to use is the pre-trained VGG19 convnet. As we process the image into a compatible array, we also need to de-process the resulting image, switching from a BGR to an RGB format.
+                Let's build two auxiliary functions to do this:
+                <br>
+
+
+                <div class="snippet-code-div">
+                    <!-- HTML generated using hilite.me -->
+                    <div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;">
+                        <pre style="margin: 0; line-height: 125%"><span style="color: #888888"># Preprocessing image to make it compatible with the VGG19 model</span>
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">preprocess_image</span>(image_path):
+    img <span style="color: #333333">=</span> load_img(image_path, target_size<span style="color: #333333">=</span>(resized_width, resized_height))
+    img <span style="color: #333333">=</span> img_to_array(img)
+    img <span style="color: #333333">=</span> np<span style="color: #333333">.</span>expand_dims(img, axis<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>)
+    img <span style="color: #333333">=</span> vgg19<span style="color: #333333">.</span>preprocess_input(img)
+    <span style="color: #008800; font-weight: bold">return</span> img
+
+<span style="color: #888888"># Function to convert a tensor into an image</span>
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">deprocess_image</span>(x):
+    x <span style="color: #333333">=</span> x<span style="color: #333333">.</span>reshape((resized_width, resized_height, <span style="color: #0000DD; font-weight: bold">3</span>))
+
+    <span style="color: #888888"># Remove zero-center by mean pixel. Necessary when working with VGG model</span>
+    x[:, :, <span style="color: #0000DD; font-weight: bold">0</span>] <span style="color: #333333">+=</span> <span style="color: #6600EE; font-weight: bold">103.939</span>
+    x[:, :, <span style="color: #0000DD; font-weight: bold">1</span>] <span style="color: #333333">+=</span> <span style="color: #6600EE; font-weight: bold">116.779</span>
+    x[:, :, <span style="color: #0000DD; font-weight: bold">2</span>] <span style="color: #333333">+=</span> <span style="color: #6600EE; font-weight: bold">123.68</span>
+
+    <span style="color: #888888"># Format BGR-&gt;RGB</span>
+    x <span style="color: #333333">=</span> x[:, :, ::<span style="color: #333333">-</span><span style="color: #0000DD; font-weight: bold">1</span>]
+    x <span style="color: #333333">=</span> np<span style="color: #333333">.</span>clip(x, <span style="color: #0000DD; font-weight: bold">0</span>, <span style="color: #0000DD; font-weight: bold">255</span>)<span style="color: #333333">.</span>astype(<span style="background-color: #fff0f0">&#39;uint8&#39;</span>)
+    <span style="color: #008800; font-weight: bold">return</span> x
+</pre>
+                    </div>
+
+
+                </div>
+                <br>
+                <h4><b>Content loss</b></h4>
+                The content loss preserves the content of the main input image to style. Since higher layers of a Convolutional Neural Network contain information of the image macrostructure, we calculate the content loss as the difference (l2 normalization) between the output of the highest layer of the input image, and the same layer of the generated image.<br>
+                The content loss is defined as:<br>
+
+                $$ \mathcal{L}_{content}(p, x, l) = \dfrac{1}{2} \sum_{i, j} (F^l_{ij} - P^l_{ij})^2$$
+
+                In the equation, <i>F</i> is the feature representation of the content image (what the network outputs when we run our input image through), and <i>P</i> the one of the generated image, at a specific hidden layer <i>l</i>.<br>
+                Here's the implementation:
+
+                <div class="snippet-code-div">
+                    <!-- HTML generated using hilite.me -->
+                    <div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;">
+                        <pre style="margin: 0; line-height: 125%"><span style="color: #888888"># The content loss maintains the features of the content image in the generated image.</span>
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">content_loss</span>(layer_features):
+    base_image_features <span style="color: #333333">=</span> layer_features[<span style="color: #0000DD; font-weight: bold">0</span>, :, :, :]                 
+    combination_features <span style="color: #333333">=</span> layer_features[<span style="color: #0000DD; font-weight: bold">2</span>, :, :, :]
+    <span style="color: #008800; font-weight: bold">return</span> K<span style="color: #333333">.</span>sum(K<span style="color: #333333">.</span>square(combination_features <span style="color: #333333">-</span> base_image_features))
+</pre>
+                    </div>
+                </div>
+            
+
+            <br>
+
+            <h4><b>Style loss</b></h4>
+            Understanding the style loss is not as straightforward as the content loss. The goal is to preserve the style of an image (i.e. visual patterns as brush strokes) in the newly generated image. In the previous case, we compare the raw outputs of the intermediate layers. Here, we compare the difference between the Gram matrices of specific layers for the style reference image and the generated image. The <b>Gram matrix</b> is defined as the inner product between the vectorized feature map of a given layer. The meaning of the matrix is to capture the correlations between features of a layer. Calculating the loss for multiple layers allow preserving similar features internally correlated in different layers, between the style image and the generated image.<br>
+            The style loss for a single layer is calculated as: <br>
+
+            $$ \mathcal{L}(a, x) = \sum_{l=0}^Lw_l \dfrac{1}{4 N_2^2M_l^2} \sum_{i, j} (G^l_{ij} - A^l_{ij})^2$$
+            
+            In the equation, <i>A</i> is the Gram matrix for the style image, and <i>G</i> is the Gram matrix for the generated image, both respect to a given layer. <i>N</i> and <i>M</i> are the width and height of the style image.<br>
+            In the equation, <i>A</i> is the Gram matrix for the style image, and <i>G</i> is the Gram matrix for the generated image, both respect to a given layer. <i>N</i> and <i>M</i> are the width and height of the style image.<br>
+            The style loss is calculated first for every single layer and then applied to every layer considered to model the style. Let's implement it: <br>
+
+            <div class="snippet-code-div">
+                <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"># The gram matrix of an image tensor is the inner product between the vectorized feature map in a layer.</span>
+<span style="color: #888888"># It is used to compute the style loss, minimizing the mean squared distance between the feature correlation map of the style image</span>
+<span style="color: #888888"># and the input image</span>
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">gram_matrix</span>(x):
+    features <span style="color: #333333">=</span> K<span style="color: #333333">.</span>batch_flatten(K<span style="color: #333333">.</span>permute_dimensions(x, (<span style="color: #0000DD; font-weight: bold">2</span>, <span style="color: #0000DD; font-weight: bold">0</span>, <span style="color: #0000DD; font-weight: bold">1</span>)))
+    gram <span style="color: #333333">=</span> K<span style="color: #333333">.</span>dot(features, K<span style="color: #333333">.</span>transpose(features))
+    <span style="color: #008800; font-weight: bold">return</span> gram
+
+
+<span style="color: #888888"># The style_loss_per_layer represents the loss between the style of the style reference image and the generated image.</span>
+<span style="color: #888888"># It depends on the gram matrices of feature maps from the style reference image and from the generated image.</span>
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">style_loss_per_layer</span>(style, combination):
+    S <span style="color: #333333">=</span> gram_matrix(style)
+    C <span style="color: #333333">=</span> gram_matrix(combination)
+    channels <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">3</span>
+    size <span style="color: #333333">=</span> resized_width <span style="color: #333333">*</span> resized_height
+    <span style="color: #008800; font-weight: bold">return</span> K<span style="color: #333333">.</span>sum(K<span style="color: #333333">.</span>square(S <span style="color: #333333">-</span> C)) <span style="color: #333333">/</span> (<span style="color: #6600EE; font-weight: bold">4.</span> <span style="color: #333333">*</span> (channels <span style="color: #333333">**</span> <span style="color: #0000DD; font-weight: bold">2</span>) <span style="color: #333333">*</span> (size <span style="color: #333333">**</span> <span style="color: #0000DD; font-weight: bold">2</span>))
+
+<span style="color: #888888"># The total_style_loss represents the total loss between the style of the style reference image and the generated image,</span>
+<span style="color: #888888"># taking into account all the layers considered for the style transfer, related to the style reference image.</span>
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">total_style_loss</span>(feature_layers):
+    loss <span style="color: #333333">=</span> K<span style="color: #333333">.</span>variable(<span style="color: #6600EE; font-weight: bold">0.</span>)
+    <span style="color: #008800; font-weight: bold">for</span> layer_name <span style="color: #000000; font-weight: bold">in</span> feature_layers:
+        layer_features <span style="color: #333333">=</span> outputs_dict[layer_name]
+        style_reference_features <span style="color: #333333">=</span> layer_features[<span style="color: #0000DD; font-weight: bold">1</span>, :, :, :]
+        combination_features <span style="color: #333333">=</span> layer_features[<span style="color: #0000DD; font-weight: bold">2</span>, :, :, :]
+        sl <span style="color: #333333">=</span> style_loss_per_layer(style_reference_features, combination_features)
+        loss <span style="color: #333333">+=</span> (style_weight <span style="color: #333333">/</span> <span style="color: #007020">len</span>(feature_layers)) <span style="color: #333333">*</span> sl
+    <span style="color: #008800; font-weight: bold">return</span> loss
+</pre></div>       
+
+            </div>
+            <br>
+
+
+
+            <h4><b>Variation loss</b></h4>
+            Finally, the last component of the loss is the variation loss. This element is not included in the original paper, and it is not strictly necessary for the success of the project. Still, empirically it was proven that adding this element produces a better result since it smoothes the color variation between close pixels. <br>
+            Let's include this: <br>
+
+             <div class="snippet-code-div">
+                <!-- HTML generated using hilite.me -->
+                <div style="background: #ffffff; overflow:auto;width:auto;div style=" background: #h3h3h3; overflow:auto;width:auto;background: #ffffff;overflow:auto;width:auto;border: solid #c1c1c1;border-width: 5em 5em 5em 5em;border-radius: 0.5em;padding: 0.8em .6em;"">
+                    <pre style="margin: 0; line-height: 125%"><span style="color: #888888"># The total variation loss mantains the generated image loclaly coherent,</span>
+<span style="color: #888888"># smoothing the pixel variations among neighbour pixels.</span>
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">total_variation_loss</span>(x):
+    a <span style="color: #333333">=</span> K<span style="color: #333333">.</span>square(x[:, :resized_width <span style="color: #333333">-</span> <span style="color: #0000DD; font-weight: bold">1</span>, :resized_height <span style="color: #333333">-</span> <span style="color: #0000DD; font-weight: bold">1</span>, :] <span style="color: #333333">-</span> x[:, <span style="color: #0000DD; font-weight: bold">1</span>:, :resized_height <span style="color: #333333">-</span> <span style="color: #0000DD; font-weight: bold">1</span>, :])
+    b <span style="color: #333333">=</span> K<span style="color: #333333">.</span>square(x[:, :resized_width <span style="color: #333333">-</span> <span style="color: #0000DD; font-weight: bold">1</span>, :resized_height <span style="color: #333333">-</span> <span style="color: #0000DD; font-weight: bold">1</span>, :] <span style="color: #333333">-</span> x[:, :resized_width <span style="color: #333333">-</span> <span style="color: #0000DD; font-weight: bold">1</span>, <span style="color: #0000DD; font-weight: bold">1</span>:, :])
+    <span style="color: #008800; font-weight: bold">return</span> K<span style="color: #333333">.</span>sum(K<span style="color: #333333">.</span>pow(a <span style="color: #333333">+</span> b, <span style="color: #6600EE; font-weight: bold">1.25</span>))
+</pre>
+                </div>
+            </div>
+            <br>
+
+            <h4><b>Total loss</b></h4>
+
+            Finally, the total loss is calculated taking into account all these contributions. First, we need to extract the output of the specific layers we choose. To do this, we define a dictionary as &lt;<i>layer name, layer output</i>&gt;:
+
+             <div class="snippet-code-div">
+                <!-- HTML generated using hilite.me -->
+                <div style="background: #ffffff; overflow:auto;width:auto;div style=" background: #h3h3h3; overflow:auto;width:auto;background: #ffffff;overflow:auto;width:auto;border: solid #c1c1c1;border-width: 5em 5em 5em 5em;border-radius: 0.5em;padding: 0.8em .6em;"">
+                    <pre style="margin: 0; line-height: 125%"><span style="color: #888888"># Get the outputs of each key layer, through unique names.</span>
+outputs_dict <span style="color: #333333">=</span> <span style="color: #007020">dict</span>([(layer<span style="color: #333333">.</span>name, layer<span style="color: #333333">.</span>output) <span style="color: #008800; font-weight: bold">for</span> layer <span style="color: #000000; font-weight: bold">in</span> model<span style="color: #333333">.</span>layers])
+</pre>
+                </div>
+            </div>
+
+            Then, we compute the loss calling the functions previously code. Each component is multiplied by specific weights, that we can tune to give intense or lighter effects:
+            <br>
+             <div class="snippet-code-div">
+                <!-- HTML generated using hilite.me -->
+                <div style="background: #ffffff; overflow:auto;width:auto;div style=" background: #h3h3h3; overflow:auto;width:auto;background: #ffffff;overflow:auto;width:auto;border: solid #c1c1c1;border-width: 5em 5em 5em 5em;border-radius: 0.5em;padding: 0.8em .6em;"">
+                    <pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">total_loss</span>():
+    loss <span style="color: #333333">=</span> K<span style="color: #333333">.</span>variable(<span style="color: #6600EE; font-weight: bold">0.</span>)
+
+    <span style="color: #888888"># contribution of content_loss</span>
+    feature_layers_content <span style="color: #333333">=</span> outputs_dict[<span style="background-color: #fff0f0">&#39;block5_conv2&#39;</span>]
+    loss <span style="color: #333333">+=</span> content_weight <span style="color: #333333">*</span> content_loss(feature_layers_content)
+
+    <span style="color: #888888"># contribution of style_loss</span>
+    feature_layers_style <span style="color: #333333">=</span> [<span style="background-color: #fff0f0">&#39;block1_conv1&#39;</span>, <span style="background-color: #fff0f0">&#39;block2_conv1&#39;</span>,
+                            <span style="background-color: #fff0f0">&#39;block3_conv1&#39;</span>, <span style="background-color: #fff0f0">&#39;block4_conv1&#39;</span>,
+                            <span style="background-color: #fff0f0">&#39;block5_conv1&#39;</span>]
+    loss <span style="color: #333333">+=</span> total_style_loss(feature_layers_style) <span style="color: #333333">*</span> style_weight
+
+    <span style="color: #888888"># contribution of variation_loss</span>
+    loss <span style="color: #333333">+=</span> total_variation_weight <span style="color: #333333">*</span> total_variation_loss(combination_image)
+    <span style="color: #008800; font-weight: bold">return</span> loss
+</pre>
+                </div>
+
+            </div>
+            <br>
+
+            <h4><b>Setting up the Neural Network</b></h4>
+            The VGG19 network takes as input a batch of three images: the input content image, the style reference image, and a symbolic tensor which contains the generated image. The first two are constant variables and are defined as <i>Variable</i> using the package keras.backend. The third variable is defined as <i>placeholder</i> since it will change over time while the optimizer updates the results. Once the variables are initialized, we joined them in a tensor which will feed later the network.
+             <div class="snippet-code-div">
+                <!-- HTML generated using hilite.me -->
+                <div style="background: #ffffff; overflow:auto;width:auto;div style=" background: #h3h3h3; overflow:auto;width:auto;background: #ffffff;overflow:auto;width:auto;border: solid #c1c1c1;border-width: 5em 5em 5em 5em;border-radius: 0.5em;padding: 0.8em .6em;"">
+                    <pre style="margin: 0; line-height: 125%"><span style="color: #888888"># Get tensor representations of our images</span>
+base_image <span style="color: #333333">=</span> K<span style="color: #333333">.</span>variable(preprocess_image(base_image_path))
+style_reference_image <span style="color: #333333">=</span> K<span style="color: #333333">.</span>variable(preprocess_image(style_reference_image_path))
+
+<span style="color: #888888"># Placeholder for generated image</span>
+combination_image <span style="color: #333333">=</span> K<span style="color: #333333">.</span>placeholder((<span style="color: #0000DD; font-weight: bold">1</span>, resized_width, resized_height, <span style="color: #0000DD; font-weight: bold">3</span>))
+
+<span style="color: #888888"># Combine the 3 images into a single Keras tensor</span>
+input_tensor <span style="color: #333333">=</span> K<span style="color: #333333">.</span>concatenate([base_image,
+                              style_reference_image,
+                              combination_image], axis<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>)
+</pre>
+                </div>
+
+            </div>
+            <br>
+            Once this is done, we need to define the loss, the gradients and the output. The original paper uses the algorithm L-BFGS as optimizer. One of the limitations of this algorithm is that it requires the loss and the gradients to be passed separately. Since computing them independently would be extremely inefficient, we will implement an Evaluator class that computes the loss and gradients values at once, but returns them separately.
+            Let's do this:
+
+             <div class="snippet-code-div">
+                <!-- HTML generated using hilite.me -->
+                <div style="background: #ffffff; overflow:auto;width:auto;div style=" background: #h3h3h3; overflow:auto;width:auto;background: #ffffff;overflow:auto;width:auto;border: solid #c1c1c1;border-width: 5em 5em 5em 5em;border-radius: 0.5em;padding: 0.8em .6em;"">
+                    <pre style="margin: 0; line-height: 125%">loss <span style="color: #333333">=</span> total_loss()
+
+<span style="color: #888888"># Get the gradients of the generated image</span>
+grads <span style="color: #333333">=</span> K<span style="color: #333333">.</span>gradients(loss, combination_image)
+outputs <span style="color: #333333">=</span> [loss]
+outputs <span style="color: #333333">+=</span> grads
+
+f_outputs <span style="color: #333333">=</span> K<span style="color: #333333">.</span>function([combination_image], outputs)
+
+<span style="color: #888888"># Evaluate the loss and the gradients respect to the generated image. It is called in the Evaluator, necessary to</span>
+<span style="color: #888888"># compute the gradients and the loss as two different functions (limitation of the L-BFGS algorithm) without</span>
+<span style="color: #888888"># excessive losses in performance</span>
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">eval_loss_and_grads</span>(x):
+    x <span style="color: #333333">=</span> x<span style="color: #333333">.</span>reshape((<span style="color: #0000DD; font-weight: bold">1</span>, resized_width, resized_height, <span style="color: #0000DD; font-weight: bold">3</span>))
+    outs <span style="color: #333333">=</span> f_outputs([x])
+    loss_value <span style="color: #333333">=</span> outs[<span style="color: #0000DD; font-weight: bold">0</span>]
+    <span style="color: #008800; font-weight: bold">if</span> <span style="color: #007020">len</span>(outs[<span style="color: #0000DD; font-weight: bold">1</span>:]) <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">1</span>:
+        grad_values <span style="color: #333333">=</span> outs[<span style="color: #0000DD; font-weight: bold">1</span>]<span style="color: #333333">.</span>flatten()<span style="color: #333333">.</span>astype(<span style="background-color: #fff0f0">&#39;float64&#39;</span>)
+    <span style="color: #008800; font-weight: bold">else</span>:
+        grad_values <span style="color: #333333">=</span> np<span style="color: #333333">.</span>array(outs[<span style="color: #0000DD; font-weight: bold">1</span>:])<span style="color: #333333">.</span>flatten()<span style="color: #333333">.</span>astype(<span style="background-color: #fff0f0">&#39;float64&#39;</span>)
+    <span style="color: #008800; font-weight: bold">return</span> loss_value, grad_values
+
+<span style="color: #888888"># Evaluator returns the loss and the gradient in two separate functions, but the calculation of the two variables</span>
+<span style="color: #888888"># are dependent. This reduces the computation time, since otherwise it would be calculated separately.</span>
+<span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">Evaluator</span>(<span style="color: #007020">object</span>):
+
+    <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">__init__</span>(<span style="color: #007020">self</span>):
+        <span style="color: #007020">self</span><span style="color: #333333">.</span>loss_value <span style="color: #333333">=</span> <span style="color: #008800; font-weight: bold">None</span>
+        <span style="color: #007020">self</span><span style="color: #333333">.</span>grads_values <span style="color: #333333">=</span> <span style="color: #008800; font-weight: bold">None</span>
+
+    <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">loss</span>(<span style="color: #007020">self</span>, x):
+        <span style="color: #008800; font-weight: bold">assert</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>loss_value <span style="color: #000000; font-weight: bold">is</span> <span style="color: #008800; font-weight: bold">None</span>
+        loss_value, grad_values <span style="color: #333333">=</span> eval_loss_and_grads(x)
+        <span style="color: #007020">self</span><span style="color: #333333">.</span>loss_value <span style="color: #333333">=</span> loss_value
+        <span style="color: #007020">self</span><span style="color: #333333">.</span>grad_values <span style="color: #333333">=</span> grad_values
+        <span style="color: #008800; font-weight: bold">return</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>loss_value
+
+    <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">grads</span>(<span style="color: #007020">self</span>, x):
+        <span style="color: #008800; font-weight: bold">assert</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>loss_value <span style="color: #000000; font-weight: bold">is</span> <span style="color: #000000; font-weight: bold">not</span> <span style="color: #008800; font-weight: bold">None</span>
+        grad_values <span style="color: #333333">=</span> np<span style="color: #333333">.</span>copy(<span style="color: #007020">self</span><span style="color: #333333">.</span>grad_values)
+        <span style="color: #007020">self</span><span style="color: #333333">.</span>loss_value <span style="color: #333333">=</span> <span style="color: #008800; font-weight: bold">None</span>
+        <span style="color: #007020">self</span><span style="color: #333333">.</span>grad_values <span style="color: #333333">=</span> <span style="color: #008800; font-weight: bold">None</span>
+        <span style="color: #008800; font-weight: bold">return</span> grad_values
+
+evaluator <span style="color: #333333">=</span> Evaluator()
+</pre>
+                </div>
+
+            </div>
+
+            <br>
+            <h4><b>Last step</b></h4>
+            Finally, everything is set! The last step is to iterate the optimizer multiple times until we reach the desired loss or the desired result.
+            We'll save the result along the iterations, to check that the algorithm is working as expected. If the result is not satisfying, we can play with the weights in order to improve the generated image.<br>
+             <div class="snippet-code-div">
+                <!-- HTML generated using hilite.me -->
+                <div style="background: #ffffff; overflow:auto;width:auto;div style=" background: #h3h3h3; overflow:auto;width:auto;background: #ffffff;overflow:auto;width:auto;border: solid #c1c1c1;border-width: 5em 5em 5em 5em;border-radius: 0.5em;padding: 0.8em .6em;"">
+                    <pre style="margin: 0; line-height: 125%"><span style="color: #888888"># The oprimizer is fmin_l_bfgs</span>
+<span style="color: #008800; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">range</span>(iterations):
+    <span style="color: #007020">print</span>(<span style="background-color: #fff0f0">&#39;Iteration: &#39;</span>, i)
+    x, min_val, info <span style="color: #333333">=</span> fmin_l_bfgs_b(evaluator<span style="color: #333333">.</span>loss,
+                                     x<span style="color: #333333">.</span>flatten(),
+                                     fprime<span style="color: #333333">=</span>evaluator<span style="color: #333333">.</span>grads,
+                                     maxfun<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">15</span>)
+
+    <span style="color: #007020">print</span>(<span style="background-color: #fff0f0">&#39;Current loss value:&#39;</span>, min_val)
+
+    <span style="color: #888888"># Save current generated image</span>
+    img <span style="color: #333333">=</span> deprocess_image(x<span style="color: #333333">.</span>copy())
+    fname <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&#39;img/new&#39;</span> <span style="color: #333333">+</span> np<span style="color: #333333">.</span>str(i) <span style="color: #333333">+</span> <span style="background-color: #fff0f0">&#39;.png&#39;</span>
+    save(fname, img)
+</pre>
+                </div>
+
+            </div>
+            <br>
+            To see the whole code, please refer to the GitHub link provided at the beginning of the page.
+            <br><br>
+
+            <h4><b>Awesome results</b></h4>
+            <br>
+            <img src="img/transferStyle/combined.png" class="container" style="object-fit: cover; margin: auto; display: block">
+            <br>
+            <br>
+            <img src="img/transferStyle/combined3.png" class="container" style="object-fit: cover; margin: auto; display: block">
+            <br>
+            <br>
+            <img src="img/transferStyle/combined2.jpg" class="container" style="object-fit: cover; margin: auto; display: block">
+
+        </div>
+        </div>
+    </section>
+
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-to-top d-lg-none position-fixed ">
+        <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+    <br>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/freelancer.min.js"></script>
+    <!-- Math Jax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</body>
+
+</html>
