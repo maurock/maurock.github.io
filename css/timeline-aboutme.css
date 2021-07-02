@@ -88,7 +88,7 @@ padding-left:90px;
   top: 16px;
   left: 50%;
   margin-left: -25px;
-  background-color: #18bc9c;
+  background-color: #73c2fb;
   z-index: 100;
   border-top-right-radius: 50%;
   border-top-left-radius: 50%;
@@ -161,12 +161,18 @@ padding-left:90px;
     }
     
     h6 {
-        font-size: 14px;
+        font-size: 16px;
     }
      .timeline-body > p {
         font-size: 16px;
         font-family: Nunito;
+         margin-bottom: 25px;
     }  
+}
+
+ul.timeline2 {
+    list-style-type: none; 
+    padding: 0;
 }
 
 /* Only mobile */
