@@ -21,15 +21,14 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto:700,200,400,300, 500" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
         <!-- Plugin CSS -->
         <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
 
         <!-- Custom styles for this template -->
-        <link href="css/code.css" rel="stylesheet">
         <link href="css/freelancer.css" rel="stylesheet">
-        <link href="css/code.css" rel="stylesheet">
         
 </head>
 
@@ -38,28 +37,38 @@
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" style="font-family: Raleway; font-size: 20px;" href="https://vegaoscar.000webhostapp.com/index.html">Mauro Comi</a>
+                <a class="navbar-brand js-scroll-trigger" style="font-family: Raleway; font-size: 20px;" href="https://maurocomi.com/index.html">Mauro Comi</a>
                 <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fa fa-bars"></i>
                 </button>
+                
+                <div class="cr cr-top cr-right cr-sticky cr-red">Work in progress</div>
+
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    
-                    <div class="cr cr-top cr-right cr-sticky cr-red">Work in progress</div>
-
-                    <ul class="navbar-nav ml-auto">
-
-                        <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html#portfolio" style="color: #fff !important">My Projects</a>
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html#about" style="color: #fff !important">About me</a>
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html#contact" style="color: #fff !important">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <div>
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#research">Research</a>
+                        </div>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <div>
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">My Projects</a>
+                        </div>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <div>
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About me</a>
+                        </div>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <div>
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
             </div>
         </nav>
 
@@ -198,6 +207,8 @@
                 <img src="img/rendering/comparison_uni_imp.png" class="container" style="max-width: 90%; height: 90 %;object-fit: cover; display:block;"> <br>
 
                 In my next article, I will explore the concept of path guiding accoridng to a policy learned using Q-Learning. This approach was studied by <a href = "https://arxiv.org/abs/1701.07403">Dahm and Keller</a> and gives a beautiful example of how the structural similarity between the Bellman equation and the rendering equation can be used for path tracing.
+            </div>   
+        </section>
    
         <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
         <div class="scroll-to-top d-lg-none position-fixed ">
@@ -209,7 +220,9 @@
         
 
                     
-
+        <!-- Math Jax -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
         <!-- Bootstrap core JavaScript -->
         <script src="vendor/jquery/jquery.min.js"></script>

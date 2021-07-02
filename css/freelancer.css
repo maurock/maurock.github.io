@@ -142,6 +142,10 @@ section h2 {
     padding: 0.8rem;
 }
 
+
+
+
+
 @media (min-width: 992px) {
     #mainNav {
         padding-top: 1.5rem;
@@ -182,7 +186,13 @@ section h2 {
     #mainNav.navbar-shrink .navbar-brand {
         font-size: 1.5em;
     }
+    
+    #mainNav .navbar-nav li.nav-item a.nav-link{
+        color: #fff !important;
+    }
 }
+
+
 
 /* For mobile */
 header.masthead {
@@ -1028,3 +1038,4 @@ h4 {
     font-family: 'Fira Code';
     margin-top: 2vh;
 }
+
