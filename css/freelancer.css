@@ -1017,13 +1017,14 @@ h4 {
 @media only screen and (max-width: 800px) {
     .MathJax {
         font-size: 1 !important;
+        overflow-x: scroll;
     }
 }
 
 /* for desktop */
 @media only screen and (min-width: 800px) {
     .MathJax {
-        font-size: 1.5em !important;
+        font-size: 1.3em !important;
     }
 }
 
@@ -1038,4 +1039,3 @@ h4 {
     font-family: 'Fira Code';
     margin-top: 2vh;
 }
-
