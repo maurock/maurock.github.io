@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://www.maurocomi.com/</loc>
+  <lastmod>2021-07-03T12:08:16+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.maurocomi.com/papers.html</loc>
+  <lastmod>2021-07-03T12:08:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.maurocomi.com/snake.html</loc>
+  <lastmod>2021-07-03T12:08:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.maurocomi.com/transfer-style.html</loc>
+  <lastmod>2021-07-03T12:08:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.maurocomi.com/flight.html</loc>
+  <lastmod>2021-07-03T12:08:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.maurocomi.com/flinkHighway.html</loc>
+  <lastmod>2021-07-03T12:08:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.maurocomi.com/hbase1.html</loc>
+  <lastmod>2021-07-03T12:08:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.maurocomi.com/kidney.html</loc>
+  <lastmod>2021-07-03T12:08:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.maurocomi.com/monteCarloPathTracer.html</loc>
+  <lastmod>2021-07-03T12:08:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.maurocomi.com/pathTracerQLearning.html</loc>
+  <lastmod>2021-07-03T12:08:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.maurocomi.com/index.html</loc>
+  <lastmod>2021-07-03T12:08:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+</urlset>
