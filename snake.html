@@ -76,12 +76,12 @@
             <img src="img/neural-network.jpg" class="container" style="max-width: 100%; height: 30vh;object-fit: cover">
 
             <div class="snippet">
-                <h3><b>Introduction</b></h3>The goal of this project is to develop a <b>AI Bot</b> able to learn how to play the popular game Snake from scratch. In order to do it, I implemented a <b>Deep Reinforcement Learning algorithm</b>, a field of unsupervised Machine Learning. This approach consists in giving the system parameters related to its state, and a positive or negative reward based on its actions. No rules about the game are given, and initially the Bot has no information on what it needs to do. The goal for the system is to figure it out and elaborate a strategy to maximize the score - or the reward.<br>
-                We are going to see how a Deep Q-Learning algorithm learns how to play snake, scoring up to 50 points and showing a solid strategy after only 5 minutes of training.<br>
+                <h3><b>Introduction</b></h3>The goal of this project is to develop an <b>AI agent</b> able to learn how to play the popular game Snake from scratch. To do so, I implemented a <b>Deep Reinforcement Learning algorithm</b>. This approach consists in the interaction between two components: an environment (the game itself) and an agent (Snake). The agent collects information about its current state (we will see later what this means) and performs an action accordingly. The environment rewards or punishes the agent based on the performed action. Over time, the agent learns what actions maximize the reward (in our case, what actions lead to eating the apple and avoiding the walls). No rules about the game are given. Initially, Snake does not know what to do and performs random actions. The goal is to figure it out and elaborate a strategy (technically called "policy") to maximize the score - or the reward.<br>
+                We are going to see how a <b>Deep Q-Learning algorithm</b> learns how to play Snake, scoring up to 50 points and showing a solid strategy in just 5 minutes.<br> Optionally, the code shows how to optimize the artificial neural networks parameters using <a href="https://distill.pub/2020/bayesian-optimization/">Bayesian Optimization</a>. This procedure is not necessary, but I want to mention it for the advanced readers. 
                 You can check the <span><b>GitHub Repository</b><img src="img/github-icon.png" style="height: 20px; margin-left: 5px;"></span> for the full code: <br>
                 <a href="https://github.com/maurock/snake-ga" class="text-center btn_custom-inverse first_btn-inverse" style="font-size: 16px; font-family: Roboto; font-weight: 500; width: fit-content; margin: auto; margin-bottom: 10px; margin-top: 10px">Check full code<span class="fa fa-long-arrow-right" aria-hidden="true" style="margin-left: 8px"></span></a>
 
-                Here you can see the two games: on the left, the AI does not know anything about the game. On the right, the AI is trained and learnt how to play.<br>
+                Here you can see the two games: on the left, the AI <i>before</i> training. On the right, the AI <i>after</i> training.<br>
 
                 <div style="text-align: center">
                     <img class="snakegif-norl" , src="img/notraining.gif">
@@ -95,11 +95,15 @@
                 </ul>
                 <br>
                 <h3><b>How does it work?</b></h3>
-                Reinforcement Learning is an approach based on Markov Decision Process to make decisions, as<a href="http://cs229.stanford.edu/notes/cs229-notes12.pdf" style="color: #2885e2ed"> perfectly explained here</a> by Andrew NG at Standford University. <br>
-                In my implementation, I used <b>Deep Q-Learning</b> instead of a traditional supervised Machine Learning approach. What's the difference? Traditional ML algorithms need to be trained with an input and a "correct answer" called target. The system will then try to learn how to predict the target according to new input. In this example, we don't know what's the best action to take at each state of the game, so a traditional approach would not be effective. <br>
-                In Reinforcement Learning we pass a <b>reward</b>, positive or negative depending on the action the system took, and the algorithm needs to learn what actions can maximize the reward, and which need to be avoided. <br>
+                <p>In my implementation, I used <b>Deep Q-Learning</b> instead of a traditional supervised Machine Learning approach. What's the difference? Traditional ML algorithms need to be trained with an input and a "correct answer" called target. The system tries to learn how to predict the target from new input. In this example, we don't know the best action to take at each state of the game (this is actually what we are trying to learn!), so a traditional approach would not be effective. This is why we use Reinforcement Learning. </p>
+                    
+                <h4><b>Reinforcement Learning in a nutshell</b></h4>
+                <p>Reinforcement Learning is a family of algorithms and techniques used for Control (e.g. Robotics, Autonomous driving, etc..) and Decision making. These approaches solve problems that need to be expressed as a Markov Decision Process (MDP). What does this mean? A Markov Decision Process is a framework described by a set of states \(\mathcal{S}\) (for example, an index based on Snake's position), a set of actions \(\mathcal{A}\) (for example, Up, Down, Right, Left), a reward function \(\mathcal{R}\) (for example, +10 when Snake eats an apple, -10 when Snakes hits a wall) and optionally a transition function \(\mathcal{T}\) that describes the transitions among states. To use Reinforcement Learning, we need to formalize our problem using these 4 components. If this is confusing, <i>fear not</i>, everything will be clear in a few minutes. <br>                
+                In Reinforcement Learning, we have two main components: the <b>environment</b> (our game) and the <b>agent</b> (our Snake.. or to be correct, the Deep Neural Network that drives our Snake's actions). Every time the agent performs an action, the environment gives a reward to the agent, which can be positive or negative depending on how good the action was from that specific state. The goal of the agent is to learn what actions maximize the reward, given every possible state. States are the observations that the agent receives at each iteration from the environment. A state can be its position, its speed, or whatever array of variables describes the environment. To be more rigorous and to use a Reinforcement Learning notation, the strategy used by the agent to take decisions is called <b>policy</b>. On a theoretical level, a policy is a mapping from the state space (the space of all the possible observations that the agent can receive) into the action space (the space of all the actions the agent can take, say UP, DOWN, LEFT and RIGHT). The optimal agent is able to generalize over the entire state space to always predict the best possible action.. even for those situations that the agent has never seen before! If this is not clear, the next example will clarify your doubts. </p>
 
-                To understand how the agent takes decisions, it's important to understand what a Q-Table is. A Q-table is a matrix, which correlates the <i>state</i> of the agent with the possible actions that the system can adopt. The values in the table are the action's probability of success, based on the rewards it got during the training. <br>
+                <h4><b>How does the agent takes decisions?</b></h4>
+
+                To understand how the agent takes decisions, it is very important to understand what a Q-Table is. A Q-table is a matrix that relates the <i>state</i> of the agent to the possible actions that it can take. The values in the table are the actions' probability of success (technically, a measure of the expected cumulative reward), which were updated based on the rewards the agent received during training. An example of a greedy policy is a policy where the agent looks up the table and selects the action that leads to the highest score. <br>
                 <br>
                 <div>
                     <table class="table table-bordered" style="width: 60%; line-height :1em; margin: auto">
@@ -146,8 +150,10 @@
                     </table>
                     <p style="text-align: center;"><i>Representation of a Q-Table</i></p>
                 </div>
-
-                Deep Q-Learning increases the potentiality of Q-Learning, continuously updating the Q-table based on the prediction of future states.
+                
+                In the example, we might want to choose RIGHT if we are in State 2, and we might want to go UP if we are in State 4. The values in the Q-Table represent the cumulative expected reward of taking action <i>a</i> from a state <i>a</i>. In other words, these values give us an indication of the average reward that the agent obtains if it takes action a from that state s .This table is the policy of the agent that we mentioned before: it determines what actions should be taken from every state in order to maximize the expected reward. What is the problem with this? The policy is a table, hence it can only handle a finite state space. In other words, we cannot have an infinitely large table with infinite states. This might be a problem for those situations where we have a very big number of possible states.
+                <br>
+                Deep Q-Learning increases the potentiality of Q-Learning by "converting" the Q-matrix into a Neural Network - a powerful representation of a parametrized function. <br>
                 The Q-values are updated according to the Bellman equation: <br><br>
                 <img class="bellman-eq" src="img/bellman.bmp.png" style="margin: auto;display: block;"><br>
 
@@ -155,8 +161,8 @@
                 <ul>
                     <li> The game starts, and the Q-value is randomly initialized.</li>
                     <li>The system gets the current state <b>s</b>.</li>
-                    <li>Based on s, it executes an <b>action</b>, randomly or based on its neural network. During the first phase of the training, the system often chooses random actions in order to maximize <b>exploration.</b> Later on, the system relies more and more on its neural network. </li>
-                    <li>When the AI chooses and performs the action, the system collects the <b>reward</b>. It now gets the new state <b>state'</b> and it updates its Q-value with the Bellman equation as mentioned above. Also, for each move it stores the original state, the action, the state reached after performed that action, the reward obtained and whether the game ended or not. This data is later sampled to train the neural network.</li>
+                    <li>The agent executes an <b>action</b> based on the collected state. The action can either be random or returned by its neural network. During the first phase of the training, the system often chooses random actions to maximize <b>exploration</b>. Later on, the system relies more and more on its neural network.</li>
+                    <li>When the AI chooses and performs the action, the environment attributes a <b>reward</b>. It now gets the new state <b>state'</b> and it updates its Q-value with the Bellman equation as mentioned above. Also, for each move it stores the original state, the action, the state reached after performed that action, the reward obtained and whether the game ended or not. This data is later sampled to train the neural network.</li>
                     <li>These last two operations are repeated until a certain condition is met</li><br>
                 </ul>
                 <h4><b>State</b></h4>
@@ -168,7 +174,7 @@
                 - if the food is above, below, on the left or on the right.<br><br>
 
                 <h4><b>Loss</b></h4>
-                The Deep neural network optimizes the answer (action) to a specific input (state) trying to maximize the reward. The value to express how good is the prediction is called Loss. The job of a neural network is to minimize the loss, reducing then the difference between the real target and the predicted one.
+                The Deep neural network optimizes the answer (action) to a specific input (state) while trying to maximize the reward. The value to express how good is the prediction is called Loss. The job of a neural network is to minimize the loss, reducing then the difference between the real target and the predicted one.
                 In our case, the loss is expressed as:
 
                 $$ loss = \left( r + \gamma max_a  \textcolor{red}{\hat{Q}}(s, a') - \textcolor{red}{Q}(s, a) \right)^2 $$
@@ -177,18 +183,18 @@
                 
                 <h4><b>Reward</b></h4>
                 As said, the AI tries to maximize the reward.
-                The only reward given to the system is when it eats the food target (+10). If the snake hits a wall or hits itself, the reward is negative (-10). Additionally, there could be given a positive reward for each step the snake takes without dying. In that case, the risk is that it prefers to run in a circle, since it gets positive rewards for each step, instead of reaching for the food. <br><br>
+                We positively reward the agent when it eats the food target (+10). If Snake hits a wall or hits itself, we punish the agent with a negative reward (-10). Additionally, we could give a positive reward for each step Snake takes without dying. In that case, Snake might exploit the situation by running in a circle instead of reaching the food, since it would get positive rewards for each step while avoiding the risk of collision against a wall. Sometimes, Reinforcement Learning agents outsmart us, presenting flaws in our strategy that we did not anticipate. <br><br>
 
                 <h4><b>Deep Neural Network</b></h4>
-                The brain of the artificial intelligence uses <b>Deep learning</b>. It consists of 3 hidden layers of 120 neurons, and three Dropout layers to optimize generalization and reduce overfitting. The learning rate is not fixed, it starts at 0.0005 and decreases to 0.000005. Different architectures and different hyper-parameters contribute to a quicker convergence to an optimum, as well as possible highest scores.<br>
-                The network receives as input the state, and returns as output three values related to the three actions: move left, move right, move straight. The last layer uses the Softmax function to returns probabilities. <br>
+                The brain of our Artificial Intelligence agent uses <b>Deep learning</b>. It consists of 3 hidden layers of 120 neurons, and three Dropout layers to optimize generalization while reducing overfitting. The learning rate is not fixed, it starts at 0.0005 and decreases to 0.000005. Different architectures and different hyper-parameters contribute to a quicker convergence to an optimum, as well as possible highest scores.<br>
+                The network receives as input the state, and returns as output three values related to the three actions: move left, move right, move straight. The last layer uses the Softmax function. <br>
                 <img class="snake-neural-net" src="img/neural_net.PNG" style="margin: auto; display: block"><br>
 
                 <h4><b>Final results</b></h4>
-                At the end of the implementation, the AI scores 40 points on average in a 20x20 game board ( Each fruit eaten rewards one point). The record is 83 points. <br>
-                To visualize the learning process and how effective is the approach of Deep Reinforcement Learning, I plot scores along the matches. As we can see in the graph below, during the first 50 games the AI scores poorly, less than 10 points on average. Indeed, in this phase, the system is often taking random actions, in order to explore the board and store in its memory many different states, actions, and rewards. During the last 50 games the system is not taking random actions anymore, but it only chooses what to do based on its neural network.<br>
+                At the end of the implementation, the AI scores 40 points on average in a 20x20 game board (each fruit eaten rewards one point). The record is 83 points. <br>
+                To visualize the learning process and how effective the approach of Deep Reinforcement Learning is, I plot scores along the matches. As we can see in the graph below, during the first 50 games the AI scores poorly (less than 10 points on average). This is expected: the system is taking random actions to explore the board and store many different states, actions, and rewards in its memory. During the last 50 games, the agent does not take random actions anymore, but it only chooses the best actions according to its policy.<br>
                 <blockquote>
-                    <p><b>In only 150 games - less than 5 minutes - the system went from 0 points and no clue whatsoever on the rules to 45 points and a solid strategy!</b></p>
+                    <p><b>In only 150 games - less than 5 minutes - the agent learnt a solid strategy and scored 45 points!</b></p>
                 </blockquote>
                 <img class="snake-score" src="img/result.PNG" style="display: block; margin: auto">
             </div>
