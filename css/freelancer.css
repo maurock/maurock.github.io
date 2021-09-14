@@ -1037,3 +1037,20 @@ h4 {
     font-family: 'Fira Code';
     margin-top: 2vh;
 }
+
+.blockquote2 {
+  font-style: italic;
+  font-size: 1.3em;
+  margin-left: 24px;
+  font-family: Nunito;
+  border-left: 4px solid #CCC;
+  padding-left: 8px;
+}
+
+.card-img-top-books{
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Develop an AI agent using Deep Reinforcement Learning to play the game Snake">
+    <meta name="author" content="Mauro Comi">
+    <title>Deep Reinforcement Learning for Games</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:700,200,400,300, 500" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700,200,400,300, 500" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/freelancer.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" style="font-family: Raleway; font-size: 20px;" href="https://maurocomi.com/index.html">Mauro Comi</a>
+            <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <div>
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html#research">Research</a>
+                        </div>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <div>
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html#portfolio">My Projects</a>
+                        </div>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <div>
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html#about_desktop_mobile">About me</a>
+                        </div>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <div>
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html#contact">Contact</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+      <!-- My Bookshelf Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="text-center text-uppercase text-secondary mb-0"><img src="img/books/book-stack.png" style="height: 1.3em; margin-right: 15px;">My Bookshelf</h2>
+            <br><br>
+            <div class="blockquote2">"Books are a uniquely portable magic." - Stephen King</div><br>
+            <h4 class="mb-0 text-intro">I like to read both Non-Fiction and Fiction books. I have a <a href="https://github.com/maurock/snake-ga"><b>Goodreads profile</b><img src="img/books/goodreads_logo.png" style="height: 1.3em; margin-left: 5px;"></a> where I (try to) keep track of the books I read and my wishlist. I recently started to write here notes for some of the books I read: </h4><br><br>
+            
+            <!-- Non-Fiction -->
+            <h3 class="text-center text-secondary mb-0">Non-Fiction</h3>
+            <br>
+            <div class="row">
+                <div class="col-md-6 col-lg-4" id="card1">
+                    <div class="card">
+                        <img class="card-img-top-books" src="img/books/remember.jpg" alt="Cover of the book showing the title surrounded by a red ribbon" style="width:50%">
+                        <div class="card-body">
+                            <h4 class="card-title">Remember: The Science of Memory and the Art of Forgetting</h4>
+                            <p class="card-text">Lisa Genova</p>
+                            <hr />
+                            <ul class="skillList card-title" style="padding-left: 0px;">
+                                <li>Neuroscience</li>
+                            </ul>
+                            <a href="https://www.notion.so/maurocomi/Remember-The-Science-of-Memory-and-the-Art-of-Forgetting-7269a48dfe65451ca0a41f35aaa0dfcf" class="btn_custom first_btn float-right">Read My notes<span class="fa fa-long-arrow-right" aria-hidden="true" style="margin-left: 8px"></span></a>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+            <br><br>
+            
+            <!-- Fiction -->
+            <h3 class="text-center text-secondary mb-0">Fiction</h3>
+            <br>
+            <div class="row">
+                <div class="col-md-6 col-lg-4" id="card1">
+                    <div class="card">
+                        <img class="card-img-top-books" src="img/books/sombradelviento.jpg" alt="Cover of the book showing the title and two figures, a taller and a shorter one. In the background, a black and white street" style="width:50%">
+                        <div class="card-body">
+                            <h4 class="card-title">The Shadow of the Wind</h4>
+                            <p class="card-text">Carlos Ruiz Zafón</p>
+                            <hr />
+                            <ul class="skillList card-title" style="padding-left: 0px;">
+                                <li>Mistery</li>
+                                <li>Historical</li>
+                                <li>Drama</li>
+                            </ul>
+                            <a href="https://maurocomi.notion.site/La-sombra-del-viento-33df6d3f8c7f4e7cabce6d7ce470f680" class="btn_custom first_btn float-right">Read My notes<span class="fa fa-long-arrow-right" aria-hidden="true" style="margin-left: 8px"></span></a>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </div>
+    
+    </section>
+
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-to-top d-lg-none position-fixed ">
+        <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+    <br>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/freelancer.min.js"></script>
+
+</body>
+
+</html>
