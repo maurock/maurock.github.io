@@ -70,8 +70,8 @@ section h2 {
 
 @media (min-width: 992px) {
     section h2 {
-        font-size: 3rem;
-        line-height: 2.5rem;
+        font-size: 2.8rem;
+        line-height: 2rem;
     }
 }
 
@@ -932,7 +932,7 @@ h4 {
 /* for desktop */
 @media only screen and (min-width: 800px) {
     .snippet {
-        line-height: 2em;
+        line-height: 1.7em;
         font-size: 1.1rem;
     }
 }
@@ -1053,4 +1053,11 @@ h4 {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* for desktop */
+@media only screen and (min-width: 992px) {
+    .container {
+        max-width: 1000px;
+    }
 }
