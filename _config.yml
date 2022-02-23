@@ -33,9 +33,13 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-relative-links
+  - jekyll-paginate
 relative_links:
   enabled: true
   collections: true
+
+#Others
+markdown: kramdown
 
 # Exclude from processing.
 # The following items will not be processed, by default.

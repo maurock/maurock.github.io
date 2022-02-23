@@ -1,0 +1,36 @@
+/* Image profile for mobile */
+@media only screen and (max-width: 992px) {
+    #img-profile{
+        display:block;
+        margin:10px auto;
+        width:280px;
+        height:280px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #img-profile{
+        float: right;
+        width:280px;
+        height:280px;
+    }
+}
+
+/* Image papers for mobile */
+@media only screen and (max-width: 992px) {
+    #img-paper{
+        float:left;
+        margin:10px;
+        width:150px;
+        height:150px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #img-paper{
+        float: left;
+        margin:10px;
+        width:150px;
+        height:150px;
+    }
+}
