@@ -8,7 +8,7 @@ description: Mauro Comi's academic profile
 ---
 <img id="img-profile" src="../img/jumping_me.png" alt="A picture of me jumping in front of a lighthouse">
 
-I am a PhD student in Machine Learning at the [University of Bristol](https://www.bristol.ac.uk/) (UK). My research interests lie at the intersection of Reinforcement Learning, Bayesian inference and physics simulation. I have a soft spot for computer graphics and physically-based rendering, and I like to keep up with research in this area as a side-interest. Previously, I worked as a Machine Learning research engineer in autonomous driving at the Netherlands Organisation for Applied Scientific Research (TNO).
+I am a PhD student in **Machine Learning** at the [University of Bristol](https://www.bristol.ac.uk/) (UK). My research interests lie at the intersection of **Reinforcement Learning**, **3D Deep Learning**, **robotics perception**, and **physics simulation**. I have a soft spot for computer graphics and physically-based rendering, and I like to keep up with research in this area as a side-interest. Previously, I worked as a Machine Learning research engineer in autonomous driving at the Netherlands Organisation for Applied Scientific Research (TNO).
 
 I read papers following Andrew Ng's invaluable tips on <a href="https://youtu.be/733m6qBH-jI">How to read research papers (Andrew NG)</a>
 
