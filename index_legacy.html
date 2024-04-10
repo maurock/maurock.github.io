@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<div id="markdown-content"></div> 
-
 <head>
 
     <meta charset="utf-8">
@@ -76,7 +74,63 @@
             </div>
         </div>
     </nav>
-   
+
+    <!-- Header -->
+    <header class="masthead text-white text-center initial-bg title-desk" style="height: 100vh">
+        <div class="container title-desk" style="text-align: center; color: #2C3E50; transform: translateY(-60px);">
+            <div class="transparent-box">
+                <div class="typewriter" style="z-index: 5px">
+                    <h1 style="padding-bottom: 20px; font-family: 'Anonymous Pro', monospace;">print("Mauro's Portfolio")</h1>
+                </div>
+                <hr class="star-light" style="width: 400px; display:  inline-block;">
+                <h4 class="mb-0" style="font-family: Raleway; font-weight: 400; line-height: 1.4em;"><b>Hello there!</b><br>I'm Mauro, a PhD student in Machine Learning at the University of Bristol (UK). I am passionate about AI and its limitless applications.<br></h4>
+            </div>
+        </div>
+    </header>
+
+    <header class="masthead text-white text-center initial-bg div-only-mobile">
+        <div class="container div-only-mobile" style="text-align: center; color: #2C3E50; transform: translateY(-60px); ">
+            <div class="transparent-box">
+                <h4 class="mb-0" style="font-family: Raleway; font-weight: 400; line-height: 1.4em; font-size: 38px"><b>Mauro's Portfolio</b></h4>
+                <hr class="star-light" style="width: 500px; display:  inline-block;">
+                <h4 class="mb-0" style="font-family: Raleway; font-weight: 400; font-size: 18px;"><b>Hello there!</b><br>I'm Mauro, a PhD student in Machine Learning at the University of Bristol (UK). I am passionate about AI and its limitless applications.<br></h4>
+            </div>
+        </div>
+        <div class="arrow bounce js-arrow-scroll">
+        </div>
+    </header>
+    
+        <!-- Research Section -->
+        <section class="bio" id="bio">
+            <!-- Machine Learning and Data Science -->
+            <div class="container">
+                <h2 class="text-center text-uppercase text-secondary mb-0">BIO</h2>
+                <br><br>
+                <div class="container">
+                    <div class="row">
+                      <div class="col-3">
+                        <img style="vertical-align:middle; width:100%" src="img/jumping_me.png">
+                      </div>
+                      <div class="col-9">
+                        <h4 class="text-intro">Hi, my name is Mauro Comi. I am a PhD student in Machine Learning at the <a href="https://www.bristol.ac.uk/study/postg">University of Bristol</a> (UK) supervised by <a href="https://lepora.com/">Prof Nathan Lepora</a> and <a href="http://www.gatsby.ucl.ac.uk/~laurence/">Dr Laurence Aitchison</a>. 
+
+                            My research interests lie at the intersection of <b>3D Deep Learning, Neural Fields, and Robotics Perception</b> (Computer Vision, Tactile Sensing). I have a soft spot for <b>Computer Graphics and Physically-Based Rendering</b>. Previously, I worked as a Machine Learning research engineer in autonomous driving at the <a href="https://www.tno.nl/en/">Netherlands Organisation for Applied Scientific Research (TNO)</a>, where I developed <b>Deep Reinforcement Learning</b> applications for self-driving vehicles.<br>
+
+                            I obtained my Double Master's degree in Data Science at the <a href="https://www.tue.nl/en/">Eindhoven University of Technology</a> and <a href="</a>https://www.upm.es/">Universidad Politecnica de Madrid</a>. 
+                            I did my Master's thesis on Deep Reinforcement Learning for importance sampling in physically-based rendering.<br><br>
+                            
+                            To know about my research, papers, and talks:
+                        </h4>                                                            
+                      </div>
+                      <a href="blog/research.html" class="btn_custom first_btn" style="width: fit-content; margin: auto; margin-top: 20px">Go to my academic profile</a>
+                  </div>
+                </div>
+            </div>
+    </section>
+
+
+
+
     <!-- My Projects Section -->
     <section class="portfolio" id="portfolio">
         <!-- Machine Learning and Data Science -->
@@ -84,52 +138,15 @@
             <h2 class="text-center text-uppercase text-secondary mb-0">Machine Learning and Side Projects</h2>
             <br><br>
             <h4 class="mb-0 text-center text-intro">This is a partial list of my Machine Learning and Data Science projects completed in my free time or for academic courses. Main findings and challenges are highlighted and reported using R Notebooks or IPython Notebooks. My professional projects are not included. </h4>
-
             
             <hr class="star-dark mb-5">
-            
             <div class="row">
-
-                <div class="col-md-6 col-lg-4" id="card1">
-                    <div class="card">
-                        <img class="card-img-top" src="/img/research/snap_tap.png" alt="Card image" style="width:100%">
-                        <div class="card-body">
-                            <h4 class="card-title">Tactile-Informed 3D Gaussian Splatting </h4>
-                            <p class="card-text">Reconstructing challenges surfaces with vision and tactile sensing within a 3D Gaussian Splatting framework.</p>
-                            <hr />
-                            <ul class="skillList card-title" style="padding-left: 0px;">
-                                <li>PYTHON</li>
-                                <li>PYTORCH</li>
-                            </ul>
-                            <!--"btn btn-primary float-right"-->
-                            <a href="https://github.com/maurock/Dynamic3DGaussians" class="btn_custom first_btn float-right">View More<span class="fa fa-long-arrow-right" aria-hidden="true" style="margin-left: 8px"></span></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4" id="card1">
-                    <div class="card">
-                        <img class="card-img-top" src="/img/robot_teapot3.png" alt="Card image" style="width:100%">
-                        <div class="card-body">
-                            <h4 class="card-title">TouchSDF </h4>
-                            <p class="card-text">Implementation of the TouchSDF paper on 3D shape reconstruction using vision-based tactile sensing.</p>
-                            <hr />
-                            <ul class="skillList card-title" style="padding-left: 0px;">
-                                <li>PYTHON</li>
-                                <li>PYTORCH</li>
-                            </ul>
-                            <!--"btn btn-primary float-right"-->
-                            <a href="https://github.com/maurock/TouchSDF" class="btn_custom first_btn float-right">View More<span class="fa fa-long-arrow-right" aria-hidden="true" style="margin-left: 8px"></span></a>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="col-md-6 col-lg-4" id="card1">
                     <div class="card">
                         <img class="card-img-top" src="/img/reconstructed_objects.jpg" alt="Card image" style="width:100%">
                         <div class="card-body">
-                            <h4 class="card-title">DeepSDF </h4>
-                            <p class="card-text">Implementation of the paper DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation with shape completion functionality.</p>
+                            <h4 class="card-title">TacSDF </h4>
+                            <p class="card-text">Implementation of the TacSDF workshop paper on 3D shape reconstruction using vision-based tactile sensing.</p>
                             <hr />
                             <ul class="skillList card-title" style="padding-left: 0px;">
                                 <li>PYTHON</li>
@@ -317,7 +334,7 @@
         </div>
 
     </section>
-
+    
     <!-- About Section, desktop -->
     <section id="about_desktop_mobile">
     <section class="bg-primary mb-0 desktop-only" id="about" style="background-color: #ffffff !important;">
@@ -1092,15 +1109,6 @@
     gtag('js', new Date());
 
     gtag('config', 'G-6EDE0EBFPG');
-    </script>
-
-    <script>
-    fetch('blog/research.html')
-      .then(response => response.text())
-      .then(html => {
-        document.getElementById('markdown-content').innerHTML = html;
-      })
-      .catch(error => console.error('Error loading the Markdown content:', error));
     </script>
 
 
