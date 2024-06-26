@@ -34,3 +34,34 @@
         height:150px;
     }
 }
+
+
+
+.publication {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px;
+    gap: 20px;
+}
+.publication img {
+    width: 150px;
+    height: auto;
+}
+.publication-text {
+    max-width: 500px;
+}
+@media (max-width: 600px) {
+    .publication {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .publication img {
+        width: 100%;
+        height: auto;
+    }
+    .publication-text {
+        max-width: 100%;
+        margin-top: 10px;
+    }
+}

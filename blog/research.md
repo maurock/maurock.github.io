@@ -2,6 +2,29 @@
 layout: research
 title: Research
 description: Mauro Comi's academic profile
+
+publications:
+  - img: "../img/research/snap_tap.png"
+    title: "Snap-it, Tap-it, Splat-it: Tactile-Informed 3D Gaussian Splatting for Reconstructing Challenging Surfaces"
+    link: "https://arxiv.org/abs/2403.20275"
+    authors: "<strong>Mauro Comi</strong>, Alessio Tonioni, Max Yang, Jonathan Tremblay, Valts Blukis, Yijiong Lin, Nathan F. Lepora, Laurence Aitchison"
+    status: "Currently in submission, available on Arxiv"
+  - img: "../img/research/results_increasing_touch.png"
+    title: "TouchSDF: A DeepSDF Approach for 3D Shape Reconstruction Using Vision-Based Tactile Sensing"
+    link: "https://arxiv.org/abs/2311.12602"
+    authors: "<strong>Mauro Comi</strong>, Alex Church, Kejie Li, Laurence Aitchison, Nathan F. Lepora"
+    status: "<strong>IEEE RA-L</strong>, also 3DVR workshop, <strong>CVPR 2023</strong>, and Touch processing workshop, <strong>NeurIPS 2023</strong>"
+  - img: "../img/research/tactile_saliency.png"
+    title: "Attention of Robot Touch: Tactile Saliency Prediction for Robust Sim-to-Real Tactile Control"
+    link: "https://arxiv.org/pdf/2307.14510.pdf"
+    authors: "Yijiong Lin, <strong>Mauro Comi</strong>, Alex Church, Dandan Zhang, Nathan F. Lepora"
+    status: "<strong>IROS 2023</strong>"
+  - img: "../img/research/safeai.png"
+    title: "A Hybrid-AI approach to Competence Assessment for Automated Driving Functions"
+    link: "http://ceur-ws.org/Vol-2808/Paper_37.pdf"
+    authors: "Jan-Pieter Paardekooper, <strong>Mauro Comi</strong>, Corrado Grappiolo, Ron Snijders, Willeke van Vught, Rutger Beekelaar"
+    status: "<strong>SafeAI AAAI 2021</strong>"
+---
 ---
 
 <img id="img-profile" src="../img/jumping_me.png" alt="A picture of me jumping in front of a lighthouse">
@@ -11,14 +34,14 @@ Hi there! I am doing a PhD in **Machine Learning** at the [University of Bristol
 I read papers following Andrew Ng's invaluable tips on <a href="https://youtu.be/733m6qBH-jI">How to read research papers (Andrew NG)</a>
 
 ### Publications
-
-|<img src="../img/research/snap_tap.png" width="180px" style="vertical-align:middle; margin-right:20px"> |[Snap-it, Tap-it, Splat-it: Tactile-Informed 3D Gaussian Splatting for Reconstructing Challenging Surfaces](https://arxiv.org/abs/2403.20275), **Mauro Comi**, Alessio Tonioni, Max Yang, Jonathan Tremblay, Valts Blukis, Yijiong Lin, Nathan F. Lepora, Laurence Aitchison - Currently in submission, available on Arxiv|
-
-|<img src="../img/research/results_increasing_touch.png" width="180px" style="vertical-align:middle; margin-right:20px"> |[TouchSDF: A DeepSDF Approach for 3D Shape Reconstruction Using Vision-Based Tactile Sensing](https://sites.google.com/view/cvpr2023-3d-vision-robotics/home?authuser=0), **Mauro Comi**, Alex Church, Kejie Li, Laurence Aitchison, Nathan F. Lepora - **IEEE RA-L**, also 3DVR workshop, **CVPR 2023**, and Touch processing workshop, **NeurIPS 2023**|
-
-|<img src="../img/research/tactile_saliency.png" width="180px" style="vertical-align:middle; margin-right:20px"> |[Attention of Robot Touch: Tactile Saliency Prediction for Robust Sim-to-Real Tactile Control](https://arxiv.org/pdf/2307.14510.pdf), Yijiong Lin, **Mauro Comi**, Alex Church, Dandan Zhang, Nathan F. Lepora - **IROS 2023**|
-
-|<img src="../img/research/safeai.png" width="180px" style="vertical-align:middle; margin-right:20px"> |[A Hybrid-AI approach to Competence Assessment for Automated Driving Functions](http://ceur-ws.org/Vol-2808/Paper_37.pdf), Jan-Pieter Paardekooper, **Mauro Comi**, Corrado Grappiolo, Ron Snijders, Willeke van Vught, Rutger Beekelaar - **SafeAI AAAI 2021**|
+{% for publication in page.publications %}
+<div class="publication">
+    <img src="{{ publication.img }}" alt="{{ publication.title }}" width="180px" style="vertical-align:middle; margin-right:20px">
+    <div class="publication-text">
+        <a href="{{ publication.link }}">{{ publication.title }}</a>, {{ publication.authors }} - {{ publication.status }}
+    </div>
+</div>
+{% endfor %}
 
 ### Reading group
 
