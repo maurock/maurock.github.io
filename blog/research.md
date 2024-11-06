@@ -13,7 +13,7 @@ publications:
     title: "Snap-it, Tap-it, Splat-it: Tactile-Informed 3D Gaussian Splatting for Reconstructing Challenging Surfaces"
     link: "https://arxiv.org/abs/2403.20275"
     authors: "<strong>Mauro Comi</strong>, Alessio Tonioni, Max Yang, Jonathan Tremblay, Valts Blukis, Yijiong Lin, Nathan F. Lepora, Laurence Aitchison"
-    status: "Currently in submission, available on Arxiv"
+    status: "<strong>3DV 2025</strong>"
   - img: "../img/research/results_increasing_touch.png"
     title: "TouchSDF: A DeepSDF Approach for 3D Shape Reconstruction Using Vision-Based Tactile Sensing"
     link: "https://arxiv.org/abs/2311.12602"
@@ -62,11 +62,11 @@ I run an online **3D Deep Learning reading group**, where we discuss papers in 3
 - **A Hybrid-AI approach to Competence Assessment for Automated Driving Functions** @SafeAI AAAI, February 2021
 
 ### Updates
+- In November 2024, our work *Snap-it, Tap-it, Splat-it: Tactile-Informed 3D Gaussian Splatting for Reconstructing Challenging Surfaces* ([link](https://arxiv.org/pdf/2410.20220v1)) was accepted at [3DV 2025](https://3dvconf.github.io/2025/). See you in Singapore!
 - In October 2024, our work *Neural Fields in Robotics: A Survey* was submitted to Arxiv ([link](https://arxiv.org/pdf/2410.20220v1)).
-- In September 2024, I started my internship as Student Researcher at **Google DeepMind**!
+- ⭐ In September 2024, I started my internship as a Student Researcher at **Google DeepMind**!
 - In May 2024, our work *TouchSDF: A DeepSDF Approach for 3D Shape Reconstruction Using Vision-Based Tactile Sensing* was accepted into the [IEEE RA-L journal](https://ieeexplore.ieee.org/abstract/document/10517361).
 - In April 2024, the 3D Deep Learning Reading Group I am running is starting again. Join us [here](https://3d-deeplearning-rg.github.io/).
-- Our work *Snap-it, Tap-it, Splat-it: Tactile-Informed 3D Gaussian Splatting for Reconstructing Challenging Surfaces* was submitted to Arxiv ([link](https://arxiv.org/abs/2403.20275)).
 - Our work *TouchSDF: A DeepSDF Approach for 3D Shape Reconstruction Using Vision-Based Tactile Sensing* was accepted to the Touch processing in AI workshop at **NeurIPS 2024**. See you in New Orleans!
 - Our work *TouchSDF: A DeepSDF Approach for 3D Shape Reconstruction Using Vision-Based Tactile Sensing* was accepted to the 3D Vision and Robotics workshop at **CVPR 2023**. See you in Vancouver!
 - Our work *Implicit Neural Representation for 3D Shape Reconstruction Using Vision-Based Tactile Sensing* was accepted to the workshop ViTac: Blending Virtual and Real Visuo-Tactile Perception at **ICRA 2023**. See you in London!
