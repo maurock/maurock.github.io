@@ -1,90 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<div id="markdown-content"></div>        <!-- initial research section -->
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content={{ page.description }}>
+    <meta name="description" content="Mauro's Portfolio for Data Science and Machine Learning ">
     <meta name="author" content="Mauro Comi">
-    <title>{{ page.title }}</title>        
+    <meta name="keywords" content="Portfolio, Data science, Machine learning, Projects">
+
+    <title>Mauro Comi</title>
+
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
+
     <!-- Custom fonts for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,500,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:700,200,400,300,500,600" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500,600,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/grid-gallery/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
     <!-- Plugin CSS -->
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
 
     <!-- Custom styles for this template -->
-    <link href="../css/blog.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="css/freelancer.css" rel="stylesheet">
+    <link href="css/timeline-aboutme.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="../css/blog.css" rel="stylesheet"> -->
     <link href="../css/research.css" rel="stylesheet">
+
+
 
 </head>
 
-<body>
+<body id="page-top">
 
-    <!-- Navigation -->
-    <!-- <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand js-scroll-trigger" style="font-family: Raleway; font-size: 20px;" href="https://maurocomi.com/index.html">Mauro Comi</a>
-            <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fa fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item mx-0 mx-lg-1">
-                        <div>
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="">Research</a>
-                        </div>
-                    </li>
-                    <li class="nav-item mx-0 mx-lg-1">
-                        <div>
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../index.html#portfolio">My Projects</a>
-                        </div>
-                    </li>
-                    <li class="nav-item mx-0 mx-lg-1">
-                        <div>
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../index.html#about_desktop_mobile">About me</a>
-                        </div>
-                    </li>
-                    <li class="nav-item mx-0 mx-lg-1">
-                        <div>
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../index.html#contact">Contact</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav> -->
-
-    <!-- Text -->
-    <div class="container container-blog">
-        <div class="text" style="margin-top: 95px">
-            {{ content }}   
-        </div>
-
-    </div>
+   {{ content }}
 
     <!-- Footer -->
-    <!-- <div class="copyright py-4 text-center text-white footer">
-        <small>Made with <svg class="heart" viewBox="0 0 32 29.6">
-                <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
-            </svg> by Mauro Comi © 2022</small>
-    </div> -->
+    <div class="copyright py-4 text-center text-white">
+        <div class="container">
+            <small>Made with <svg class="heart" viewBox="0 0 32 29.6">
+                    <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+                </svg> by Mauro Comi</small>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-to-top d-lg-none position-fixed ">
+        <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/freelancer.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6EDE0EBFPG"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6EDE0EBFPG');
+    </script>
+
 
 </body>
-
-
-<!-- Math Jax -->
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script src="../vendor/jquery/jquery.min.js"></script>
-<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-
 </html>

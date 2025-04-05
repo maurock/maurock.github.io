@@ -107,4 +107,26 @@ margin-top: 5px;
     }
 }
 
+/* Text */
+.text {
+    font-family: Nunito;
+    margin: 10px;
+}
+
+/* for mobile */
+@media only screen and (max-width: 800px) {
+    .text {
+        line-height: 1.6em;
+        font-size: 1.1rem;
+    }
+}
+
+/* for desktop */
+@media only screen and (min-width: 800px) {
+    .text {
+        line-height: 1.6em;
+        font-size: 1.1rem;
+    }
+}
+
 
