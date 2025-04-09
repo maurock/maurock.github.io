@@ -10,14 +10,14 @@
     <meta name="author" content="Mauro Comi">
     <meta name="keywords" content="Portfolio, Data science, Machine learning, Projects">
 
-    <title>Mauro Comi</title>
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
 
     <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500,600,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -27,24 +27,46 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/grid-gallery/css/style.css">
+    <link rel="stylesheet" href="../css/grid-gallery/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
     <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+    <link href="../vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
 
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="css/freelancer.css" rel="stylesheet">
-    <link href="css/timeline-aboutme.css" rel="stylesheet">
+    <link href="../css/freelancer.css" rel="stylesheet">
+    <link href="../css/timeline-aboutme.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="../css/research.css" rel="stylesheet">
+
 </head>
 
 <body id="page-top">
+    
+    {% include navigation.html %}
 
-   {{ content }}
+    <div class="container container-blog">
+
+        <div class="post-title">
+            {{ page.title }}
+        </div>
+        <div class="post-subtitle">
+            {% if page.subtitle %}
+            {{ page.subtitle }}
+            {% endif %}
+        </div>
+        <div class="post-date">
+            {% if page.date %}
+            {{ page.date | date: "%B %d, %Y" }}
+            {% endif %}
+        </div>
+        <hr>
+        <div class="text" style="margin-top: 50px">
+            {{ content | markdownify }}
+        </div>
+    </div>
 
     <!-- Footer -->
     <div class="copyright py-4 text-center text-white">
@@ -63,19 +85,19 @@
     </div>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
     <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    <script src="../js/jqBootstrapValidation.js"></script>
+    <script src="../js/contact_me.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="js/freelancer.js"></script>
+    <script src="../js/freelancer.js"></script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6EDE0EBFPG"></script>

@@ -32,39 +32,7 @@ publications:
 ---
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav" style="height: 9vh;">
-    <div class="container" style="padding-right: 0px; padding-left: 0px;">
-        <img class="logo" src="img/logo3.PNG" style="height: auto">
-        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-            <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item mx-0 mx-lg-1">
-                    <div>
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" style="color: black !important" href="/">Research</a>
-                    </div>
-                </li>
-                <li class="nav-item mx-0 mx-lg-1">
-                    <div>
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" style="color: black !important" href="#portfolio">My Projects</a>
-                    </div>
-                </li>
-                <li class="nav-item mx-0 mx-lg-1">
-                    <div>
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" style="color: black !important" href="#about_desktop_mobile">About me</a>
-                    </div>
-                </li>
-                <li class="nav-item mx-0 mx-lg-1">
-                    <div>
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" style="color: black !important" href="#contact">Contact</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+{% include navigation.html %}
 
 <!-- Text -->
 <div class="container container-blog">
@@ -76,7 +44,24 @@ publications:
     </div>
 </div>
 
+
+<!-- Blog Section -->
+<!-- <br><br>    
+<div id="blog-section" class="container">
+    <h2 class="text-center text-uppercase text-secondary mb-0">Blog</h2>
+</div>
+<div class="container container-blog">
+    <div class="text" style="margin-top: 95px">
+        {% capture blog_list %}
+        {% include blog_list.md %}
+        {% endcapture %}
+        {{ blog_list | markdownify }}
+    </div>
+</div> -->
+
+
 <!-- My Projects Section -->
+<br><br>    
 <section class="portfolio" id="portfolio">
     <!-- Machine Learning and Data Science -->
     <div class="container">
@@ -758,7 +743,7 @@ publications:
                 <li class="timeline2-item">                            
                         <div class="timeline2-marker"></div>
                         <div class="timeline2-content">
-                            <h5 class="timeline2-title">Postgraduate Teaching Assistant</h5>
+                            <h5 class="timeline2-title">Research Intern (Student Researcher)</h5>
                             <div style="display: inline-block; margin-bottom: 5px;">
                                 <img src="img/calendar.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
                                 <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">09/2024 - present</h6>
@@ -1062,13 +1047,4 @@ publications:
         </div>
     </div>
 </section>
-
-<!-- Footer -->
-<div class="copyright py-4 text-center text-white">
-    <div class="container">
-        <small>Made with <svg class="heart" viewBox="0 0 32 29.6">
-                <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
-            </svg> by Mauro Comi</small>
-    </div>
-</div>
 ---
