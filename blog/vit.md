@@ -43,7 +43,7 @@ Remember our squirrel image? How can a Transformer, designed for text sequences,
 - **Classify**: We use the output corresponding to the CLS token to predict the image's class.
 
 <div style="text-align: center;">
-    <img src="../img/blog/vit/vit.png" style="width: 100%; margin: auto; text-align: center;" alt="Image of the ViT pipeline form the ViT paper. It shows the same steps outlined above"><br>
+    <img src="../img/blog/vit/vit.png" style="width: 400px; margin: auto; text-align: center;" alt="Image of the ViT pipeline form the ViT paper. It shows the same steps outlined above"><br>
     <em>Overview of the main steps in a Vision Transformer. Source: <a href="https://arxiv.org/abs/2010.11929">original paper</a></em>
 </div>
 <br>
