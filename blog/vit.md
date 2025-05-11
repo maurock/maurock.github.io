@@ -43,7 +43,7 @@ Remember our squirrel image? How can a Transformer, designed for text sequences,
 - **Classify**: We use the output corresponding to the CLS token to predict the image's class.
 
 <div style="text-align: center;">
-    <img src="../img/blog/vit/vit.png" style="width: 500px; margin: auto; text-align: center;" alt="Image of the ViT pipeline form the ViT paper. It shows the same steps outlined above"><br>
+    <img src="../img/blog/vit/vit.png" style="width: 100%; margin: auto; text-align: center;" alt="Image of the ViT pipeline form the ViT paper. It shows the same steps outlined above"><br>
     <em>Overview of the main steps in a Vision Transformer. Source: <a href="https://arxiv.org/abs/2010.11929">original paper</a></em>
 </div>
 <br>
@@ -53,7 +53,7 @@ Let's build each part.
 
 <h4><span style="color: rgb(215, 215, 215);">##</span> Step 1: Patchifying the Image, From Pixels to Patches</h4> 
 <div style="text-align: center; margin: 10px 0">
-<video autoplay loop muted playsinline width="600" height="400">
+<video autoplay loop muted playsinline width="100%" height="400">
     <source src="../img/blog/vit/patch.mp4" type="video/mp4">
 </video>
 </div>
@@ -238,7 +238,7 @@ Now we have a sequence of embeddings ready for the Transformer Encoder! Shape: `
 
 <h4><span style="color: rgb(215, 215, 215);">##</span> Step 5: Attention and the Transformer Encoder</h4> 
 <div style="text-align: center; margin: 10px 0;">
-<video autoplay loop muted playsinline width="600" height="400">
+<video autoplay loop muted playsinline width="100%" height="400">
     <source src="../img/blog/vit/attention.mp4" type="video/mp4">
 </video>
 </div>
