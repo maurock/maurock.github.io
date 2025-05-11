@@ -1,3 +1,13 @@
+h3{
+    font-family: Raleway;
+    font-weight: 600;
+}
+h4{
+  font-family: Raleway;
+  font-weight: 600;
+}
+
+
 /* Image profile for mobile */
 @media only screen and (max-width: 992px) {
     #img-profile{
@@ -207,4 +217,224 @@ margin-top: 5px;
   height: 3rem; /* Line height - adjust based on title size */
   background-color: #a0d4ff; /* Cute light blue */
   border-radius: 2px; /* Slightly rounded ends */
+}
+
+
+.icon{
+    width: 2em;
+    height: 2em;
+    margin: 0 5px;
+}
+
+/* =================================================================== */
+/* Catppuccin Latte Theme for Highlight.js (Inspired)                  */
+/* Adaption for AI Blog - Cute, Clear & Light Style                   */
+/* =================================================================== */
+
+/* Define Catppuccin Latte Colors as CSS Variables */
+:root {
+    --ctp-rosewater: #dc8a78;
+    --ctp-flamingo: #dd7878;
+    --ctp-pink: #ea76cb;
+    --ctp-mauve: #8839ef;
+    --ctp-red: #d20f39;
+    --ctp-maroon: #e64553;
+    --ctp-peach: #fe640b;
+    --ctp-yellow: #df8e1d;
+    --ctp-green: #40a02b;
+    --ctp-teal: #179299;
+    --ctp-sky: #04a5e5;
+    --ctp-sapphire: #209fb5;
+    --ctp-blue: #1e66f5;
+    --ctp-lavender: #7287fd;
+    --ctp-text: #4c4f69;       /* Main text color on light bg */
+    --ctp-subtext1: #5c5f77;
+    --ctp-subtext0: #6c6f85;
+    --ctp-overlay2: #7c7f93;
+    --ctp-overlay1: #8c8fa1;
+    --ctp-overlay0: #9ca0b0;
+    --ctp-surface2: #acb0be;
+    --ctp-surface1: #bcc0cc;
+    --ctp-surface0: #ccd0da;
+    --ctp-base: #eff1f5;     /* Latte Background - Light */
+    --ctp-mantle: #e6e9ef;   /* Slightly darker layer */
+    --ctp-crust: #dce0e8;    /* Darkest layer */
+  }
+  
+  /* --- Base Code Block Styling --- */
+  pre {
+    margin: 1.5em 0;
+    padding: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+  }
+  
+  pre code.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 1.5em;
+    background: var(--ctp-base); /* Light background */
+    color: var(--ctp-text); /* Default text color for light themes */
+    border-radius: 8px; /* Cute rounded corners */
+    border: 1px solid var(--ctp-surface0); /* Subtle border */
+    font-family: 'JetBrains Mono', 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 0.8em;
+    line-height: 1.6;
+    white-space: pre;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* --- Syntax Highlighting (using Latte palette) --- */
+  /* Use colors with enough contrast against the light background */
+  
+  /* Comments */
+  .hljs-comment,
+  .hljs-quote {
+    color: var(--ctp-overlay0); /* Lighter gray for comments */
+    font-style: italic;
+  }
+  
+  /* Keywords, Tags, Selectors */
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-tag,
+  .hljs-selector-id,
+  .hljs-selector-class {
+    color: var(--ctp-mauve); /* Strong accent */
+  }
+  
+  /* Strings, RegEx, Symbols, Links */
+  .hljs-string,
+  .hljs-regexp,
+  .hljs-symbol,
+  .hljs-bullet,
+  .hljs-link {
+    color: var(--ctp-green);
+  }
+  
+  /* Numbers, Booleans, Constants */
+  .hljs-number,
+  .hljs-literal, /* true, false, null */
+  .hljs-variable.constant_ {
+    color: var(--ctp-peach);
+  }
+  
+  /* Functions, Class Names, Types */
+  .hljs-title.function_,
+  .hljs-title.class_,
+  .hljs-type,            /* Type hints, e.g., string, int */
+  .hljs-built_in         /* Built-in functions/objects, e.g., console, Array */
+  {
+    color: var(--ctp-blue); /* Use blue for functions/classes */
+  }
+  
+  
+  /* Function Arguments, Instance/Class Variables */
+  .hljs-params,
+  .hljs-variable,
+  .hljs-variable.language_ /* e.g., this, self */
+   {
+     color: var(--ctp-yellow); /* Yellow stands out well */
+     /* Alternative: var(--ctp-text); for less color */
+  }
+  
+  /* Attributes, Properties, Meta Keywords */
+  .hljs-attribute,
+  .hljs-property,
+  .hljs-meta .hljs-keyword {
+    color: var(--ctp-teal);
+  }
+  
+  /* Meta (Decorators/Annotations) */
+  .hljs-meta {
+      color: var(--ctp-red); /* Red for meta/decorators */
+  }
+  .hljs-meta .hljs-string { /* String inside meta */
+      color: var(--ctp-flamingo); /* Use a related color */
+  }
+  
+  
+  /* Emphasis */
+  .hljs-emphasis {
+    font-style: italic;
+    color: var(--ctp-pink); /* Add color to italics */
+  }
+  
+  /* Strong Emphasis */
+  .hljs-strong {
+    font-weight: bold;
+    color: var(--ctp-maroon); /* Use a strong color for bold */
+  }
+  
+  /* Additions in diffs */
+  .hljs-addition {
+    background-color: rgba(64, 160, 43, 0.1); /* Subtle Green background */
+    color: var(--ctp-green); /* Make text clearly green */
+    display: inline-block;
+    width: 100%;
+  }
+  
+  /* Deletions in diffs */
+  .hljs-deletion {
+    background-color: rgba(210, 15, 57, 0.08); /* Subtle Red background */
+    color: var(--ctp-red); /* Make text clearly red */
+    display: inline-block;
+    width: 100%;
+  }
+  
+  /* --- Optional: Scrollbar Styling (Webkit browsers) --- */
+  pre code.hljs::-webkit-scrollbar {
+    height: 8px;
+    background-color: var(--ctp-mantle); /* Light scrollbar track */
+  }
+  
+  pre code.hljs::-webkit-scrollbar-thumb {
+    background-color: var(--ctp-surface1); /* Scrollbar handle */
+    border-radius: 4px;
+    border: 1px solid var(--ctp-surface0); /* Add subtle border */
+  }
+  
+  pre code.hljs::-webkit-scrollbar-thumb:hover {
+    background-color: var(--ctp-surface2); /* Handle on hover */
+  }
+
+
+.toc{
+    background-color: #bae1ff68;
+    border-left: 4px solid #bae1ff; 
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.quiz{
+    background-color: #ffdfba91;
+    border-left: 4px solid #ffdfba; 
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.note{
+    background-color: #c3b1e16b;
+    border-left: 4px solid #C3B1E1; 
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+} 
+
+code {
+  font-family: 'JetBrains Mono', 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 80%; 
+  color: #c7254e; 
+  background-color: #f9f2f4; 
+  border-radius: 3px;
+  padding: 0.15em 0.4em;
+  line-height: inherit;
+  word-wrap: break-word;
+}
+code:hover {
+  background-color: #f5ebed; /* Slightly darken background on hover */
 }
