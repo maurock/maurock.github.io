@@ -25,7 +25,7 @@ In this post, we'll understand what a Vision Transformer is and how it works in 
 I have included some <span style='background-color: #ffdfba91'>quizzes</span> and <span style='background-color: #c3b1e16b;'>recaps </span> along the way to reinforce understanding - spaced repetition! 🙌 
 [The code for this blog post is here]()
 
-We'll build and train using **Google's JAX** and the new [NNX](https://flax.readthedocs.io/en/v0.8.3/experimental/nnx/index.html) library. NNX makes building complex models like ViTs more explicit and Pythonic. **Why JAX/NNX**? JAX is extremely efficient thanks to `jit` (just-in-time) compilation and fast automatic differentiation (`grad`). It also runs seamlessly on CPU/GPU/TPU. This great post covers its benefits: [PyTorch is Dead. Long Live Jax](https://neel04.github.io/my-website/blog/pytorch_rant/) (*Disclaimer*: I wouldn't say PyTorch is dead, I love Pytorch. But JAX is equally cool!).NNX is the new deep learning framework for JAX, which is currently [Google's recommended framework](https://flax.readthedocs.io/en/latest/why.html) and provides a more familiar object-oriented programming model (like PyTorch) while retaining JAX's functional principles.
+We'll build and train using **Google's JAX** and the new [NNX](https://flax.readthedocs.io/en/v0.8.3/experimental/nnx/index.html) library. NNX makes building complex models like ViTs more explicit and Pythonic. **Why JAX/NNX**? JAX is extremely efficient thanks to `jit` (just-in-time) compilation and fast automatic differentiation (`grad`). It also runs seamlessly on CPU/GPU/TPU. This great post covers its benefits: [PyTorch is Dead. Long Live Jax](https://neel04.github.io/my-website/blog/pytorch_rant/) (*Disclaimer*: I wouldn't say PyTorch is dead, I love PyTorch. But JAX is equally cool!).NNX is the new deep learning framework for JAX, which is currently [Google's recommended framework](https://flax.readthedocs.io/en/latest/why.html) and provides a more familiar object-oriented programming model (like PyTorch) while retaining JAX's functional principles.
 
 **Important resources**:
 
@@ -248,7 +248,7 @@ Now we have a sequence of embeddings ready for the Transformer Encoder! The shap
     <source src="../img/blog/vit/attention.mp4" type="video/mp4">
 </video>
 </div>
-**Attention: this is the heart of the ViT**. Let's start with a strongbuild a strong intuition for the self-attention mechanism. Imagine each token in our sequence (patch embeddings + CLS token) wants to update itself by gathering information from other tokens. To do this, each token generates three vectors from its own embedding: a Query (`Q`) representing its current state and what it's looking for, a Key (`K`) representing what it can offer, and a Value (`V`) representing the actual content it wants to share. These Q, K, V vectors are typically derived by multiplying the token's embedding by three separate learnable weight matrices (`W_Q`, `W_K`, `W_V`).
+**Attention: this is the heart of the ViT**. Let's start with building a strong intuition for the self-attention mechanism. Imagine each token in our sequence (patch embeddings + CLS token) wants to update itself by gathering information from other tokens. To do this, each token generates three vectors from its own embedding: a Query (`Q`) representing its current state and what it's looking for, a Key (`K`) representing what it can offer, and a Value (`V`) representing the actual content it wants to share. These Q, K, V vectors are typically derived by multiplying the token's embedding by three separate learnable weight matrices (`W_Q`, `W_K`, `W_V`).
 
 <div class="note">
 Attention as a conversation: patch embeddings talk to each other to understand their context. Q="What I need", K="What I have", V="What I'll share if you pay attention".
@@ -257,7 +257,7 @@ Attention as a conversation: patch embeddings talk to each other to understand t
 The attention procedures compares its Query with the Keys of all other tokens (including itself). High similarity (*dot product*) means high relevance. These similarities become **attention scores**, which are normalized via softmax. The Query token then takes a weighted sum of all tokens' Values, using these attention weights. It pays more attention to tokens relevant to its Query. 
 in other words, this process allows each token (patch embedding or CLS token) to "look" at all other tokens in the sequence and decide which ones are most relevant to it. It calculates attention scores, determining how much "focus" to place on other tokens when updating its own representation. 
 
-In practice, we usually don't use a single set of ``W_Q, W_K, W_V` matrices. We use multiple sets in parallel, and this is called **Multi-Head Self Attention**. Each head performs the attention mechanism independently with its own learned projection matrices. This allows the model to capture different types of relationships and focus on different aspects of the information (e.g. one head might focus on texture, another on shapes, another on long-range dependencies). The outputs of these heads are then concatenated and linearly projected back to the original embedding dimension.
+In practice, we usually don't use a single set of `W_Q, W_K, W_V` matrices. We use multiple sets in parallel, and this is called **Multi-Head Self Attention**. Each head performs the attention mechanism independently with its own learned projection matrices. This allows the model to capture different types of relationships and focus on different aspects of the information (e.g. one head might focus on texture, another on shapes, another on long-range dependencies). The outputs of these heads are then concatenated and linearly projected back to the original embedding dimension.
 
 The attention magic happens in the *Transformer Encoder*, which is typically a stack of identical Encoder Blocks. Each block processes the sequence of embeddings, allowing tokens to interact and exchange information.
 
@@ -690,6 +690,10 @@ While the ViT we've built is a functional baseline, the field has evolved rapidl
 
 However, the core concepts—patching, embedding, self-attention, and using a Transformer architecture for vision—remain fundamental. ViTs have not only achieved state-of-the-art results in image classification but also serve as powerful backbones for various other computer vision tasks like object detection, segmentation, and even in generative models like **Diffusion Transformers (DiTs)**. These could be exciting topics for future posts!
 
-Please let me know if you have any feedback, corrections, or are interested in specific future topics. Hope this was useful, happy transforming!
+Please let me know if you have any feedback, corrections, or are interested in specific future topics. 
+
+*Hope this was useful, happy transforming!*
+
+
 <br><br>
 
