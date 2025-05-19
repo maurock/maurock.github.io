@@ -23,7 +23,7 @@ Think about an image of a squirrel floating in space, like the one in the video 
 
 In this post, we'll understand what a Vision Transformer is and how it works in detail. We'll build and train a Vision Transformer from scratch to classify images. I'll focus on intuition, explaining the *why* behind each component, and walk through the code step-by-step.
 I have included some <span style='background-color: #ffdfba91'>quizzes</span> and <span style='background-color: #c3b1e16b;'>recaps </span> along the way to reinforce understanding - spaced repetition! 🙌 
-[The code for this blog post is here]()
+[The code for this blog post is here](https://github.com/maurock/vitax)
 
 We'll build and train using **Google's JAX** and the new [NNX](https://flax.readthedocs.io/en/v0.8.3/experimental/nnx/index.html) library. NNX makes building complex models like ViTs more explicit and Pythonic. **Why JAX/NNX**? JAX is extremely efficient thanks to `jit` (just-in-time) compilation and fast automatic differentiation (`grad`). It also runs seamlessly on CPU/GPU/TPU. This great post covers its benefits: [PyTorch is Dead. Long Live Jax](https://neel04.github.io/my-website/blog/pytorch_rant/) (*Disclaimer*: I wouldn't say PyTorch is dead, I love PyTorch. But JAX is equally cool!).NNX is the new deep learning framework for JAX, which is currently [Google's recommended framework](https://flax.readthedocs.io/en/latest/why.html) and provides a more familiar object-oriented programming model (like PyTorch) while retaining JAX's functional principles.
 
