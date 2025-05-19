@@ -124,6 +124,7 @@ section h2 {
 
 #mainNav .navbar-nav li.nav-item a.nav-link {
     color: #fff;
+    font-size: 80%;
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
