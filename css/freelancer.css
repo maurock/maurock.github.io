@@ -119,6 +119,7 @@ section h2 {
     margin-top: 1rem;
     letter-spacing: 0.0625rem;
     text-align: center;
+    align-items: center;
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link {
