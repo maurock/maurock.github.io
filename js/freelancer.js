@@ -37,23 +37,6 @@
     offset: 80
   });
 
-  // Collapse Navbar
-  var navbarCollapse = function() {
-    if ($("#mainNav").offset().top > 1) {
-      $("#mainNav").addClass("navbar-shrink");        
-      $('#mainNav').attr('style', 'background-color: white !important; border-bottom: solid 1px #C1C1C1 !important; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);');
-
-    } else {
-      $("#mainNav").removeClass("navbar-shrink");
-      $('#mainNav').attr('style', 'background-color: transparent !important;');
-    }     
-  };
-    
-  // Collapse now if page is not at top
-  navbarCollapse();
-  // Collapse the navbar when page is scrolled
-  $(window).scroll(navbarCollapse);
-
   // Modal popup$(function () {
   $('.portfolio-item').magnificPopup({
     type: 'inline',

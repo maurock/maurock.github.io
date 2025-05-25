@@ -3,6 +3,14 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
   @include heading-font;
+  position: fixed; /* Add this line */
+  top: 0; /* Add this line */
+  width: 100%; /* Add this line */
+  z-index: 1030; /* Add this line */
+  background-color: white !important; 
+  border-bottom: solid 1px #C1C1C1 !important; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
   .navbar-brand {
     color: $white;
   }
@@ -34,14 +42,8 @@
   #mainNav {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
-    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
-    transition: padding-top 0.3s, padding-bottom 0.3s;
     .navbar-brand {
       font-size: 2em;
-      -webkit-transition: font-size 0.3s;
-      -moz-transition: font-size 0.3s;
-      transition: font-size 0.3s;
     }
     .navbar-nav {
       margin-top: 0;
@@ -55,13 +57,6 @@
         color: $white;
         background: $primary;
       }
-    }
-  }
-  #mainNav.navbar-shrink {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    .navbar-brand {
-      font-size: 1.5em;
     }
   }
 }
