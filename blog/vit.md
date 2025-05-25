@@ -457,17 +457,6 @@ The full Vision Transformer will stack multiple `EncoderBlock` instances sequent
     </details>
 </div>
 
-<div class="quiz">
-    <strong>Quiz</strong><br>
-    <p>Why are skip connections important in deep networks like Transformers?</p>
-    <details>
-    <summary>
-    Click for the answer
-    </summary>
-        <p><i>They help gradients flow better during backpropagation, preventing them from vanishing and enabling the training of deeper models.</i></p>   
-    </details>
-</div>
-
 <h4><span style="color: rgb(215, 215, 215);">##</span> Step 6: Classification Head</h4> 
 
 After passing the sequence through all the Encoder Blocks, we need to get our final classification. It's time to shine for the CLS token we added in Step 3.
