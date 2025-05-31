@@ -438,3 +438,10 @@ code {
 code:hover {
   background-color: #f5ebed; /* Slightly darken background on hover */
 }
+
+.substack-nudge {
+    font-size: 0.9em; /* Slightly smaller for subtlety */
+    margin-top: 2em; /* Space above */;
+    text-align: left; /* Or 'center' if you prefer */
+    line-height: 1.5; /* Improved readability for the smaller text */
+}

@@ -6,18 +6,27 @@ description: Mauro Comi's academic profile
 date: 8 April 2025
 ---
 
-<!-- <div class="toc">
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/ywzPAurbc1s?si=1LaR3CTa9II-mUfr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<div class="toc">
     <strong>Table of Content</strong>
     <ul style="margin: 10px 0; padding-left: 20px;">
-        <li>Seeing the World Through Transformers</li>
-        <ul style="margin: 10px 0; padding-left: 20px;">        
-            <li>Step 1: Patchifying the Image, From Pixels to Patches</li>
-            <li>Step 2: Patch Embedding</li>
-        </ul>
+        <li><a href="#seeing-the-world-through-transformers">Seeing the World Through Transformers</a>
+            <ul>
+                <li><a href="#step-1-patchifying-the-image-from-pixels-to-patches">Step 1: Patchifying the Image, From Pixels to Patches</a></li>
+                <li><a href="#step-2-patch-embedding">Step 2: Patch Embedding</a></li>
+                <li><a href="#step-3-positional-embeddings">Step 3: Positional Embeddings</a></li>
+                <li><a href="#step-4-the-cls-token">Step 4: The CLS Token</a></li>
+                <li><a href="#step-5-attention-and-the-transformer-encoder">Step 5: Attention and the Transformer Encoder</a></li>
+                <li><a href="#step-6-classification-head">Step 6: Classification Head</a></li>
+            </ul>
+        </li>
+        <li><a href="#training-the-vit">Training the ViT</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
     </ul>
-</div> -->
+</div>
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/ywzPAurbc1s?si=1LaR3CTa9II-mUfr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 Think about an image of a squirrel floating in space, like the one in the video above. How can a computer understand what the image represents? What if we could teach a machine to *read* an image more like how we read text, by looking at meaningful chunks and understanding their relationships? **Introducing Vision Transformers**. Transformers power all the latest advances in AI, from Gemini to ChatGPT, Claude, LLaMa, and pretty much every big model you've heard of in the last two years. They are known to be ground-breaking language models, but they are also extremely powerful at solving computer vision tasks.
 
