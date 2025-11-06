@@ -1,0 +1,126 @@
+- img: "/img/research/interface.png"
+  title: "DeckTor: Your Anki Doctor"
+  description: "A tool for improving Anki flashcards using local quantized LLMs."
+  link: "https://github.com/maurock/decktor"
+  skills:
+    - "PYTHON"
+    - "PYTORCH"
+
+- img: "/img/blog/vit/thumbnail.png"
+  title: "ViTAX: Vision Transformer from Scratch in JAX"
+  description: "A Vision Transformer implementation from scratch using JAX."
+  link: "https://github.com/maurock/vitax"
+  skills:
+    - "PYTHON"
+    - "JAX"
+
+- img: "/img/research/snap_tap.png"
+  title: "Tactile-Informed 3D Gaussian Splatting"
+  description: "Reconstructing challenges surfaces with vision and tactile sensing within a 3D Gaussian Splatting framework."
+  link: "https://github.com/maurock/Dynamic3DGaussians"
+  skills:
+    - "PYTHON"
+    - "PYTORCH"
+
+- img: "/img/robot_teapot3.png"
+  title: "TouchSDF"
+  description: "Implementation of the TouchSDF paper on 3D shape reconstruction using vision-based tactile sensing."
+  link: "https://github.com/maurock/TouchSDF"
+  skills:
+    - "PYTHON"
+    - "PYTORCH"
+
+- img: "/img/reconstructed_objects.jpg"
+  title: "DeepSDF"
+  description: "Implementation of the paper DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation with shape completion functionality."
+  link: "https://github.com/maurock/DeepSDF"
+  skills:
+    - "PYTHON"
+    - "PYTORCH"
+
+- img: "img/robot_sampling2.png"
+  title: "3D Shape Reconstruction using Vision Based Tactile Perception"
+  description: "Reconstructing 3D object shapes using Graph Neural Networks and robotics tactile sensing."
+  link: "https://github.com/maurock/object_reconstruction"
+  skills:
+    - "PYTHON"
+    - "PYTORCH3D"
+    - "PYBULLET"
+
+- img: "img/rendering/cover.png"
+  title: "Monte Carlo Path Tracer"
+  description: "Implementation of different standard Monte Carlo approaches in path tracing, and comparison with Next Event Estimation"
+  link: "monteCarloPathTracer.html"
+  skills:
+    - "C++"
+
+- img: "img/rendering/q-learning-cover.png"
+  title: "Q-Learning for Monte Carlo importance sampling"
+  description: "Reinforcement Learning-based approaches applied to the light transport equation for importance sampling"
+  link: "https://github.com/maurock/Q-tracer"
+  skills:
+    - "C++"
+
+- img: "img/Deep_Mind.jpg"
+  title: "Deep Reinforcement Learning for Games"
+  description: "Deep Q-Learning agent to play the game Snake. Optimized it using Bayesian Optimization"
+  link: "snake.html"
+  skills:
+    - "PYTHON"
+    - "PYTORCH"
+    - "TENSORFLOW"
+    - "DEEP REINFORCEMENT LEARNING"
+    - "BAYESIAN OPTIMIZATION"
+
+- img: "img/transferStyle/combined2.jpg"
+  title: "Artificial Intelligence meets Art: Neural Transfer Style"
+  description: "Deep Learning technique to transfer the style of a painting to a chosen image"
+  link: "transfer-style.html"
+  skills:
+    - "PYTHON"
+    - "TENSORFLOW"
+    - "DEEP LEARNING"
+    - "KERAS"
+
+- img: "img/mcts.jpg"
+  title: "Monte Carlo Tree Search: Tic Tac Toe"
+  description: "MCTS strategy to play the game Tic tac Toe"
+  link: "https://github.com/maurock/mcts_tictactoe"
+  skills:
+    - "PYTHON"
+    - "MCTS"
+
+- img: "img/flight_delays.jpg"
+  title: "Flight Delay Prediction"
+  description: "Modeling and predicting the delay of 7 million US domestic flights using Big Data Tools."
+  link: "flight.html"
+  skills:
+    - "SPARK"
+    - "SCALA"
+    - "R"
+
+- img: "img/flinkHighway/cover.jpg"
+  title: "Highway patrol"
+  description: "Java application using Flink, implementing functionalities of Speed Radar, Average Speed Control and Accident Reporter on data streams."
+  link: "flinkHighway.html"
+  skills:
+    - "JAVA"
+    - "FLINK"
+    - "DATA STREAM"
+
+- img: "img/hbase_cover.jpg"
+  title: "TPC-C Benchmark"
+  description: "Java program using HBase to create, load tables, and implementing four different queries to simulate the activity of any company that manages, sells, and distributes products or services."
+  link: "hbase1.html"
+  skills:
+    - "JAVA"
+    - "HBASE"
+    - "HADOOP"
+
+- img: "img/medicine_python.jpg"
+  title: "Raw data processing for diseases prediction"
+  description: "Processing raw data to feed a machine learning model using IBM SPSS Modeler."
+  link: "kidney.html"
+  skills:
+    - "PYTHON"
+    - "RAW DATA"

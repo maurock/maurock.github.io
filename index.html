@@ -2,38 +2,6 @@
 layout: research
 title: Research
 description: Mauro Comi's academic profile
-
-publications:
-  - img: "../img/research/splatting_physical_images.png"
-    title: "Splatting Physical Scenes: End-to-End Real-to-Sim from Imperfect Robot Data"
-    link: "https://arxiv.org/pdf/2506.04120"
-    authors: "<strong>Mauro Comi*</strong>, Ben Moran*, Arunkumar Byravan, Steven Bohez, Tom Erez, Zhibin Li, Leonard Hasenclever"
-    status: "*Joint first authorship. Work done during my first internship at Google DeepMind. Available on Arxiv"
-  - img: "../img/research/survey_paper_NF.png"
-    title: "Neural Fields in Robotics: A Survey"
-    link: "https://arxiv.org/pdf/2410.20220v1"
-    authors: "Muhammad Zubair Irshad, <strong>Mauro Comi</strong>, Yen-Chen Lin, Nick Heppert, Abhinav Valada, Rares Ambrus, Zsolt Kira, Jonathan Tremblay"
-    status: "Currently in submission, available on Arxiv"
-  - img: "../img/research/snap_tap.png"
-    title: "Snap-it, Tap-it, Splat-it: Tactile-Informed 3D Gaussian Splatting for Reconstructing Challenging Surfaces"
-    link: "https://arxiv.org/abs/2403.20275"
-    authors: "<strong>Mauro Comi</strong>, Alessio Tonioni, Max Yang, Jonathan Tremblay, Valts Blukis, Yijiong Lin, Nathan F. Lepora, Laurence Aitchison"
-    status: "<strong>3DV 2025</strong>"
-  - img: "../img/research/results_increasing_touch.png"
-    title: "TouchSDF: A DeepSDF Approach for 3D Shape Reconstruction Using Vision-Based Tactile Sensing"
-    link: "https://arxiv.org/abs/2311.12602"
-    authors: "<strong>Mauro Comi</strong>, Yijiong Lin, Alex Church, Alessio Tonioni, Laurence Aitchison, Nathan F. Lepora"
-    status: "<strong>IEEE RA-L</strong>, also 3DVR workshop at <strong>CVPR 2023</strong>, and Touch processing workshop at <strong>NeurIPS 2023</strong>"
-  - img: "../img/research/tactile_saliency.png"
-    title: "Attention of Robot Touch: Tactile Saliency Prediction for Robust Sim-to-Real Tactile Control"
-    link: "https://arxiv.org/pdf/2307.14510.pdf"
-    authors: "Yijiong Lin, <strong>Mauro Comi</strong>, Alex Church, Dandan Zhang, Nathan F. Lepora"
-    status: "<strong>IROS 2023</strong>"
-  - img: "../img/research/safeai.png"
-    title: "A Hybrid-AI approach to Competence Assessment for Automated Driving Functions"
-    link: "http://ceur-ws.org/Vol-2808/Paper_37.pdf"
-    authors: "Jan-Pieter Paardekooper, <strong>Mauro Comi</strong>, Corrado Grappiolo, Ron Snijders, Willeke van Vught, Rutger Beekelaar"
-    status: "<strong>SafeAI AAAI 2021</strong>"
 ---
 
 <!-- Navigation -->
@@ -66,223 +34,36 @@ publications:
 
 
 <!-- My Projects Section -->
-<br><br>    
+<br><br>
 <section class="portfolio" id="portfolio">
     <!-- Machine Learning and Data Science -->
     <div class="container">
         <h2 class="text-center text-uppercase text-secondary mb-0">Machine Learning and Side Projects</h2>
         <br><br>
-        <h4 class="mb-0 text-center text-intro">This is a partial list of my Machine Learning and Data Science projects completed in my free time or for academic courses. Main findings and challenges are highlighted and reported using R Notebooks or IPython Notebooks. My professional projects are not included. </h4>
+        <h4 class="mb-0 text-center text-intro">This is a partial list of my Machine Learning and Data Science projects
+            completed in my free time or for academic courses. Main findings and challenges are highlighted and reported
+            using R Notebooks or IPython Notebooks. My professional projects are not included. </h4>
         <hr class="star-dark mb-5">
         <div class="row">
+            {% for project in site.data.projects %}
             <div class="col-md-6 col-lg-4" id="card1">
                 <div class="card">
-                    <img class="card-img-top" src="/img/research/snap_tap.png" alt="Card image" style="width:100%">
+                    <img class="card-img-top" src="{{ project.img }}" alt="Card image" style="width:100%">
                     <div class="card-body">
-                        <h4 class="card-title">Tactile-Informed 3D Gaussian Splatting </h4>
-                        <p class="card-text">Reconstructing challenges surfaces with vision and tactile sensing within a 3D Gaussian Splatting framework.</p>
+                        <h4 class="card-title">{{ project.title }}</h4>
+                        <p class="card-text">{{ project.description }}</p>
                         <hr />
                         <ul class="skillList card-title" style="padding-left: 0px;">
-                            <li>PYTHON</li>
-                            <li>PYTORCH</li>
+                            {% for skill in project.skills %}
+                            <li>{{ skill }}</li>
+                            {% endfor %}
                         </ul>
-                        <!--"btn btn-primary float-right"-->
-                        <a href="https://github.com/maurock/Dynamic3DGaussians" class="btn_custom first_btn float-right">View More<span class="fa fa-long-arrow-right" aria-hidden="true" style="margin-left: 8px"></span></a>
+                        <a href="{{ project.link }}" class="btn_custom first_btn float-right">View More<span
+                                class="fa fa-long-arrow-right" aria-hidden="true" style="margin-left: 8px"></span></a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4" id="card1">
-                <div class="card">
-                    <img class="card-img-top" src="/img/robot_teapot3.png" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">TouchSDF </h4>
-                        <p class="card-text">Implementation of the TouchSDF paper on 3D shape reconstruction using vision-based tactile sensing.</p>
-                        <hr />
-                        <ul class="skillList card-title" style="padding-left: 0px;">
-                            <li>PYTHON</li>
-                            <li>PYTORCH</li>
-                        </ul>
-                        <!--"btn btn-primary float-right"-->
-                        <a href="https://github.com/maurock/TouchSDF" class="btn_custom first_btn float-right">View More<span class="fa fa-long-arrow-right" aria-hidden="true" style="margin-left: 8px"></span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4" id="card1">
-                <div class="card">
-                    <img class="card-img-top" src="/img/reconstructed_objects.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">DeepSDF </h4>
-                        <p class="card-text">Implementation of the paper DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation with shape completion functionality.</p>
-                        <hr />
-                        <ul class="skillList card-title" style="padding-left: 0px;">
-                            <li>PYTHON</li>
-                            <li>PYTORCH</li>
-                        </ul>
-                        <!--"btn btn-primary float-right"-->
-                        <a href="https://github.com/maurock/DeepSDF" class="btn_custom first_btn float-right">View More<span class="fa fa-long-arrow-right" aria-hidden="true" style="margin-left: 8px"></span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4" id="card1">
-                <div class="card">
-                    <img class="card-img-top" src="img/robot_sampling2.png" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">3D Shape Reconstruction using Vision Based Tactile Perception</h4>
-                        <p class="card-text">Reconstructing 3D object shapes using Graph Neural Networks and robotics tactile sensing.</p>
-                        <hr />
-                        <ul class="skillList card-title" style="padding-left: 0px;">
-                            <li>PYTHON</li>
-                            <li>PYTORCH3D</li>
-                            <li>PYBULLET</li>
-                        </ul>
-                        <!--"btn btn-primary float-right"-->
-                        <a href="https://github.com/maurock/object_reconstruction" class="btn_custom first_btn float-right">View More<span class="fa fa-long-arrow-right" aria-hidden="true" style="margin-left: 8px"></span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4" id="card1">
-                <div class="card">
-                    <img class="card-img-top" src="img/rendering/cover.png" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Monte Carlo Path Tracer</h4>
-                        <p class="card-text">Implementation of different standard Monte Carlo approaches in path tracing, and comparison with Next Event Estimation</p>
-                        <hr />
-                        <ul class="skillList card-title" style="padding-left: 0px;">
-                            <li>C++</li>
-                        </ul>
-                        <!--"btn btn-primary float-right"-->
-                        <a href="monteCarloPathTracer.html" class="btn_custom first_btn float-right">View More<span class="fa fa-long-arrow-right" aria-hidden="true" style="margin-left: 8px"></span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4" id="card1">
-                <div class="card">
-                    <img class="card-img-top" src="img/rendering/q-learning-cover.png" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Q-Learning for Monte Carlo importance sampling</h4>
-                        <p class="card-text">Reinforcement Learning-based approaches applied to the light transport equation for importance sampling</p>
-                        <hr />
-                        <ul class="skillList card-title" style="padding-left: 0px;">
-                            <li>C++</li>
-                        </ul>
-                        <a href="https://github.com/maurock/Q-tracer" class="btn_custom first_btn float-right">View More<span class="fa fa-long-arrow-right" aria-hidden="true" style="margin-left: 8px"></span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4" id="card1">
-                <div class="card">
-                    <img class="card-img-top" src="img/Deep_Mind.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Deep Reinforcement Learning for Games</h4>
-                        <p class="card-text">Deep Q-Learning agent to play the game Snake. Optimized it using Bayesian Optimization</p>
-                        <hr />
-                        <ul class="skillList card-title" style="padding-left: 0px;">
-                            <li>PYTHON</li>
-                            <li>PYTORCH</li>
-                            <li>TENSORFLOW</li>
-                            <li>DEEP REINFORCEMENT LEARNING</li>
-                            <li>BAYESIAN OPTIMIZATION</li>
-                        </ul>
-                        <a href="snake.html" class="btn_custom first_btn float-right">View More<span class="fa fa-long-arrow-right" aria-hidden="true" style="margin-left: 8px"></span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4" id="card1">
-                <div class="card">
-                    <img class="card-img-top" src="img/transferStyle/combined2.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Artificial Intelligence meets Art: Neural Transfer Style</h4>
-                        <p class="card-text">Deep Learning technique to transfer the style of a painting to a chosen image</p>
-                        <hr />
-                        <ul class="skillList card-title" style="padding-left: 0px;">
-                            <li>PYTHON</li>
-                            <li>TENSORFLOW</li>
-                            <li>DEEP LEARNING</li>
-                            <li>KERAS</li>
-                        </ul>
-                        <a href="transfer-style.html" class="btn_custom first_btn float-right">View More<span class="fa fa-long-arrow-right" aria-hidden="true" style="margin-left: 8px"></span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4" id="card1">
-                <div class="card">
-                    <img class="card-img-top" src="img/mcts.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Monte Carlo Tree Search: Tic Tac Toe</h4>
-                        <p class="card-text">MCTS strategy to play the game Tic tac Toe</p>
-                        <hr />
-                        <ul class="skillList card-title" style="padding-left: 0px;">
-                            <li>PYTHON</li>
-                            <li>MCTS</li>
-                        </ul>
-                        <a href="https://github.com/maurock/mcts_tictactoe" class="btn_custom first_btn float-right">View More<span class="fa fa-long-arrow-right" aria-hidden="true" style="margin-left: 8px"></span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4" id="card1">
-                <div class="card">
-                    <img class="card-img-top" src="img/flight_delays.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Flight Delay Prediction</h4>
-                        <p class="card-text">Modeling and predicting the delay of 7 million US domestic flights using Big Data Tools.</p>
-                        <hr />
-                        <ul class="skillList card-title" style="padding-left: 0px;">
-                            <li>SPARK</li>
-                            <li>SCALA</li>
-                            <li>R</li>
-                        </ul>
-                        <!--"btn btn-primary float-right"-->
-                        <a href="flight.html" class="btn_custom first_btn float-right">View More<span class="fa fa-long-arrow-right" aria-hidden="true" style="margin-left: 8px"></span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4" id="card1">
-                <div class="card">
-                    <img class="card-img-top" src="img/flinkHighway/cover.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Highway patrol</h4>
-                        <p class="card-text">Java application using Flink, implementing functionalities of Speed Radar, Average Speed Control and Accident Reporter on data streams.</p>
-                        <hr />
-                        <ul class="skillList card-title" style="padding-left: 0px;">
-                            <li>JAVA</li>
-                            <li>FLINK</li>
-                            <li>DATA STREAM</li>
-                        </ul>
-                        <a href="flinkHighway.html" class="btn_custom first_btn float-right">View More<span class="fa fa-long-arrow-right" aria-hidden="true" style="margin-left: 8px"></span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4" id="card1">
-                <div class="card">
-                    <img class="card-img-top" src="img/hbase_cover.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">TPC-C Benchmark</h4>
-                        <p class="card-text">Java program using HBase to create, load tables, and implementing four different queries to simulate the activity of any company that manages, sells, and distributes products or services.</p>
-                        <hr />
-                        <ul class="skillList card-title" style="padding-left: 0px;">
-                            <li>JAVA</li>
-                            <li>HBASE</li>
-                            <li>HADOOP</li>
-                        </ul>
-                        <a href="hbase1.html" class="btn_custom first_btn float-right">View More<span class="fa fa-long-arrow-right" aria-hidden="true" style="margin-left: 8px"></span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4" id="card1">
-                <div class="card">
-                    <img class="card-img-top" src="img/medicine_python.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Raw data processing for diseases prediction</h4>
-                        <p class="card-text">Processing raw data to feed a machine learning model using IBM SPSS Modeler.</p>
-                        <hr />
-                        <ul class="skillList card-title" style="padding-left: 0px;">
-                            <li>PYTHON</li>
-                            <li>RAW DATA</li>
-                        </ul>
-                        <a href="kidney.html" class="btn_custom first_btn float-right">View More<span class="fa fa-long-arrow-right" aria-hidden="true" style="margin-left: 8px"></span></a>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
@@ -295,28 +76,36 @@ publications:
             <hr class="star-light mb-5">
             <div class="container" style="margin-bottom: 70px;">
                 <div class="page-header" style="display: inline-block; margin-bottom: 20px;">
-                    <img src="img/university.png" style="display: inline; height: 50px; width: auto;  vertical-align: middle;">
-                    <h1 id="timeline" style="display: inline;  vertical-align: middle; margin-left: 25px;">Education</h1>
+                    <img src="img/university.png"
+                        style="display: inline; height: 50px; width: auto;  vertical-align: middle;">
+                    <h1 id="timeline" style="display: inline;  vertical-align: middle; margin-left: 25px;">Education
+                    </h1>
                 </div>
                 <ul class="timeline">
                     <li>
                         <div class="timeline-badge"><i class="glyphicon glyphicon-credit-card"></i></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4 class="timeline-title" style="margin-bottom: 5px;">PhD in Machine Learning (CDT in Interactive AI)</h4>
+                                <h4 class="timeline-title" style="margin-bottom: 5px;">PhD in Machine Learning (CDT in
+                                    Interactive AI)</h4>
                                 <div style="display: inline-block; margin-bottom: 5px;">
-                                    <img src="img/calendar.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">09/2021 - present</h6>
+                                    <img src="img/calendar.png"
+                                        style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">09/2021 -
+                                        present</h6>
                                 </div>
                                 <br>
                                 <div style="display: inline-block; margin-bottom: 5px;">
-                                    <img src="img/university.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">University of Bristol (Bristol, United Kingdom)</h6>
+                                    <img src="img/university.png"
+                                        style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">University
+                                        of Bristol (Bristol, United Kingdom)</h6>
                                 </div>
                                 <br>
                             </div>
                             <div class="timeline-body">
-                                <p>A four-year PhD program in Machine Learning. I am interested in 3D Deep Learning, robotics perception, and physics simulation.</p>
+                                <p>A four-year PhD program in Machine Learning. I am interested in 3D Deep Learning,
+                                    robotics perception, and physics simulation.</p>
                             </div>
                         </div>
                     </li>
@@ -324,24 +113,32 @@ publications:
                         <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4 class="timeline-title ">Master thesis researching Q-Learning and Deep Reinforcement Learning for Importance Sampling in Physically-based rendering.</h4>
+                                <h4 class="timeline-title ">Master thesis researching Q-Learning and Deep Reinforcement
+                                    Learning for Importance Sampling in Physically-based rendering.</h4>
                                 <div style="display: inline-block; margin-bottom: 5px;">
-                                    <img src="img/calendar.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">02/2019 - 10/2019</h6>
+                                    <img src="img/calendar.png"
+                                        style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">02/2019 -
+                                        10/2019</h6>
                                 </div>
                                 <br>
                                 <div style="display: inline-block; margin-bottom: 5px;">
-                                    <img src="img/university.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">TU Delft (Delft, The Netherlands)</h6>
+                                    <img src="img/university.png"
+                                        style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">TU Delft
+                                        (Delft, The Netherlands)</h6>
                                 </div>
                                 <br>
                                 <div style="display: inline-block; margin-bottom: 5px;">
-                                    <img src="img/university.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Technical University of Eindhoven (Eindhoven, The Netherlands)</h6>
+                                    <img src="img/university.png"
+                                        style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Technical
+                                        University of Eindhoven (Eindhoven, The Netherlands)</h6>
                                 </div>
                             </div>
                             <div class="timeline-body">
-                                <p>Master thesis researching Q-Learning and Deep Reinforcement Learning for Importance Sampling in Physically-based rendering. <br>
+                                <p>Master thesis researching Q-Learning and Deep Reinforcement Learning for Importance
+                                    Sampling in Physically-based rendering. <br>
                                     Supervisor: Prof. Elmar Eisemann - TU Delft <br>
                                     Supervisor: Prof. Decebal Mocanu - TU Eindhoven
                                 </p>
@@ -352,28 +149,38 @@ publications:
                         <div class="timeline-badge"><i class="glyphicon glyphicon-credit-card"></i></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4 class="timeline-title" style="margin-bottom: 5px;">EIT Digital Double Degree - MSc in Data Science, Distinction</h4>
+                                <h4 class="timeline-title" style="margin-bottom: 5px;">EIT Digital Double Degree - MSc
+                                    in Data Science, Distinction</h4>
                                 <div style="display: inline-block; margin-bottom: 5px;">
-                                    <img src="img/calendar.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">09/2017 - 10/2019</h6>
+                                    <img src="img/calendar.png"
+                                        style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">09/2017 -
+                                        10/2019</h6>
                                 </div>
                                 <br>
                                 <div style="display: inline-block; margin-bottom: 5px;">
-                                    <img src="img/university.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Entry University: Universidad Politecnica de Madrid (Madrid, Spain)</h6>
+                                    <img src="img/university.png"
+                                        style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Entry
+                                        University: Universidad Politecnica de Madrid (Madrid, Spain)</h6>
                                 </div>
                                 <br>
                                 <div style="display: inline-block; margin-bottom: 5px;">
-                                    <img src="img/university.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Exit University: Technical University of Eindhoven (Eindhoven, The Netherlands)</h6>
+                                    <img src="img/university.png"
+                                        style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Exit
+                                        University: Technical University of Eindhoven (Eindhoven, The Netherlands)</h6>
                                 </div>
                             </div>
                             <div class="timeline-body">
-                                <p>A two-year Master double degree programme, coordinated by the European Institute of Innovation and Technology (EIT). Major in Data Science, and Minor in Innovation and Entrepreneurship. <br> Topics covered: <br>
-                                • Machine Learning algorithms and Deep Learning (Computer Vision, NLP)<br>
-                                • Big Data Ecosystem: creation of Big Data application with Spark (Scala), Flink, HBase <br>
-                                • Advanced statistics with R <br>
-                                • Innovation and Enterpreneurship, focused on start-ups development.</p>
+                                <p>A two-year Master double degree programme, coordinated by the European Institute of
+                                    Innovation and Technology (EIT). Major in Data Science, and Minor in Innovation and
+                                    Entrepreneurship. <br> Topics covered: <br>
+                                    • Machine Learning algorithms and Deep Learning (Computer Vision, NLP)<br>
+                                    • Big Data Ecosystem: creation of Big Data application with Spark (Scala), Flink,
+                                    HBase <br>
+                                    • Advanced statistics with R <br>
+                                    • Innovation and Enterpreneurship, focused on start-ups development.</p>
                             </div>
                         </div>
                     </li>
@@ -381,24 +188,32 @@ publications:
                         <div class="timeline-badge"><i class="glyphicon glyphicon-credit-card"></i></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4 class="timeline-title" style="margin-bottom: 5px;">Premaster in Data Science and Business Information Technology</h4>
+                                <h4 class="timeline-title" style="margin-bottom: 5px;">Premaster in Data Science and
+                                    Business Information Technology</h4>
                                 <div style="display: inline-block; margin-bottom: 5px;">
-                                    <img src="img/calendar.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">09/2016–07/2017</h6>
+                                    <img src="img/calendar.png"
+                                        style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">
+                                        09/2016–07/2017</h6>
                                 </div>
                                 <br>
                                 <div style="display: inline-block; margin-bottom: 5px;">
-                                    <img src="img/university.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">University of Twente</h6>
+                                    <img src="img/university.png"
+                                        style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">University
+                                        of Twente</h6>
                                 </div>
                                 <br>
                                 <div style="display: inline-block;">
-                                    <img src="img/location_pin.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle;">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 5px">Enschede, The Netherlands</h6>
+                                    <img src="img/location_pin.png"
+                                        style="display: inline; height: 25px; width: auto;  vertical-align: middle;">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 5px">Enschede, The
+                                        Netherlands</h6>
                                 </div>
                             </div>
                             <div class="timeline-body">
-                                <p> Bridge program on Computer Science and Business IT. Among the courses I took, I followed joint courses with Delft University and Standford University. </p>
+                                <p> Bridge program on Computer Science and Business IT. Among the courses I took, I
+                                    followed joint courses with Delft University and Standford University. </p>
                             </div>
                         </div>
                     </li>
@@ -406,24 +221,37 @@ publications:
                         <div class="timeline-badge"><i class="glyphicon glyphicon-credit-card"></i></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4 class="timeline-title" style="margin-bottom: 5px;">Bachelor of Science in Mechanical Engineering</h4>
+                                <h4 class="timeline-title" style="margin-bottom: 5px;">Bachelor of Science in Mechanical
+                                    Engineering</h4>
                                 <div style="display: inline-block; margin-bottom: 5px;">
-                                    <img src="img/calendar.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">09/2011 – 02/2015</h6>
+                                    <img src="img/calendar.png"
+                                        style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">09/2011 –
+                                        02/2015</h6>
                                 </div>
                                 <br>
                                 <div style="display: inline-block; margin-bottom: 5px;">
-                                    <img src="img/university.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Polytechnic University of Milan</h6>
+                                    <img src="img/university.png"
+                                        style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Polytechnic
+                                        University of Milan</h6>
                                 </div>
                                 <br>
                                 <div style="display: inline-block;">
-                                    <img src="img/location_pin.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle;">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 5px">Milan, Italy</h6>
+                                    <img src="img/location_pin.png"
+                                        style="display: inline; height: 25px; width: auto;  vertical-align: middle;">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 5px">Milan, Italy
+                                    </h6>
                                 </div>
                             </div>
                             <div class="timeline-body">
-                                <p>Thesis Project: "Mechanical design and virtual prototyping for thermal turbomachinery" <br> • Cost accounting and decision making, economic criteria for the dimensioning of industrial plants and facilities, layout planning <br> • C++ and Matlab programming <br> • Operations Research and linear planning for optimization <br> • Design methods and CAD Softwares (Autodesk Inventor, SolidWorks, SolidEdge, PTC Creo)</p>
+                                <p>Thesis Project: "Mechanical design and virtual prototyping for thermal
+                                    turbomachinery" <br> • Cost accounting and decision making, economic criteria for
+                                    the dimensioning of industrial plants and facilities, layout planning <br> • C++ and
+                                    Matlab programming <br> • Operations Research and linear planning for optimization
+                                    <br> • Design methods and CAD Softwares (Autodesk Inventor, SolidWorks, SolidEdge,
+                                    PTC Creo)
+                                </p>
                             </div>
                         </div>
                     </li>
@@ -432,32 +260,41 @@ publications:
             <!-- Work -->
             <div class="container">
                 <div class="page-header" style="display: inline-block; margin-bottom: 20px;">
-                    <img src="img/work.png" style="display: inline; height: 50px; width: auto;  vertical-align: middle;">
+                    <img src="img/work.png"
+                        style="display: inline; height: 50px; width: auto;  vertical-align: middle;">
                     <h2 id="timeline" style="display: inline;  vertical-align: middle; margin-left: 25px;">Work</h2>
-                </div>               
+                </div>
                 <ul class="timeline">
                     <li class="timeline-inverted">
                         <div class="timeline-badge "><i class="glyphicon glyphicon-credit-card"></i></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4 class="timeline-title" style="margin-bottom: 5px;">Research Intern (Student Researcher)</h4>
+                                <h4 class="timeline-title" style="margin-bottom: 5px;">Research Intern (Student
+                                    Researcher)</h4>
                                 <div style="display: inline-block; margin-bottom: 5px;">
-                                    <img src="img/calendar.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">09/2024 - present</h6>
+                                    <img src="img/calendar.png"
+                                        style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">09/2024 -
+                                        present</h6>
                                 </div>
                                 <br>
                                 <div style="display: inline-block; margin-bottom: 5px;">
-                                    <img src="img/company.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Google DeepMind</h6>
+                                    <img src="img/company.png"
+                                        style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Google
+                                        DeepMind</h6>
                                 </div>
                                 <br>
                                 <div style="display: inline-block;">
-                                    <img src="img/location_pin.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle;">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 5px">London, UK</h6>
+                                    <img src="img/location_pin.png"
+                                        style="display: inline; height: 25px; width: auto;  vertical-align: middle;">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 5px">London, UK
+                                    </h6>
                                 </div>
                             </div>
                             <div class="timeline-body">
-                                <p>I did two different Research Internships at Google DeepMind, focusing on 3D Vision and multi-modal learning.
+                                <p>I did two different Research Internships at Google DeepMind, focusing on 3D Vision
+                                    and multi-modal learning.
                                 </p>
                             </div>
                         </div>
@@ -466,27 +303,34 @@ publications:
                         <div class="timeline-badge "><i class="glyphicon glyphicon-credit-card"></i></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4 class="timeline-title" style="margin-bottom: 5px;">Postgraduate Teaching Assistant</h4>
+                                <h4 class="timeline-title" style="margin-bottom: 5px;">Postgraduate Teaching Assistant
+                                </h4>
                                 <div style="display: inline-block; margin-bottom: 5px;">
-                                    <img src="img/calendar.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">02/2021 - present</h6>
+                                    <img src="img/calendar.png"
+                                        style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">02/2021 -
+                                        present</h6>
                                 </div>
                                 <br>
                                 <div style="display: inline-block; margin-bottom: 5px;">
-                                    <img src="img/company.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">University of Bristol</h6>
+                                    <img src="img/company.png"
+                                        style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">University
+                                        of Bristol</h6>
                                 </div>
                                 <br>
                                 <div style="display: inline-block;">
-                                    <img src="img/location_pin.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle;">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 5px">Bristol, United Kingdom</h6>
+                                    <img src="img/location_pin.png"
+                                        style="display: inline; height: 25px; width: auto;  vertical-align: middle;">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 5px">Bristol,
+                                        United Kingdom</h6>
                                 </div>
                             </div>
                             <div class="timeline-body">
                                 <p> Teaching Assistant for the units: <br>
                                     • Introduction to AI, MSc unit, 2022-2023 <br>
                                     • Introduction to AI, BSc unit, 2022-2023 <br>
-                                    • Introduction to AI, MSc unit, 2021-2022 
+                                    • Introduction to AI, MSc unit, 2021-2022
                                 </p>
                             </div>
                         </div>
@@ -495,28 +339,36 @@ publications:
                         <div class="timeline-badge "><i class="glyphicon glyphicon-credit-card"></i></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4 class="timeline-title" style="margin-bottom: 5px;">Machine Learning Research Engineer</h4>
+                                <h4 class="timeline-title" style="margin-bottom: 5px;">Machine Learning Research
+                                    Engineer</h4>
                                 <div style="display: inline-block; margin-bottom: 5px;">
-                                    <img src="img/calendar.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">03/2019 - 08/2021</h6>
+                                    <img src="img/calendar.png"
+                                        style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">03/2019 -
+                                        08/2021</h6>
                                 </div>
                                 <br>
                                 <div style="display: inline-block; margin-bottom: 5px;">
-                                    <img src="img/company.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">TNO - Netherlands Organisation for Applied Scientific Research </h6>
+                                    <img src="img/company.png"
+                                        style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">TNO -
+                                        Netherlands Organisation for Applied Scientific Research </h6>
                                 </div>
                                 <br>
                                 <div style="display: inline-block;">
-                                    <img src="img/location_pin.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle;">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 5px">Helmond, The Netherlands</h6>
+                                    <img src="img/location_pin.png"
+                                        style="display: inline; height: 25px; width: auto;  vertical-align: middle;">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 5px">Helmond, The
+                                        Netherlands</h6>
                                 </div>
                             </div>
                             <div class="timeline-body">
-                                <p>Focus on researching and applying Machine Learning techniques for autonomous driving: <br>
+                                <p>Focus on researching and applying Machine Learning techniques for autonomous driving:
+                                    <br>
                                     • Deep Learning for trajectory prediction and decision making <br>
                                     • (Inverse and Deep) Reinforcement Learning for planning and decision making <br>
-                                    • Bayesian statistics for uncertainty modelling, Explainable AI and Interpretable AI 
-                                    </p>
+                                    • Bayesian statistics for uncertainty modelling, Explainable AI and Interpretable AI
+                                </p>
                             </div>
                         </div>
                     </li>
@@ -526,22 +378,29 @@ publications:
                             <div class="timeline-heading">
                                 <h4 class="timeline-title" style="margin-bottom: 5px;">Machine Learning Intern</h4>
                                 <div style="display: inline-block; margin-bottom: 5px;">
-                                    <img src="img/calendar.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">03/2018 - 08/2018</h6>
+                                    <img src="img/calendar.png"
+                                        style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">03/2018 -
+                                        08/2018</h6>
                                 </div>
                                 <br>
                                 <div style="display: inline-block; margin-bottom: 5px;">
-                                    <img src="img/company.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Zinkcloud</h6>
+                                    <img src="img/company.png"
+                                        style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Zinkcloud
+                                    </h6>
                                 </div>
                                 <br>
                                 <div style="display: inline-block;">
-                                    <img src="img/location_pin.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle;">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 5px">Madrid, Spain</h6>
+                                    <img src="img/location_pin.png"
+                                        style="display: inline; height: 25px; width: auto;  vertical-align: middle;">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 5px">Madrid, Spain
+                                    </h6>
                                 </div>
                             </div>
                             <div class="timeline-body">
-                                <p>Developed Deep Learning algorithms for Image detection in aerospace applications (Python, Tensorflow, Keras).</p>
+                                <p>Developed Deep Learning algorithms for Image detection in aerospace applications
+                                    (Python, Tensorflow, Keras).</p>
                             </div>
                         </div>
                     </li>
@@ -549,26 +408,35 @@ publications:
                         <div class="timeline-badge"><i class="glyphicon glyphicon-credit-card"></i></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4 class="timeline-title" style="margin-bottom: 5px;">Internship as Product manager assistant and Aerospace Engineer</h4>
+                                <h4 class="timeline-title" style="margin-bottom: 5px;">Internship as Product manager
+                                    assistant and Aerospace Engineer</h4>
                                 <div style="display: inline-block; margin-bottom: 5px;">
-                                    <img src="img/calendar.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">02/2015 - 04/2015</h6>
+                                    <img src="img/calendar.png"
+                                        style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">02/2015 -
+                                        04/2015</h6>
                                 </div>
                                 <br>
                                 <div style="display: inline-block; margin-bottom: 5px;">
-                                    <img src="img/company.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Jenoptik GmbH</h6>
+                                    <img src="img/company.png"
+                                        style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Jenoptik
+                                        GmbH</h6>
                                 </div>
                                 <br>
                                 <div style="display: inline-block;">
-                                    <img src="img/location_pin.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle;">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 5px">Hamburg, Germany</h6>
+                                    <img src="img/location_pin.png"
+                                        style="display: inline; height: 25px; width: auto;  vertical-align: middle;">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 5px">Hamburg,
+                                        Germany</h6>
                                 </div>
                             </div>
                             <div class="timeline-body">
-                                <p>• Mechanical design and optimization for aerospace systems (drones, Airbus components) <br>
-                                • Product Management: market analysis for military and civil helicopters, market research and analysis for unmanned aerial veichle <br>
-                                </p> 
+                                <p>• Mechanical design and optimization for aerospace systems (drones, Airbus
+                                    components) <br>
+                                    • Product Management: market analysis for military and civil helicopters, market
+                                    research and analysis for unmanned aerial veichle <br>
+                                </p>
                             </div>
                         </div>
                     </li>
@@ -576,20 +444,27 @@ publications:
                         <div class="timeline-badge "><i class="glyphicon glyphicon-credit-card"></i></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4 class="timeline-title" style="margin-bottom: 5px;">Trainee as Mechanical design Engineer</h4>
+                                <h4 class="timeline-title" style="margin-bottom: 5px;">Trainee as Mechanical design
+                                    Engineer</h4>
                                 <div style="display: inline-block; margin-bottom: 5px;">
-                                    <img src="img/calendar.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">09/2014 - 01/2015 (3 Months)</h6>
+                                    <img src="img/calendar.png"
+                                        style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">09/2014 -
+                                        01/2015 (3 Months)</h6>
                                 </div>
                                 <br>
                                 <div style="display: inline-block; margin-bottom: 5px;">
-                                    <img src="img/company.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Stilmas</h6>
+                                    <img src="img/company.png"
+                                        style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Stilmas
+                                    </h6>
                                 </div>
                                 <br>
                                 <div style="display: inline-block;">
-                                    <img src="img/location_pin.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle;">
-                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 5px">Milan, Italy</h6>
+                                    <img src="img/location_pin.png"
+                                        style="display: inline; height: 25px; width: auto;  vertical-align: middle;">
+                                    <h6 style="display: inline;  vertical-align: middle; margin-left: 5px">Milan, Italy
+                                    </h6>
                                 </div>
                             </div>
                             <div class="timeline-body">
@@ -600,434 +475,528 @@ publications:
                 </ul>
             </div>
         </div>
-</section>
+    </section>
 
-<!-- About Section, mobile -->
-<section class="bg-primary mb-0 mobile-only" id="about_mobile" style="background-color: #ffffff !important; padding-bottom: 5px; padding-top: 15px;">
-    <div class="container">
-        <h2 class="text-center text-uppercase">About me</h2>
-        <hr class="star-light mb-5">
-        <div class="container-fluid">
-            <!--    Education    -->
-            <div class="page-header" style="display: inline-block; margin-bottom: 20px;">
-                <img src="img/university.png" style="display: inline; height: 50px; width: auto; vertical-align: middle;">
-                <h1 id="timeline2" style="display: inline;  vertical-align: middle; margin-left: 25px;">Education</h1>
-            </div>
-            <div class="row example-basic">
-                <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
-                <ul class="timeline2">
-                    <li class="timeline2-item">                            
-                        <div class="timeline2-marker"></div>
-                        <div class="timeline2-content">
-                            <h5 class="timeline2-title">PhD in Machine Learning (CDT in Interactive AI)</h5>
-                            <div style="display: inline-block; margin-bottom: 5px;">
-                                <img src="img/calendar.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">09/2021 - present</h6>
-                            </div>
-                            <br>
-                            <div style="display: inline-block; margin-bottom: 5px;">
-                                <img src="img/university.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">TU Delft (Delft, The Netherlands)</h6>
-                            </div>
-                            <br>
-                            <div style="display: inline-block; margin-bottom: 5px;">
-                                <img src="img/university.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">University of Bristol (United Kingdom)</h6>
-                            </div>
-                            <div class="timeline-body">
-                            <p>A four-year PhD program in Machine Learning. I work on 3D Deep Learning, robotics perception, and physics simulation.</p>
-                            </div>
-                        </div>
-                        <div class="timeline2-content">
-                            <h5 class="timeline2-title">Master thesis: Deep Reinforcement Learning for importance sampling in Physically-based rendering.</h5>
-                            <div style="display: inline-block; margin-bottom: 5px;">
-                                <img src="img/calendar.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">02/2019 - 10/2019</h6>
-                            </div>
-                            <br>
-                            <div style="display: inline-block; margin-bottom: 5px;">
-                                <img src="img/university.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">TU Delft (Delft, The Netherlands)</h6>
-                            </div>
-                            <br>
-                            <div style="display: inline-block; margin-bottom: 5px;">
-                                <img src="img/university.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Technical University of Eindhoven (Eindhoven, The Netherlands)</h6>
-                            </div>
-                            <div class="timeline-body">
-                            <p>Master thesis researching Q-Learning and Deep Reinforcement Learning for Importance Sampling in Physically-based rendering. <br>
-                                Supervisor: Prof. Elmar Eisemann - TU Delft <br>
-                                Supervisor: Prof. Decebal Mocanu - TU Eindhoven</p>
-                            </div>
-                        </div>
-                    </li>          
-                    <li class="timeline2-item">                            
-                        <div class="timeline2-marker"></div>
-                        <div class="timeline2-content">
-                            <h5 class="timeline2-title">EIT Digital Double Degree - MSc in Data Science</h5>
-                            <div style="display: inline-block; margin-bottom: 5px;">
-                                <img src="img/calendar.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">09/2017 - 10/2019</h6>
-                            </div>
-                            <br>
-                            <div style="display: inline-block; margin-bottom: 5px;">
-                                <img src="img/university.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Entry University: Universidad Politecnica de Madrid (Madrid, Spain)</h6>
-                            </div>
-                            <br>
-                            <div style="display: inline-block; margin-bottom: 5px;">
-                                <img src="img/university.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Exit University: Technical University of Eindhoven (Eindhoven, The Netherlands)</h6>
-                            </div>
-                            <div class="timeline-body">
-                                <p>A two-year Master double degree programme, coordinated by the European Institute of Innovation and Technology (EIT). Major in Data Science, and Minor in Innovation and Entrepreneurship. <br> Topics covered: <br>
-                                • Machine Learning algorithms and Deep Learning (Computer Vision, NLP)<br>
-                                • Big Data Ecosystem: creation of Big Data application with Spark (Scala), Flink, HBase <br>
-                                • Advanced statistics with R <br>
-                                • Innovation and Enterpreneurship, focused on start-ups development.</p>
-                            </div>
-                        </div>
-                    </li>              
-                    <li class="timeline2-item">                            
-                        <div class="timeline2-marker"></div>
-                        <div class="timeline2-content">
-                            <h5 class="timeline2-title">Premaster in Data Science and Business Information Technology</h5>
-                            <div style="display: inline-block; margin-bottom: 5px;">
-                                <img src="img/calendar.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 10px; font-family: Montserrat">09/2016–07/2017</h6>
-                            </div>
-                            <br>
-                            <div style="display: inline-block; margin-bottom: 5px;">
-                                <img src="img/university.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">University of Twente</h6>
-                            </div>
-                            <br>
-                            <div style="display: inline-block;">
-                                <img src="img/location_pin.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle;">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 5px">Enschede, The Netherlands</h6>
-                            </div>
-                            <div class="timeline-body">
-                                <p> Bridge program on Computer Science and Business IT. Among the courses I took, I followed joint courses with Delft University and Standford University. </p>
-                            </div>
-                        </div>
-                    </li>                 
-                    <li class="timeline2-item">                            
-                        <div class="timeline2-marker"></div>
-                        <div class="timeline2-content">
-                            <h5 class="timeline2-title">Bachelor of Science in Mechanical Engineering</h5>
-                            <div style="display: inline-block; margin-bottom: 5px;">
-                                <img src="img/calendar.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">09/2011 – 02/2015</h6>
-                            </div>
-                            <br>
-                            <div style="display: inline-block; margin-bottom: 5px;">
-                                <img src="img/university.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Polytechnic University of Milan</h6>
-                            </div>
-                            <br>
-                            <div style="display: inline-block;">
-                                <img src="img/location_pin.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle;">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 5px">Milan, Italy</h6>
-                            </div>
-                            <div class="timeline-body">
-                                <p>Thesis Project: "Mechanical design and virtual prototyping for thermal turbomachinery" <br> • Cost accounting and decision making, economic criteria for the dimensioning of industrial plants and facilities, layout planning <br> • C++ and Matlab programming <br> • Operations Research and linear planning for optimization <br> • Design methods and CAD Softwares (Autodesk Inventor, SolidWorks, SolidEdge, PTC Creo)</p>
-                            </div>
-                        </div>
-                    </li>                        
-                </ul>
-            </div>
-        </div>     
-            <!--    Work    -->
-            <div class="page-header" style="display: inline-block; margin-bottom: 20px;">
-                <img src="img/work.png" style="display: inline; height: 50px; width: auto; vertical-align: middle;">
-                <h1 id="timeline2" style="display: inline;  vertical-align: middle; margin-left: 25px;">Work</h1>
-            </div>
-            <div class="row example-basic">
-                <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
-                <ul class="timeline2" >
-                <li class="timeline2-item">                            
-                        <div class="timeline2-marker"></div>
-                        <div class="timeline2-content">
-                            <h5 class="timeline2-title">Research Intern (Student Researcher)</h5>
-                            <div style="display: inline-block; margin-bottom: 5px;">
-                                <img src="img/calendar.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">09/2024 - present</h6>
-                            </div>
-                            <br>
-                            <div style="display: inline-block; margin-bottom: 5px;">
-                                <img src="img/company.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Google DeepMind</h6>
-                            </div>
-                            <br>
-                            <div style="display: inline-block; margin-bottom: 5px;">
-                                <img src="img/location_pin.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">London, United Kingdom</h6>
-                            </div>
-                            <div class="timeline-body">
-                                <p> I did two Research Internships at Google DeepMind, focusing on 3D Vision and multi-modal learning.  </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="timeline2-item">                            
-                        <div class="timeline2-marker"></div>
-                        <div class="timeline2-content">
-                            <h5 class="timeline2-title">Postgraduate Teaching Assistant</h5>
-                            <div style="display: inline-block; margin-bottom: 5px;">
-                                <img src="img/calendar.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">02/2021 - present</h6>
-                            </div>
-                            <br>
-                            <div style="display: inline-block; margin-bottom: 5px;">
-                                <img src="img/company.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">University of Bristol </h6>
-                            </div>
-                            <br>
-                            <div style="display: inline-block; margin-bottom: 5px;">
-                                <img src="img/location_pin.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Bristol, United Kingdom</h6>
-                            </div>
-                            <div class="timeline-body">
-                                <p> Teaching Assistant for the units: <br>
-                                    • Introduction to AI, MSc unit, 2022-2023 <br>
-                                    • Introduction to AI, BSc unit, 2022-2023 <br>
-                                    • Introduction to AI, MSc unit, 2021-2022 
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="timeline2-item">                            
-                        <div class="timeline2-marker"></div>
-                        <div class="timeline2-content">
-                            <h5 class="timeline2-title">Machine Learning Research Engineer</h5>
-                            <div style="display: inline-block; margin-bottom: 5px;">
-                                <img src="img/calendar.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">03/2019 - Present</h6>
-                            </div>
-                            <br>
-                            <div style="display: inline-block; margin-bottom: 5px;">
-                                <img src="img/company.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">TNO - Netherlands Organisation for Applied Scientific Research </h6>
-                            </div>
-                            <br>
-                            <div style="display: inline-block; margin-bottom: 5px;">
-                                <img src="img/location_pin.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Helmond, The Netherlands</h6>
-                            </div>
-                            <div class="timeline-body">
-                            <p>Focus on researching and applying Machine Learning techniques for autonomous driving: <br>
-                                • Deep Learning for trajectory prediction and decision making <br>
-                                • (Inverse and Deep) Reinforcement Learning for planning and decision making <br>
-                                • Bayesian statistics for uncertainty modelling, Explainable AI and Interpretable AI 
-                                </p>
-                        </div>
-                        </div>
-                    </li>                 
-                    <li class="timeline2-item">                            
-                        <div class="timeline2-marker"></div>
-                        <div class="timeline2-content">
-                            <h5 class="timeline2-title">Machine Learning Intern</h5>
-                            <div style="display: inline-block; margin-bottom: 5px;">
-                                <img src="img/calendar.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">03/2018 - 08/2018</h6>
-                            </div>
-                            <br>
-                            <div style="display: inline-block; margin-bottom: 5px;">
-                                <img src="img/company.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Zinkcloud</h6>
-                            </div>
-                            <br>
-                            <div style="display: inline-block; margin-bottom: 5px;">
-                                <img src="img/location_pin.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Madrid, Spain</h6>
-                            </div>
-                            <div class="timeline-body">
-                            <p>Developed Deep Learning algorithms for Image detection in aerospace applications (Python, Tensorflow, Keras).</p>
-                        </div>
-                        </div>
-                    </li>                   
-                    <li class="timeline2-item">                            
-                        <div class="timeline2-marker"></div>
-                        <div class="timeline2-content">
-                            <h5 class="timeline2-title">Internship as Aerospace Engineer and Product Management assistant</h5>
-                            <div style="display: inline-block; margin-bottom: 5px;">
-                                <img src="img/calendar.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">02/2015 - 04/2015</h6>
-                            </div>
-                            <br>
-                            <div style="display: inline-block; margin-bottom: 5px;">
-                                <img src="img/company.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Jenoptik GmbH</h6>
-                            </div>
-                            <br>
-                            <div style="display: inline-block; margin-bottom: 5px;">
-                                <img src="img/location_pin.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Hamburg, Germany</h6>
-                            </div>
-                            <div class="timeline-body">
-                            <p>• Mechanical design and optimization for aerospace systems (drones, Airbus components) <br>
-                            • Product Management: market analysis for military and civil helicopters, market research and analysis for unmanned aerial veichle <br>
-                            </p>                                    
-                        </div>
-                        </div>
-                    </li>                                       
-                    <li class="timeline2-item">                            
-                        <div class="timeline2-marker"></div>
-                        <div class="timeline2-content">
-                            <h5 class="timeline2-title">Trainee as Mechanical Design Engineer</h5>
-                            <div style="display: inline-block; margin-bottom: 5px;">
-                                <img src="img/calendar.png" style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">09/2014 - 01/2015</h6>
-                            </div>
-                            <br>
-                            <div style="display: inline-block; margin-bottom: 5px;">
-                                <img src="img/company.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Stilmas</h6>
-                            </div>
-                            <br>
-                            <div style="display: inline-block; margin-bottom: 5px;">
-                                <img src="img/location_pin.png" style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
-                                <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Milan, Italy</h6>
-                            </div>
-                            <div class="timeline-body">
-                            <p>Computational Fluid Dynamics and turbomachinery optimization<br>
-                            </p>                                    
-                        </div>
-                        </div>
-                    </li>                                          
-                </ul>
+    <!-- About Section, mobile -->
+    <section class="bg-primary mb-0 mobile-only" id="about_mobile"
+        style="background-color: #ffffff !important; padding-bottom: 5px; padding-top: 15px;">
+        <div class="container">
+            <h2 class="text-center text-uppercase">About me</h2>
+            <hr class="star-light mb-5">
+            <div class="container-fluid">
+                <!--    Education    -->
+                <div class="page-header" style="display: inline-block; margin-bottom: 20px;">
+                    <img src="img/university.png"
+                        style="display: inline; height: 50px; width: auto; vertical-align: middle;">
+                    <h1 id="timeline2" style="display: inline;  vertical-align: middle; margin-left: 25px;">Education
+                    </h1>
+                </div>
+                <div class="row example-basic">
+                    <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+                        <ul class="timeline2">
+                            <li class="timeline2-item">
+                                <div class="timeline2-marker"></div>
+                                <div class="timeline2-content">
+                                    <h5 class="timeline2-title">PhD in Machine Learning (CDT in Interactive AI)</h5>
+                                    <div style="display: inline-block; margin-bottom: 5px;">
+                                        <img src="img/calendar.png"
+                                            style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">09/2021
+                                            - present</h6>
+                                    </div>
+                                    <br>
+                                    <div style="display: inline-block; margin-bottom: 5px;">
+                                        <img src="img/university.png"
+                                            style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">TU
+                                            Delft (Delft, The Netherlands)</h6>
+                                    </div>
+                                    <br>
+                                    <div style="display: inline-block; margin-bottom: 5px;">
+                                        <img src="img/university.png"
+                                            style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">
+                                            University of Bristol (United Kingdom)</h6>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>A four-year PhD program in Machine Learning. I work on 3D Deep Learning,
+                                            robotics perception, and physics simulation.</p>
+                                    </div>
+                                </div>
+                                <div class="timeline2-content">
+                                    <h5 class="timeline2-title">Master thesis: Deep Reinforcement Learning for
+                                        importance sampling in Physically-based rendering.</h5>
+                                    <div style="display: inline-block; margin-bottom: 5px;">
+                                        <img src="img/calendar.png"
+                                            style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">02/2019
+                                            - 10/2019</h6>
+                                    </div>
+                                    <br>
+                                    <div style="display: inline-block; margin-bottom: 5px;">
+                                        <img src="img/university.png"
+                                            style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">TU
+                                            Delft (Delft, The Netherlands)</h6>
+                                    </div>
+                                    <br>
+                                    <div style="display: inline-block; margin-bottom: 5px;">
+                                        <img src="img/university.png"
+                                            style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">
+                                            Technical University of Eindhoven (Eindhoven, The Netherlands)</h6>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Master thesis researching Q-Learning and Deep Reinforcement Learning for
+                                            Importance Sampling in Physically-based rendering. <br>
+                                            Supervisor: Prof. Elmar Eisemann - TU Delft <br>
+                                            Supervisor: Prof. Decebal Mocanu - TU Eindhoven</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline2-item">
+                                <div class="timeline2-marker"></div>
+                                <div class="timeline2-content">
+                                    <h5 class="timeline2-title">EIT Digital Double Degree - MSc in Data Science</h5>
+                                    <div style="display: inline-block; margin-bottom: 5px;">
+                                        <img src="img/calendar.png"
+                                            style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">09/2017
+                                            - 10/2019</h6>
+                                    </div>
+                                    <br>
+                                    <div style="display: inline-block; margin-bottom: 5px;">
+                                        <img src="img/university.png"
+                                            style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Entry
+                                            University: Universidad Politecnica de Madrid (Madrid, Spain)</h6>
+                                    </div>
+                                    <br>
+                                    <div style="display: inline-block; margin-bottom: 5px;">
+                                        <img src="img/university.png"
+                                            style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Exit
+                                            University: Technical University of Eindhoven (Eindhoven, The Netherlands)
+                                        </h6>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>A two-year Master double degree programme, coordinated by the European
+                                            Institute of Innovation and Technology (EIT). Major in Data Science, and
+                                            Minor in Innovation and Entrepreneurship. <br> Topics covered: <br>
+                                            • Machine Learning algorithms and Deep Learning (Computer Vision, NLP)<br>
+                                            • Big Data Ecosystem: creation of Big Data application with Spark (Scala),
+                                            Flink, HBase <br>
+                                            • Advanced statistics with R <br>
+                                            • Innovation and Enterpreneurship, focused on start-ups development.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline2-item">
+                                <div class="timeline2-marker"></div>
+                                <div class="timeline2-content">
+                                    <h5 class="timeline2-title">Premaster in Data Science and Business Information
+                                        Technology</h5>
+                                    <div style="display: inline-block; margin-bottom: 5px;">
+                                        <img src="img/calendar.png"
+                                            style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
+                                        <h6
+                                            style="display: inline;  vertical-align: middle; margin-left: 10px; font-family: Montserrat">
+                                            09/2016–07/2017</h6>
+                                    </div>
+                                    <br>
+                                    <div style="display: inline-block; margin-bottom: 5px;">
+                                        <img src="img/university.png"
+                                            style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">
+                                            University of Twente</h6>
+                                    </div>
+                                    <br>
+                                    <div style="display: inline-block;">
+                                        <img src="img/location_pin.png"
+                                            style="display: inline; height: 25px; width: auto;  vertical-align: middle;">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 5px">Enschede,
+                                            The Netherlands</h6>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p> Bridge program on Computer Science and Business IT. Among the courses I
+                                            took, I followed joint courses with Delft University and Standford
+                                            University. </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline2-item">
+                                <div class="timeline2-marker"></div>
+                                <div class="timeline2-content">
+                                    <h5 class="timeline2-title">Bachelor of Science in Mechanical Engineering</h5>
+                                    <div style="display: inline-block; margin-bottom: 5px;">
+                                        <img src="img/calendar.png"
+                                            style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">09/2011
+                                            – 02/2015</h6>
+                                    </div>
+                                    <br>
+                                    <div style="display: inline-block; margin-bottom: 5px;">
+                                        <img src="img/university.png"
+                                            style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">
+                                            Polytechnic University of Milan</h6>
+                                    </div>
+                                    <br>
+                                    <div style="display: inline-block;">
+                                        <img src="img/location_pin.png"
+                                            style="display: inline; height: 25px; width: auto;  vertical-align: middle;">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 5px">Milan,
+                                            Italy</h6>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Thesis Project: "Mechanical design and virtual prototyping for thermal
+                                            turbomachinery" <br> • Cost accounting and decision making, economic
+                                            criteria for the dimensioning of industrial plants and facilities, layout
+                                            planning <br> • C++ and Matlab programming <br> • Operations Research and
+                                            linear planning for optimization <br> • Design methods and CAD Softwares
+                                            (Autodesk Inventor, SolidWorks, SolidEdge, PTC Creo)</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--    Work    -->
+                <div class="page-header" style="display: inline-block; margin-bottom: 20px;">
+                    <img src="img/work.png" style="display: inline; height: 50px; width: auto; vertical-align: middle;">
+                    <h1 id="timeline2" style="display: inline;  vertical-align: middle; margin-left: 25px;">Work</h1>
+                </div>
+                <div class="row example-basic">
+                    <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+                        <ul class="timeline2">
+                            <li class="timeline2-item">
+                                <div class="timeline2-marker"></div>
+                                <div class="timeline2-content">
+                                    <h5 class="timeline2-title">Research Intern (Student Researcher)</h5>
+                                    <div style="display: inline-block; margin-bottom: 5px;">
+                                        <img src="img/calendar.png"
+                                            style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">09/2024
+                                            - present</h6>
+                                    </div>
+                                    <br>
+                                    <div style="display: inline-block; margin-bottom: 5px;">
+                                        <img src="img/company.png"
+                                            style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Google
+                                            DeepMind</h6>
+                                    </div>
+                                    <br>
+                                    <div style="display: inline-block; margin-bottom: 5px;">
+                                        <img src="img/location_pin.png"
+                                            style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">London,
+                                            United Kingdom</h6>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p> I did two Research Internships at Google DeepMind, focusing on 3D Vision and
+                                            multi-modal learning. </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline2-item">
+                                <div class="timeline2-marker"></div>
+                                <div class="timeline2-content">
+                                    <h5 class="timeline2-title">Postgraduate Teaching Assistant</h5>
+                                    <div style="display: inline-block; margin-bottom: 5px;">
+                                        <img src="img/calendar.png"
+                                            style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">02/2021
+                                            - present</h6>
+                                    </div>
+                                    <br>
+                                    <div style="display: inline-block; margin-bottom: 5px;">
+                                        <img src="img/company.png"
+                                            style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">
+                                            University of Bristol </h6>
+                                    </div>
+                                    <br>
+                                    <div style="display: inline-block; margin-bottom: 5px;">
+                                        <img src="img/location_pin.png"
+                                            style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">
+                                            Bristol, United Kingdom</h6>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p> Teaching Assistant for the units: <br>
+                                            • Introduction to AI, MSc unit, 2022-2023 <br>
+                                            • Introduction to AI, BSc unit, 2022-2023 <br>
+                                            • Introduction to AI, MSc unit, 2021-2022
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline2-item">
+                                <div class="timeline2-marker"></div>
+                                <div class="timeline2-content">
+                                    <h5 class="timeline2-title">Machine Learning Research Engineer</h5>
+                                    <div style="display: inline-block; margin-bottom: 5px;">
+                                        <img src="img/calendar.png"
+                                            style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">03/2019
+                                            - Present</h6>
+                                    </div>
+                                    <br>
+                                    <div style="display: inline-block; margin-bottom: 5px;">
+                                        <img src="img/company.png"
+                                            style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">TNO -
+                                            Netherlands Organisation for Applied Scientific Research </h6>
+                                    </div>
+                                    <br>
+                                    <div style="display: inline-block; margin-bottom: 5px;">
+                                        <img src="img/location_pin.png"
+                                            style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">
+                                            Helmond, The Netherlands</h6>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Focus on researching and applying Machine Learning techniques for autonomous
+                                            driving: <br>
+                                            • Deep Learning for trajectory prediction and decision making <br>
+                                            • (Inverse and Deep) Reinforcement Learning for planning and decision making
+                                            <br>
+                                            • Bayesian statistics for uncertainty modelling, Explainable AI and
+                                            Interpretable AI
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline2-item">
+                                <div class="timeline2-marker"></div>
+                                <div class="timeline2-content">
+                                    <h5 class="timeline2-title">Machine Learning Intern</h5>
+                                    <div style="display: inline-block; margin-bottom: 5px;">
+                                        <img src="img/calendar.png"
+                                            style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">03/2018
+                                            - 08/2018</h6>
+                                    </div>
+                                    <br>
+                                    <div style="display: inline-block; margin-bottom: 5px;">
+                                        <img src="img/company.png"
+                                            style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">
+                                            Zinkcloud</h6>
+                                    </div>
+                                    <br>
+                                    <div style="display: inline-block; margin-bottom: 5px;">
+                                        <img src="img/location_pin.png"
+                                            style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Madrid,
+                                            Spain</h6>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Developed Deep Learning algorithms for Image detection in aerospace
+                                            applications (Python, Tensorflow, Keras).</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline2-item">
+                                <div class="timeline2-marker"></div>
+                                <div class="timeline2-content">
+                                    <h5 class="timeline2-title">Internship as Aerospace Engineer and Product Management
+                                        assistant</h5>
+                                    <div style="display: inline-block; margin-bottom: 5px;">
+                                        <img src="img/calendar.png"
+                                            style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">02/2015
+                                            - 04/2015</h6>
+                                    </div>
+                                    <br>
+                                    <div style="display: inline-block; margin-bottom: 5px;">
+                                        <img src="img/company.png"
+                                            style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">
+                                            Jenoptik GmbH</h6>
+                                    </div>
+                                    <br>
+                                    <div style="display: inline-block; margin-bottom: 5px;">
+                                        <img src="img/location_pin.png"
+                                            style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">
+                                            Hamburg, Germany</h6>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>• Mechanical design and optimization for aerospace systems (drones, Airbus
+                                            components) <br>
+                                            • Product Management: market analysis for military and civil helicopters,
+                                            market research and analysis for unmanned aerial veichle <br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline2-item">
+                                <div class="timeline2-marker"></div>
+                                <div class="timeline2-content">
+                                    <h5 class="timeline2-title">Trainee as Mechanical Design Engineer</h5>
+                                    <div style="display: inline-block; margin-bottom: 5px;">
+                                        <img src="img/calendar.png"
+                                            style="display: inline; height: 25px; width: auto;  vertical-align: middle; ">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">09/2014
+                                            - 01/2015</h6>
+                                    </div>
+                                    <br>
+                                    <div style="display: inline-block; margin-bottom: 5px;">
+                                        <img src="img/company.png"
+                                            style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Stilmas
+                                        </h6>
+                                    </div>
+                                    <br>
+                                    <div style="display: inline-block; margin-bottom: 5px;">
+                                        <img src="img/location_pin.png"
+                                            style="display: inline; height: 20px; width: auto;  vertical-align: middle; ">
+                                        <h6 style="display: inline;  vertical-align: middle; margin-left: 10px;">Milan,
+                                            Italy</h6>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Computational Fluid Dynamics and turbomachinery optimization<br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-        </div>        
-    </div>
-</section>
+    </section>
 
-<!-- Photo Grid Section -->
-<section class="photo-gallery" id="photo-gallery">
-    <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">The World through my lens</h2>
-        <br><br>
-        <h4 class="mb-0 text-center text-intro">I love photography, traveling and exploring new cultures. here you can see some of the pictures I have taken during my travels. </h4>
+    <!-- Photo Grid Section -->
+    <section class="photo-gallery" id="photo-gallery">
+        <div class="container">
+            <h2 class="text-center text-uppercase text-secondary mb-0">The World through my lens</h2>
+            <br><br>
+            <h4 class="mb-0 text-center text-intro">I love photography, traveling and exploring new cultures. here you
+                can see some of the pictures I have taken during my travels. </h4>
 
 
-        <section class="tiles-a">
-            <ul>
+            <section class="tiles-a">
+                <ul>
 
-                <li>
-                    <div class="photobox photobox_type16">
-                        <div class="photobox__previewbox">
-                            <img class="pic-dim" src="img/myGallery/hamburg.jpg">
-                            <span class="photobox__label text_label">Hamburg, Germany</span>
+                    <li>
+                        <div class="photobox photobox_type16">
+                            <div class="photobox__previewbox">
+                                <img class="pic-dim" src="img/myGallery/hamburg.jpg">
+                                <span class="photobox__label text_label">Hamburg, Germany</span>
+                            </div>
                         </div>
-                    </div>
 
-                </li>
+                    </li>
 
-                <li>
-                    <div class="photobox photobox_type16">
-                        <div class="photobox__previewbox">
-                            <img class="pic-dim" src="img/myGallery/rotterdam.jpg">
-                            <span class="photobox__label text_label">Rotterdam, The Netherlands</span>
+                    <li>
+                        <div class="photobox photobox_type16">
+                            <div class="photobox__previewbox">
+                                <img class="pic-dim" src="img/myGallery/rotterdam.jpg">
+                                <span class="photobox__label text_label">Rotterdam, The Netherlands</span>
+                            </div>
                         </div>
-                    </div>
 
 
-                </li>
+                    </li>
 
-                <li>
-                    <div class="photobox photobox_type16">
-                        <div class="photobox__previewbox">
-                            <img class="pic-dim" src="img/myGallery/hamburg2.jpg">
-                            <span class="photobox__label text_label">Hamburg, Germany</span>
+                    <li>
+                        <div class="photobox photobox_type16">
+                            <div class="photobox__previewbox">
+                                <img class="pic-dim" src="img/myGallery/hamburg2.jpg">
+                                <span class="photobox__label text_label">Hamburg, Germany</span>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="photobox photobox_type16">
-                        <div class="photobox__previewbox">
-                            <img class="pic-dim" src="img/myGallery/painter.jpg">
-                            <span class="photobox__label text_label">Zaanse Schaans, <br> The Netherlands</span>
+                    </li>
+                    <li>
+                        <div class="photobox photobox_type16">
+                            <div class="photobox__previewbox">
+                                <img class="pic-dim" src="img/myGallery/painter.jpg">
+                                <span class="photobox__label text_label">Zaanse Schaans, <br> The Netherlands</span>
+                            </div>
                         </div>
-                    </div>
-                </li>
+                    </li>
 
-                <li>
-                    <div class="photobox photobox_type16">
-                        <div class="photobox__previewbox">
-                            <img class="pic-dim" src="img/myGallery/SAM_0271_1.jpg">
-                            <span class="photobox__label text_label">USA, Maine <br>Acadia National Park</span>
+                    <li>
+                        <div class="photobox photobox_type16">
+                            <div class="photobox__previewbox">
+                                <img class="pic-dim" src="img/myGallery/SAM_0271_1.jpg">
+                                <span class="photobox__label text_label">USA, Maine <br>Acadia National Park</span>
+                            </div>
                         </div>
-                    </div>
 
-                </li>
+                    </li>
 
-                <li>
-                    <div class="photobox photobox_type16">
-                        <div class="photobox__previewbox">
-                            <img class="pic-dim" src="img/myGallery/SAM_0829.JPG">
-                            <span class="photobox__label text_label">USA, New York City</span>
+                    <li>
+                        <div class="photobox photobox_type16">
+                            <div class="photobox__previewbox">
+                                <img class="pic-dim" src="img/myGallery/SAM_0829.JPG">
+                                <span class="photobox__label text_label">USA, New York City</span>
+                            </div>
                         </div>
-                    </div>
-                </li>
+                    </li>
 
-                <li>
-                    <div class="photobox photobox_type16">
-                        <div class="photobox__previewbox">
-                            <img class="pic-dim" src="img/myGallery/me.jpg">
-                            <span class="photobox__label text_label">USA, Massachusetts</span>
+                    <li>
+                        <div class="photobox photobox_type16">
+                            <div class="photobox__previewbox">
+                                <img class="pic-dim" src="img/myGallery/me.jpg">
+                                <span class="photobox__label text_label">USA, Massachusetts</span>
+                            </div>
                         </div>
-                    </div>
-                </li>
+                    </li>
 
-                <li>
-                    <div class="photobox photobox_type16">
-                        <div class="photobox__previewbox">
-                            <img class="pic-dim" src="img/myGallery/toureiffel.jpg">
-                            <span class="photobox__label text_label">France, Paris</span>
+                    <li>
+                        <div class="photobox photobox_type16">
+                            <div class="photobox__previewbox">
+                                <img class="pic-dim" src="img/myGallery/toureiffel.jpg">
+                                <span class="photobox__label text_label">France, Paris</span>
+                            </div>
                         </div>
-                    </div>
-                </li>
+                    </li>
 
-                <li>
-                    <div class="photobox photobox_type16">
-                        <div class="photobox__previewbox">
-                            <img src="img/myGallery/sunset.jpg" class="pic-dim">
-                            <span class="photobox__label text_label">Madrid, Spain</span>
+                    <li>
+                        <div class="photobox photobox_type16">
+                            <div class="photobox__previewbox">
+                                <img src="img/myGallery/sunset.jpg" class="pic-dim">
+                                <span class="photobox__label text_label">Madrid, Spain</span>
+                            </div>
                         </div>
-                    </div>
-                </li>
+                    </li>
 
-                <li>
-                    <div class="photobox photobox_type16">
-                        <div class="photobox__previewbox">
-                            <img src="img/myGallery/mountain.jpg" class="pic-dim">
-                            <span class="photobox__label text_label">Como, Italy</span>
+                    <li>
+                        <div class="photobox photobox_type16">
+                            <div class="photobox__previewbox">
+                                <img src="img/myGallery/mountain.jpg" class="pic-dim">
+                                <span class="photobox__label text_label">Como, Italy</span>
+                            </div>
                         </div>
-                    </div>
-                </li>
+                    </li>
 
 
-                <li>
-                    <div class="photobox photobox_type16">
-                        <div class="photobox__previewbox">
-                            <img src="img/myGallery/stockholm.jpg" class="pic-dim">
-                            <span class="photobox__label text_label">Stockholm, Sweden</span>
+                    <li>
+                        <div class="photobox photobox_type16">
+                            <div class="photobox__previewbox">
+                                <img src="img/myGallery/stockholm.jpg" class="pic-dim">
+                                <span class="photobox__label text_label">Stockholm, Sweden</span>
+                            </div>
                         </div>
-                    </div>
-                </li>
+                    </li>
 
 
-                <li>
-                    <div class="photobox photobox_type16">
-                        <div class="photobox__previewbox">
-                            <img src="img/myGallery/SAM_0265_1.jpg" class="pic-dim">
-                            <span class="photobox__label text_label">USA, Maine</span>
+                    <li>
+                        <div class="photobox photobox_type16">
+                            <div class="photobox__previewbox">
+                                <img src="img/myGallery/SAM_0265_1.jpg" class="pic-dim">
+                                <span class="photobox__label text_label">USA, Maine</span>
+                            </div>
                         </div>
-                    </div>
-                </li>
-            </ul>
-        </section>
-    </div>
-</section>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </section>
 
 </section>
 
@@ -1039,15 +1008,18 @@ publications:
         <div class="card contactme">
             <div class="container row" style="display: inline-block; margin: 30px; margin-bottom: 20px">
                 <img src="img/email.png" style="display:inline; width: 40px; height: auto" />
-                <h6 style="font-weight: 400; display:inline; margin: auto; margin-left: 10px;">maurocomi92@gmail.com</h6>
+                <h6 style="font-weight: 400; display:inline; margin: auto; margin-left: 10px;">maurocomi92@gmail.com
+                </h6>
             </div>
             <div class="container row" style="display: inline-block; margin-bottom:  20px; margin-left: 30px">
                 <img src="img/linkedin.png" style="display:inline; width: 40px; height: auto" />
-                <a style="font-family: 'Montserrat'; font-weight: 400; display:inline; margin: auto; margin-left: 10px;color: #4875B4" href="http://www.linkedin.com/in/mauro-comi">Mauro Comi | LinkedIn</a>
+                <a style="font-family: 'Montserrat'; font-weight: 400; display:inline; margin: auto; margin-left: 10px;color: #4875B4"
+                    href="http://www.linkedin.com/in/mauro-comi">Mauro Comi | LinkedIn</a>
             </div>
             <div class="container row" style="display: inline-block; margin-left: 30px">
                 <img src="img/location_pin.png" style="display:inline; width: auto; height: 40px" />
-                <h6 style="font-family: 'Montserrat'; font-weight: 400; display:inline; margin: auto; margin-left: 10px;" href="linkedin.com/in/mauro-comi">London, UK</h6>
+                <h6 style="font-family: 'Montserrat'; font-weight: 400; display:inline; margin: auto; margin-left: 10px;"
+                    href="linkedin.com/in/mauro-comi">London, UK</h6>
             </div>
         </div>
     </div>

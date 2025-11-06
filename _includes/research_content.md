@@ -7,7 +7,7 @@ I read papers following Andrew Ng's invaluable tips on <a href="https://youtu.be
 
 ### Publications
 <div style="display: flex; flex-direction: column; gap: 20px;">
-{% for publication in page.publications %}
+{% for publication in site.data.publications %}
     <div class="publication" style="display: flex; align-items: center; gap: 20px; border-bottom: 1px solid #ddd; padding-bottom: 15px;">
         <img src="{{ publication.img }}" alt="{{ publication.title }}" width="200px" style="border-radius: 10px;">
         <div>
