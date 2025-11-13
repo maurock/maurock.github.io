@@ -166,14 +166,14 @@ section h2 {
         margin-top: 0;
     }
 
-    #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
+    #mainNav .navbar-nav>li.nav-item>a.nav-link.active {
         color: #fff;
         background: #18BC9C;
     }
 
-    #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active,
-    #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus,
-    #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
+    #mainNav .navbar-nav>li.nav-item>a.nav-link.active:active,
+    #mainNav .navbar-nav>li.nav-item>a.nav-link.active:focus,
+    #mainNav .navbar-nav>li.nav-item>a.nav-link.active:hover {
         color: #fff;
         background: #18BC9C;
     }
@@ -186,8 +186,8 @@ section h2 {
     #mainNav.navbar-shrink .navbar-brand {
         font-size: 1.5em;
     }
-    
-    #mainNav .navbar-nav li.nav-item a.nav-link{
+
+    #mainNav .navbar-nav li.nav-item a.nav-link {
         color: #fff !important;
     }
 }
@@ -482,7 +482,7 @@ from, to { border-color: transparent }
 }
 
 
-.navbar-nav > li > a,
+.navbar-nav>li>a,
 .navbar-brand {
     padding-top: 0px !important;
     padding-bottom: 0 !important;
@@ -529,7 +529,7 @@ hr {
     font-size: 17px;
 }
 
-.skillList > li {
+.skillList>li {
     list-style: none;
     display: inline-block;
     border-radius: 5px;
@@ -549,7 +549,7 @@ hr {
 @media only screen and (max-width: 800px) {
     #navbarResponsive ul li a {
         background: white;
-    }    
+    }
 }
 
 
@@ -692,7 +692,7 @@ blockquote {
     border-left: 10px solid #ccc;
     margin: 1.5em 10px;
     padding: 0.5em 10px;
-    quotes: "\201C""\201D""\2018""\2019";
+    quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
 blockquote:before {
@@ -868,7 +868,7 @@ blockquote p {
     font-weight: 600;
 }
 
-.text-research > ul > li {
+.text-research>ul>li {
     padding-bottom: 10px;
 }
 
@@ -876,7 +876,7 @@ blockquote p {
     margin-bottom: 20px;
 }
 
-#card1 > .card {
+#card1>.card {
     height: 100%;
 }
 
@@ -916,7 +916,7 @@ a:active {
     margin-bottom: 20px;
 }
 
-.snippet > h3,
+.snippet>h3,
 h4 {
     font-family: Raleway;
 }
@@ -1012,7 +1012,7 @@ h4 {
 
 /* MathJAX */
 /* for mobile */
-@media only screen and (max-width: 800px) {
+/* @media only screen and (max-width: 800px) {
     .MathJax {
         font-size: 1 !important;
         overflow-x: scroll;
@@ -1020,13 +1020,13 @@ h4 {
 }
 
 /* for desktop */
-@media only screen and (min-width: 800px) {
+/* @media only screen and (min-width: 800px) {
     .MathJax {
         font-size: 1.3em !important;
     }
-}
+} */
 
-.snippet-code-div {
+*/ .snippet-code-div {
     background: #ffffff;
     overflow: auto;
     width: auto;
@@ -1039,15 +1039,15 @@ h4 {
 }
 
 .blockquote2 {
-  font-style: italic;
-  font-size: 1.3em;
-  margin-left: 24px;
-  font-family: Nunito;
-  border-left: 4px solid #CCC;
-  padding-left: 8px;
+    font-style: italic;
+    font-size: 1.3em;
+    margin-left: 24px;
+    font-family: Nunito;
+    border-left: 4px solid #CCC;
+    padding-left: 8px;
 }
 
-.card-img-top-books{
+.card-img-top-books {
     border-top-left-radius: calc(.25rem - 1px);
     border-top-right-radius: calc(.25rem - 1px);
     display: block;
@@ -1064,7 +1064,7 @@ h4 {
 
 /* for desktop */
 @media only screen and (min-width: 992px) {
-    .container-blog{
+    .container-blog {
         max-width: 900px;
     }
 }
