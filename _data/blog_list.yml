@@ -1,3 +1,8 @@
+- link: "/blog/vae.html"
+  title: "Building a Modern Variational Autoencoder (VAE) from Scratch"
+  datetime: "2025-11-13"
+  date_string: "November 13, 2025"
+
 - link: "/blog/vit.html"
   title: "ViTAX: Vision Transformer from Scratch in JAX"
   datetime: "2024-06-15"

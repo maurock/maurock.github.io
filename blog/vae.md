@@ -2,7 +2,7 @@
 layout: post
 title: "Building a Modern Variational Autoencoder (VAE) from Scratch"
 subtitle: From zero to a working Variational Autoencoder, understanding every step
-description: Mauro Comi's academic profile
+description: A deep-dive implementation of a modern Variational Autoencoder (VAE) from scratch, explaining the theory and code.
 date: 8 April 2025
 usemathjax: true
 ---
@@ -30,12 +30,12 @@ usemathjax: true
 
 This blog post is part of a series of **Implementations from Scratch**, covering the major advancements in AI.
 **Important resources**:
-- <a href=""><img src="https://openmoji.org/data/color/svg/E045.svg" alt="Github" class="icon"> Github code for this blog post</a>
-- Follow this blog post in Colab! <a href="https://colab.research.google.com/drive/1N1Nas_z8CPE1dG1IbfIbiVQUgTQHL6hw?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Follow this blog post in Colab!"></a>
+- <a href="https://github.com/maurock/vaex"> <img src="https://openmoji.org/data/color/svg/E045.svg" alt="Github" class="icon"> Github code for this blog post </a>
+- <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Follow this blog post in Colab!"><a href="https://colab.research.google.com/drive/1N1Nas_z8CPE1dG1IbfIbiVQUgTQHL6hw?usp=sharing"> Follow this blog post in Colab! </a>
 
 <h4 id="what-is-a-vae"><span style="color: rgb(215, 215, 215);">#</span> What is a VAE and why is it important?</h4> 
 
-Have you ever wondered how models like Stable Diffusion can generate high-resolution images so quickly? This is because they don't work in the huge pixel space of high-reoslution images. Instead, they work in a tiny latent space learnt by a Variational Autoencoder (VAE). This **Latent Diffusion** technique is the standard for modern image generation, and it all depends on a powerful VAE. This is the topic of today's blog post.
+Models like Stable Diffusion generate high-resolution images quickly because they don't work in the huge pixel space of high-resolution images. Instead, they work in a tiny latent space learnt by a Variational Autoencoder (VAE). This **Latent Diffusion** technique is the standard for modern image generation, and it all depends on a powerful VAE.
 
 If you've read the previous post on [Vision Transformers from Scratch](www.maurocomi.com/blog/vit.html), you'll know that images of squirrels floating in space are a quintessential element of any serious AI blog post. Let's consider many different images of squirrels: some are floating in space, some are chilling on trees, others are [hiding acorns and later forgetting where the acorns are stored](https://www.britannica.com/story/is-it-true-that-squirrels-forget-where-they-bury-about-half-of-their-food). **Our goal** is generate new images that are similar, but not identical, to the pictures in this dataset. We want to generate images that *plausibly could have come* from our dataset. In technical terms, we want to learn the underlying probability distribution of our data. If our dataset was very big, like the entire Internet, we could generate (and reconstruct) all kinds of plausible images! 
 
@@ -252,7 +252,7 @@ This is the most important part of the VAE. To train this, we need a loss functi
 1. Reconstruct the input image
 2. Organize the latent space
 
-So far we have seen *what* and *how* we implement a VAE, but to fully appreciate and understand *why* we do so, we need to dive into some mathematics.
+We've covered the *what* and *how* of the VAE architecture. To understand *why* it works, we need to deconstruct its loss function.
 
 Our true goal is not just to reconstruct an image, but to model the probability of our data $p(\mathbf{x})$. Let's also define some latent vector $\mathbf{z}$ on which our data depends. What do we mean by this? We're saying that the image $\mathbf{x}$ (the squirrel) isn't just a random collection of pixels, but it was generated from some high-level concepts. The latent vector $\mathbf{z}$ is our attempt to capture those concepts in a compressed numerical form. 
 
@@ -273,7 +273,7 @@ Again, not terribly helpful:
 - We know $p(\mathbf{x} \| \mathbf{z})$. Why? This is a function that we can learn. In our model, this will be our **Decoder**. It's a neural network that takes some vector $\mathbf{z}$ (which we can sample, since *we* define $p(\mathbf{z})$!) and outputs a reconstructed $\mathbf{\hat{x}}$.
 - We don't know $p(\mathbf{z}\|\mathbf{x})$.
 
-When something like this happens, we often resort to the same solution. Let's introduce some function $q_\phi$ that approximates $p(\mathbf{z}\|\mathbf{x})$. Mathematically, we call this our approximate posterior, $q_\phi(\mathbf{z}\|\mathbf{x})$. Well, as we saw earlier, this is our Encoder: a function that receives an input $\mathbf{x}$ and output a probability distribution over $\mathbf{z}$.
+This is a problem for which we have a solution. Let's introduce some function $q_\phi$ that approximates $p(\mathbf{z}\|\mathbf{x})$. Mathematically, we call this our approximate posterior, $q_\phi(\mathbf{z}\|\mathbf{x})$. Well, as we saw earlier, this is our Encoder: a function that receives an input $\mathbf{x}$ and output a probability distribution over $\mathbf{z}$.
 
 We now have a new goal: instead of maximizing the intractable $p(\mathbf{x})$, we want to model $q_\phi(\mathbf{z}\|\mathbf{x})$ so that it gets as close as possible to our real posterior probability $p(\mathbf{z}\|\mathbf{x})$. In other words, we want to minimize the distance between $p$ and $q$. This is equivalent to minimize the <span style="background-color: #ffdea1f7">Kullback-Liebler divergence</span>, which by definition:
 
@@ -311,7 +311,7 @@ $\$
 D_{KL}(q \parallel p) =  \mathbb{E}\_{q\_\phi(\mathbf{z}\|\mathbf{x})} \left[ \log \frac{q_\phi(\mathbf{z}\|\mathbf{x})}{p(\mathbf{z})} \right] -  \mathbb{E}\_{q\_\phi(\mathbf{z}\|\mathbf{x})} [\log p(\mathbf{x}\|\mathbf{z})] + \textcolor{Emerald}{\log p(\mathbf{x})}
 $\$
 
-Almost there, I promise! Let's re-arrange the equation to solve for $\log p(\mathbf{x})$, which was our original goal:
+Let's re-arrange the equation to solve for $\log p(\mathbf{x})$, which was our original goal:
 
 $\$
 \log p(\mathbf{x}) = D\_{KL}(q \parallel p) -  \mathbb{E}\_{q\_\phi(\mathbf{z}\|\mathbf{x})} \left[ \log \frac{q_\phi(\mathbf{z}\|\mathbf{x})}{p(\mathbf{z})} \right] + \mathbb{E}\_{q\_\phi(\mathbf{z}\|\mathbf{x})} [\log p(\mathbf{x}|\mathbf{z})]
@@ -456,10 +456,10 @@ Please check a code on Github for the whole Dataset defintion and training loop 
 
 <h4 id="conclusion"><span style="color: rgb(215, 215, 215);">#</span>Conclusion</h4>
 
-⭐ We made it! We've gone through the entire process of building a modern Variational Autoencoder from scratch using JAX. We started with a practical implementation of our Encoder, which leverages `ResNetBlocks`, normalization layers, and `ConvNets`. We have seen the core theory of the Evidence Lower Bound (ELBO), and specifically how its two competing goals (reconstruction and regularization) motivates our architecture. Finally, we assembled a complete training pipeline to train bring our model. 
+We made it :) We've gone through the entire process of building a modern Variational Autoencoder from scratch using JAX. We started with a practical implementation of our Encoder, which leverages `ResNetBlocks`, normalization layers, and `ConvNets`. We have seen the core theory of the Evidence Lower Bound (ELBO), and specifically how its two competing goals (reconstruction and regularization) motivates our architecture. Finally, we assembled a complete training pipeline to train bring our model. 
 
 The VAE we've built is a functional baseline. The code on Github defines the whole model, a dataset with 16k images form Hugging Face, the loading/saving weight process. We'll be using this for our next step, which consists in the implementation of a Diffusion Transformer for image generation. 
 
-Happy autoencoding!
+Thanks for reading, and see you in the next episode!
 <br>
 <br>
