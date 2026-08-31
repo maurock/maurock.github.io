@@ -1,3 +1,9 @@
+- img: "../img/research/gen2physics.png"
+  title: "Gen2Physics: Grounding Generated 3D Meshes in Physics via Multi-View Material Decomposition"
+  link: "https://arxiv.org/abs/2608.23869"
+  authors: "<strong>Mauro Comi*</strong>, Jordi Serrano Berbel, Kevis-Kokitsi Maninis, Philipp Henzler, Manuel Sanchez"
+  status: "Available on Arxiv"
+
 - img: "../img/research/splatting_physical_images.png"
   title: "Splatting Physical Scenes: End-to-End Real-to-Sim from Imperfect Robot Data"
   link: "https://arxiv.org/pdf/2506.04120"
@@ -8,7 +14,7 @@
   title: "Neural Fields in Robotics: A Survey"
   link: "https://arxiv.org/pdf/2410.20220v1"
   authors: "Muhammad Zubair Irshad, <strong>Mauro Comi</strong>, Yen-Chen Lin, Nick Heppert, Abhinav Valada, Rares Ambrus, Zsolt Kira, Jonathan Tremblay"
-  status: "Currently in submission, available on Arxiv"
+  status: "Accepted at IEEE Transactions on Robotics (T-RO)"
 
 - img: "../img/research/snap_tap.png"
   title: "Snap-it, Tap-it, Splat-it: Tactile-Informed 3D Gaussian Splatting for Reconstructing Challenging Surfaces"

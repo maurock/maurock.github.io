@@ -1,7 +1,7 @@
 
 <img id="img-profile" src="img/jumping_me.png" alt="A picture of me jumping in front of a lighthouse">
 
-Hi there! I'm a Student Researcher at Google in New York City, and a final year PhD student in **Machine Learning** at the [University of Bristol](https://www.bristol.ac.uk/) (UK). I recently concluded two research internships at [Google DeepMind](https://deepmind.google/) in London, where I worked on multimodal 3D computer vision and 3D representations. My research interests lie at the intersection of **3D Deep Learning, Neural Fields and 3D Gaussian Splatting,** and **Robotics Perception** (Computer Vision, Tactile Sensing). I have a soft spot for **Computer Graphics** and **Physically-Based Rendering**. I am supervised by [Prof Nathan Lepora](https://lepora.com/) and [Dr Laurence Aitchison](http://www.gatsby.ucl.ac.uk/~laurence/), and I am fortunate to get guidance from [Alessio Tonioni](https://alessiotonioni.github.io/) (Google) and [Jonathan Tremblay](https://research.nvidia.com/person/jonathan-tremblay) (NVIDIA). Previously, I worked as a Machine Learning research engineer in autonomous driving at the Netherlands Organisation for Applied Scientific Research (TNO), where I worked and led EU-funded projects on autonomous driving, and developed **Deep Reinforcement Learning** applications for self-driving vehicles.
+Hi there! I'm an AI Scientist at **Mistral AI**, and a final year PhD student in **Machine Learning** at the [University of Bristol](https://www.bristol.ac.uk/) (UK). I recently concluded three research internships at **Google** (New York City, 2026) and **Google DeepMind** (London, 2024-2025), where I worked on multimodal 2D/3D computer vision and 3D representations. My research interests lie at the intersection of **Physically plausible simulation, 3D Deep Learning, Neural Fields and 3D Gaussian Splatting** and **Robotics Perception** (Computer Vision, Tactile Sensing). I have a soft spot for **Computer Graphics** and **Physically-Based Rendering**. I am supervised by [Prof Nathan Lepora](https://lepora.com/) and [Dr Laurence Aitchison](http://www.gatsby.ucl.ac.uk/~laurence/), and I am fortunate to get guidance from [Alessio Tonioni](https://alessiotonioni.github.io/) (Google) and [Jonathan Tremblay](https://research.nvidia.com/person/jonathan-tremblay) (NVIDIA). Previously, I worked as a Machine Learning research engineer in autonomous driving at the Netherlands Organisation for Applied Scientific Research (TNO), where I worked and led EU-funded projects on autonomous driving, and developed **Deep Reinforcement Learning** applications for self-driving vehicles.
 
 I read papers following Andrew Ng's invaluable tips on <a href="https://youtu.be/733m6qBH-jI">How to read research papers (Andrew NG)</a>
 
@@ -31,10 +31,13 @@ I run an online **3D Deep Learning reading group**, where we discuss papers in 3
 ### Talks
 - **A Hybrid-AI approach to Competence Assessment for Automated Driving Functions** @SafeAI AAAI, February 2021
 
-### Updates
-- **February 2025** ⭐ – I started my second research internship as a **Student Researcher** at **Google DeepMind**!  
+### Updated
+- **July 2026** ⭐ – I started my role as an AI Scientist at **Mistral AI**, working on Multimodal AI!
+- **June 2026** - Our work *Gen2Physics: Grounding Generated 3D Meshes in Physics via Multi-View Material Decomposition* was submitted to Arxiv ([link](https://arxiv.org/pdf/2608.23869))
+- **June 2026** – Our work *Neural Fields in Robotics: A Survey* ([link](https://arxiv.org/pdf/2410.20220v1)) was accepted at Transactions on Robotics (T-RO)!
+- **March 2026** ⭐ – I started my third research internship as a **Student Researcher** at **Google** in New York City!  
+- **February 2025** ⭐ – I started my second research internship as a **Student Researcher** at **Google DeepMind** in London!  
 - **November 2024** – Our work *Snap-it, Tap-it, Splat-it: Tactile-Informed 3D Gaussian Splatting for Reconstructing Challenging Surfaces* ([link](https://arxiv.org/pdf/2410.20220v1)) was accepted at [3DV 2025](https://3dvconf.github.io/2025/). See you in Singapore!  
-- **October 2024** – Our work *Neural Fields in Robotics: A Survey* was submitted to ArXiv ([link](https://arxiv.org/pdf/2410.20220v1)).  
 - **September 2024** ⭐ – I started my research internship as a **Student Researcher** at **Google DeepMind**!  
 - **May 2024** - Our work *TouchSDF: A DeepSDF Approach for 3D Shape Reconstruction Using Vision-Based Tactile Sensing* was accepted into the [IEEE RA-L journal](https://ieeexplore.ieee.org/abstract/document/10517361).
 - **April 2024** - The 3D Deep Learning Reading Group I am running is starting again. Join us [here](https://3d-deeplearning-rg.github.io/).
